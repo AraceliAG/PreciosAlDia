@@ -43,10 +43,7 @@ namespace BuscadorPrecio
                 // Mostrar los resultados en el DataGridView
                 dataGridView1.DataSource = resultados;
 
-                //if (dataGridView1.Rows.Count > 0)
-                //{
-                //    dataGridView1.Rows[0].DefaultCellStyle.BackColor = Color.LightBlue; // Cambiar a cualquier color que desees
-                //}
+                
 
 
             }

@@ -32,6 +32,10 @@ namespace BuscadorPrecio
                 Form ventanaCableTH = new Form2();
                 ventanaCableTH.Show();
 
+            }else if (tipo == "Cable multiconductor de alambre Cu ARMORFLEX")
+            {
+                Form ventanaCableMulti = new CableMulti();
+                ventanaCableMulti.Show();
             }
         }
     }
