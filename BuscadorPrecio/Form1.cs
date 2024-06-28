@@ -36,6 +36,10 @@ namespace BuscadorPrecio
             {
                 Form ventanaCableMulti = new CableMulti();
                 ventanaCableMulti.Show();
+            } else if (tipo == "Cable de uso rudo THHW")
+            {
+                Form ventanaRudo = new CableRudo();
+                ventanaRudo.Show();
             }
         }
     }
