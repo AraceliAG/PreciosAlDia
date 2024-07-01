@@ -33,6 +33,7 @@
             button2 = new Button();
             cbCables = new ComboBox();
             btnIniciar = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -86,11 +87,21 @@
             btnIniciar.UseVisualStyleBackColor = true;
             btnIniciar.Click += btnIniciar_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(245, 52);
+            button3.Name = "button3";
+            button3.Size = new Size(144, 36);
+            button3.TabIndex = 5;
+            button3.Text = "insertar Datos";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
             Controls.Add(btnIniciar);
             Controls.Add(cbCables);
             Controls.Add(button2);
@@ -109,5 +120,6 @@
         private Button button2;
         private ComboBox cbCables;
         private Button btnIniciar;
+        private Button button3;
     }
 }
