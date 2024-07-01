@@ -39,6 +39,8 @@
             txtFecha = new TextBox();
             label2 = new Label();
             txtPrecio = new TextBox();
+            label3 = new Label();
+            txtProveedor = new TextBox();
             SuspendLayout();
             // 
             // btnAgregar
@@ -49,6 +51,7 @@
             btnAgregar.TabIndex = 0;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // cbMarca
             // 
@@ -136,11 +139,29 @@
             txtPrecio.Size = new Size(212, 31);
             txtPrecio.TabIndex = 15;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 254);
+            label3.Name = "label3";
+            label3.Size = new Size(94, 25);
+            label3.TabIndex = 16;
+            label3.Text = "Proveedor";
+            // 
+            // txtProveedor
+            // 
+            txtProveedor.Location = new Point(118, 254);
+            txtProveedor.Name = "txtProveedor";
+            txtProveedor.Size = new Size(212, 31);
+            txtProveedor.TabIndex = 17;
+            // 
             // Insercion
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(903, 450);
+            Controls.Add(txtProveedor);
+            Controls.Add(label3);
             Controls.Add(txtPrecio);
             Controls.Add(label2);
             Controls.Add(txtFecha);
@@ -171,5 +192,7 @@
         private TextBox txtFecha;
         private Label label2;
         private TextBox txtPrecio;
+        private Label label3;
+        private TextBox txtProveedor;
     }
 }
