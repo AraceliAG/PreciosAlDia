@@ -44,5 +44,11 @@ namespace BuscadorPrecio
                 ventanaRudo.Show();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form insercion = new Insercion();
+            insercion.Show();
+        }
     }
 }
