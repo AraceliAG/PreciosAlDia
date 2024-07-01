@@ -23,19 +23,23 @@ namespace BuscadorPrecio
             string marca = cbMarca.Text;
             string calibre = cbCalibre.Text;
 
-
             if (marca == "Todos")
             {
                 // Consulta SQL para obtener el precio más bajo de cada marca
                 string query = $@"
-    SELECT proveedor, MIN(precio) AS precio_minimo, fecha
-    FROM cables
-    WHERE nombre LIKE 'Cable Cu. THHW%'
-      AND calibre = '{calibre}'
-      AND color = '{color}'
-      AND fecha = (SELECT MAX(fecha) FROM cables)
-    GROUP BY proveedor, fecha
-";
+                SELECT c.proveedor, c.precio, c.fecha
+                FROM cables c
+                WHERE calibre = '{calibre}'
+                  AND color = '{color}'
+                  AND c.fecha = (
+                SELECT MAX(c2.fecha)
+                FROM cables c2
+                WHERE c2.proveedor = c.proveedor
+                  AND c2.nombre = c.nombre
+                  AND c2.calibre = c.calibre
+                  AND c2.color = c.color
+              )
+            ORDER BY c.proveedor, c.nombre, c.calibre, c.color, c.marca";
 
                 // Ejecutar la consulta utilizando DbUtils
                 DataTable resultados = DbUtils.ExecuteQuery(query);
@@ -48,18 +52,22 @@ namespace BuscadorPrecio
             {
                 // Construir la consulta SQL dinámica
                 string query = $@"
-        SELECT proveedor,precio, fecha
-        FROM cables
-        WHERE nombre LIKE 'Cable Cu. THHW%'
+        SELECT c.proveedor, c.precio, c.fecha
+        FROM cables c
+        WHERE marca = '{marca}'
           AND calibre = '{calibre}'
           AND color = '{color}'
-          AND marca = '{marca}'
-          AND fecha = (SELECT MAX(fecha) FROM cables WHERE nombre LIKE 'Cable Cu. THHW%'
-          AND calibre = '{calibre}'
-          AND color = '{color}'
-          AND marca = '{marca}')
-          ORDER BY precio ASC
-          LIMIT 1";
+           AND c.fecha = (
+            SELECT MAX(c2.fecha)
+            FROM cables c2
+            WHERE c2.proveedor = c.proveedor
+              AND c2.nombre = c.nombre
+              AND c2.calibre = c.calibre
+              AND c2.color = c.color
+              AND c2.marca = c.marca
+          )
+        ORDER BY c.fecha asc
+        LIMIT 1";
 
                 // Ejecutar la consulta utilizando DbUtils
                 DataTable resultados = DbUtils.ExecuteQuery(query);
