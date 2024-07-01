@@ -43,23 +43,23 @@ namespace BuscadorPrecio
                 // Mostrar los resultados en el DataGridView
                 dataGridView1.DataSource = resultados;
 
-                
-
-
             }
             else
             {
                 // Construir la consulta SQL dinámica
                 string query = $@"
-        SELECT precio, proveedor, fecha
+        SELECT proveedor,precio, fecha
         FROM cables
         WHERE nombre LIKE 'Cable Cu. THHW%'
           AND calibre = '{calibre}'
           AND color = '{color}'
           AND marca = '{marca}'
-          AND fecha = (SELECT MAX(fecha) FROM cables)
-          AND precio = (SELECT MIN(precio) FROM cables WHERE fecha = (SELECT MAX(fecha) FROM cables))
-    ";
+          AND fecha = (SELECT MAX(fecha) FROM cables WHERE nombre LIKE 'Cable Cu. THHW%'
+          AND calibre = '{calibre}'
+          AND color = '{color}'
+          AND marca = '{marca}')
+          ORDER BY precio ASC
+          LIMIT 1";
 
                 // Ejecutar la consulta utilizando DbUtils
                 DataTable resultados = DbUtils.ExecuteQuery(query);
