@@ -27,7 +27,7 @@ namespace BuscadorPrecio
             {
                 // Consulta SQL para obtener el precio más bajo de cada marca
                 string query = $@"
-                SELECT c.proveedor, c.precio, c.fecha
+                SELECT c.proveedor, c.marca, c.precio, c.fecha
                 FROM cables c
                 WHERE calibre = '{calibre}'
                   AND color = '{color}'
