@@ -60,7 +60,7 @@ namespace BuscadorPrecio
 
             
 
-            DateTime fecha2 = DateTime.ParseExact(fecha1, "M/d/yyyy", null);
+            DateTime fecha2 = DateTime.ParseExact(fecha1, "d/M/yyyy", null);
 
             // Formatear la fecha en el formato deseado
             string fecha = fecha2.ToString("dd-MM-yyyy");
@@ -68,8 +68,6 @@ namespace BuscadorPrecio
             string query = $@"insert into cables values(idcables, '{nombre}', '{calibre}',
             '{tipo_medida}', '{color}', '{marca}', '{servicio}', '{unidad}',
             '{precio}', '{proveedor}', '{fecha}' )";
-
-            // Ejecutar la consulta utilizando DbUtils
 
 
             try
