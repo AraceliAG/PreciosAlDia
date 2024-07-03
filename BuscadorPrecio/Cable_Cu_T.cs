@@ -66,7 +66,7 @@ namespace BuscadorPrecio
               AND c2.color = c.color
               AND c2.marca = c.marca
           )
-        ORDER BY c.fecha asc
+        ORDER BY MAX(c.fecha) asc
         LIMIT 1";
 
                 // Ejecutar la consulta utilizando DbUtils
