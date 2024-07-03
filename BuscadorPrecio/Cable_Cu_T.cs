@@ -31,8 +31,8 @@ namespace BuscadorPrecio
                 FROM cables c
                 WHERE calibre = '{calibre}'
                   AND color = '{color}'
-                  AND c.fecha = (
-                SELECT MAX(c2.fecha)
+                  AND STR_TO_DATE (c.fecha, '%d/%m/%Y') = (
+                SELECT MAX(STR_TO_DATE(c2.fecha, '%d/%m/%Y'))
                 FROM cables c2
                 WHERE c2.proveedor = c.proveedor
                   AND c2.nombre = c.nombre
