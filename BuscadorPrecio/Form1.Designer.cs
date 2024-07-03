@@ -39,7 +39,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(511, 63);
+            button1.Location = new Point(1031, 15);
             button1.Name = "button1";
             button1.Size = new Size(151, 34);
             button1.TabIndex = 0;
@@ -50,18 +50,18 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(192, 159);
+            dataGridView1.Location = new Point(472, 94);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(360, 225);
+            dataGridView1.Size = new Size(677, 319);
             dataGridView1.TabIndex = 1;
             // 
             // button2
             // 
-            button2.Location = new Point(53, 33);
+            button2.Location = new Point(70, 15);
             button2.Name = "button2";
-            button2.Size = new Size(142, 48);
+            button2.Size = new Size(185, 48);
             button2.TabIndex = 2;
             button2.Text = "cable";
             button2.UseVisualStyleBackColor = true;
@@ -71,15 +71,15 @@
             // 
             cbCables.FormattingEnabled = true;
             cbCables.Items.AddRange(new object[] { "Cable Cu. THHW-LS, 90°C, 600V, Cal.", "Cable multiconductor de alambre Cu ARMORFLEX", "Cable de uso rudo THHW", "Cable Cu. Desnudo, semiduro, Cal." });
-            cbCables.Location = new Point(31, 87);
+            cbCables.Location = new Point(12, 76);
             cbCables.Name = "cbCables";
-            cbCables.Size = new Size(182, 33);
+            cbCables.Size = new Size(338, 33);
             cbCables.TabIndex = 3;
             cbCables.Visible = false;
             // 
             // btnIniciar
             // 
-            btnIniciar.Location = new Point(31, 141);
+            btnIniciar.Location = new Point(98, 127);
             btnIniciar.Name = "btnIniciar";
             btnIniciar.Size = new Size(112, 34);
             btnIniciar.TabIndex = 4;
@@ -89,7 +89,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(245, 52);
+            button3.Location = new Point(576, 27);
             button3.Name = "button3";
             button3.Size = new Size(144, 36);
             button3.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1194, 520);
             Controls.Add(button3);
             Controls.Add(btnIniciar);
             Controls.Add(cbCables);

@@ -27,12 +27,12 @@ namespace BuscadorPrecio
             {
                 // Consulta SQL para obtener el precio más bajo de cada marca
                 string query = $@"
-                SELECT c.proveedor, c.precio, c.fecha
+                SELECT c.proveedor, c.marca, c.precio, c.fecha
                 FROM cables c
                 WHERE calibre = '{calibre}'
                   AND color = '{color}'
-                  AND c.fecha = (
-                SELECT MAX(c2.fecha)
+                  AND STR_TO_DATE (c.fecha, '%d/%m/%Y') = (
+                SELECT MAX(STR_TO_DATE(c2.fecha, '%d/%m/%Y'))
                 FROM cables c2
                 WHERE c2.proveedor = c.proveedor
                   AND c2.nombre = c.nombre
@@ -66,7 +66,7 @@ namespace BuscadorPrecio
               AND c2.color = c.color
               AND c2.marca = c.marca
           )
-        ORDER BY c.fecha asc
+        ORDER BY MAX(c.fecha) asc
         LIMIT 1";
 
                 // Ejecutar la consulta utilizando DbUtils
