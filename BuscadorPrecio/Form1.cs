@@ -16,12 +16,13 @@ namespace BuscadorPrecio
             DataTable resultados = DbUtils.ExecuteQuery(query);
 
             // Aquí puedes procesar los resultados (por ejemplo, mostrar en un DataGridView)
-            dataGridView1.DataSource = resultados;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             cbCables.Visible = true;
+            btnIniciar.Visible = true;
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
