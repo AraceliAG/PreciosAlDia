@@ -51,5 +51,23 @@ namespace BuscadorPrecio
             Form insercion = new Insercion();
             insercion.Show();
         }
+
+        private void timerHyF_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToShortTimeString();
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btSoportaria_Click(object sender, EventArgs e)
+        {
+            cbSoporteria.Visible = true;
+            btIniciarSup.Visible = true;
+
+        }
     }
 }
