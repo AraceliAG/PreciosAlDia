@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace BuscadorPrecio
 {
     public partial class Form2 : Form
@@ -45,7 +47,22 @@ namespace BuscadorPrecio
                 DataTable resultados = DbUtils.ExecuteQuery(query);
 
                 // Mostrar los resultados en el DataGridView
+                resultados.Columns.Add("precio_formateado", typeof(string));
+
+                foreach (DataRow row in resultados.Rows)
+                {
+                    decimal precio = Convert.ToDecimal(row["precio"]);
+                    row["precio_formateado"] = precio.ToString("C2", new System.Globalization.CultureInfo("es-MX"));
+                }
+
+                // Mostrar los resultados en el DataGridView
                 dataGridView1.DataSource = resultados;
+
+                // Ocultar la columna original de precio
+                dataGridView1.Columns["precio"].Visible = false;
+
+                // Mostrar la columna formateada
+                dataGridView1.Columns["precio_formateado"].HeaderText = "Precio";
 
             }
             else
@@ -73,7 +90,29 @@ namespace BuscadorPrecio
                 DataTable resultados = DbUtils.ExecuteQuery(query);
 
                 // Mostrar los resultados en el DataGridView
+                resultados.Columns.Add("precio_formateado", typeof(string));
+
+                foreach (DataRow row in resultados.Rows)
+                {
+                    if (row["precio"] != DBNull.Value && !string.IsNullOrEmpty(row["precio"].ToString()))
+                    {
+                        decimal precio = Convert.ToDecimal(row["precio"]);
+                        row["precio_formateado"] = precio.ToString("C2", new System.Globalization.CultureInfo("es-MX"));
+                    }
+                    else
+                    {
+                        row["precio_formateado"] = "$0.00"; // o cualquier valor predeterminado que desees mostrar
+                    }
+                }
+
+                // Mostrar los resultados en el DataGridView
                 dataGridView1.DataSource = resultados;
+
+                // Ocultar la columna original de precio
+                dataGridView1.Columns["precio"].Visible = false;
+
+                // Mostrar la columna formateada
+                dataGridView1.Columns["precio_formateado"].HeaderText = "Precio";
             }
 
 

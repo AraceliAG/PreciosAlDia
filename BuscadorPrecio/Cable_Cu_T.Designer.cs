@@ -36,13 +36,14 @@
             cbMarca = new ComboBox();
             btBuscarPrecio = new Button();
             dataGridView1 = new DataGridView();
+            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // lblCalibre
             // 
             lblCalibre.AutoSize = true;
-            lblCalibre.Location = new Point(28, 64);
+            lblCalibre.Location = new Point(28, 97);
             lblCalibre.Name = "lblCalibre";
             lblCalibre.Size = new Size(66, 25);
             lblCalibre.TabIndex = 0;
@@ -51,7 +52,7 @@
             // lblColor
             // 
             lblColor.AutoSize = true;
-            lblColor.Location = new Point(28, 115);
+            lblColor.Location = new Point(28, 148);
             lblColor.Name = "lblColor";
             lblColor.Size = new Size(55, 25);
             lblColor.TabIndex = 1;
@@ -60,7 +61,7 @@
             // lblMarca
             // 
             lblMarca.AutoSize = true;
-            lblMarca.Location = new Point(29, 156);
+            lblMarca.Location = new Point(23, 192);
             lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(60, 25);
             lblMarca.TabIndex = 2;
@@ -70,7 +71,7 @@
             // 
             cbCalibre.FormattingEnabled = true;
             cbCalibre.Items.AddRange(new object[] { "4", "2", "6", "8", "12", "10", "14", "1/0", "2/0", "3/0", "4/0", "" });
-            cbCalibre.Location = new Point(118, 68);
+            cbCalibre.Location = new Point(118, 97);
             cbCalibre.Name = "cbCalibre";
             cbCalibre.Size = new Size(212, 33);
             cbCalibre.TabIndex = 3;
@@ -79,7 +80,7 @@
             // 
             cbColor.FormattingEnabled = true;
             cbColor.Items.AddRange(new object[] { "BLANCO", "NEGRO", "ROJO", "VERDE", "AZUL" });
-            cbColor.Location = new Point(118, 115);
+            cbColor.Location = new Point(118, 148);
             cbColor.Name = "cbColor";
             cbColor.Size = new Size(212, 33);
             cbColor.TabIndex = 4;
@@ -88,14 +89,14 @@
             // 
             cbMarca.FormattingEnabled = true;
             cbMarca.Items.AddRange(new object[] { "Todos", "Condulac", "Condumex", "Viakon" });
-            cbMarca.Location = new Point(118, 153);
+            cbMarca.Location = new Point(118, 192);
             cbMarca.Name = "cbMarca";
             cbMarca.Size = new Size(212, 33);
             cbMarca.TabIndex = 5;
             // 
             // btBuscarPrecio
             // 
-            btBuscarPrecio.Location = new Point(118, 192);
+            btBuscarPrecio.Location = new Point(118, 243);
             btBuscarPrecio.Name = "btBuscarPrecio";
             btBuscarPrecio.Size = new Size(212, 34);
             btBuscarPrecio.TabIndex = 6;
@@ -106,18 +107,25 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 262);
+            dataGridView1.Location = new Point(23, 437);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(850, 225);
+            dataGridView1.Size = new Size(952, 261);
             dataGridView1.TabIndex = 7;
+            // 
+            // mySqlCommand1
+            // 
+            mySqlCommand1.CacheAge = 0;
+            mySqlCommand1.Connection = null;
+            mySqlCommand1.EnableCaching = false;
+            mySqlCommand1.Transaction = null;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(905, 499);
+            ClientSize = new Size(1129, 761);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
@@ -143,5 +151,6 @@
         private ComboBox cbMarca;
         private Button btBuscarPrecio;
         private DataGridView dataGridView1;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }
