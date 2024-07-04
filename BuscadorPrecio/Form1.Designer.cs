@@ -138,7 +138,7 @@
             lblFecha.AutoSize = true;
             lblFecha.Font = new Font("Yu Gothic UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblFecha.ForeColor = SystemColors.ControlLightLight;
-            lblFecha.Location = new Point(84, 28);
+            lblFecha.Location = new Point(192, 28);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(62, 48);
             lblFecha.TabIndex = 1;
@@ -150,7 +150,7 @@
             lblHora.AutoSize = true;
             lblHora.Font = new Font("Yu Gothic UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblHora.ForeColor = SystemColors.ControlLightLight;
-            lblHora.Location = new Point(908, 28);
+            lblHora.Location = new Point(1463, 28);
             lblHora.Name = "lblHora";
             lblHora.Size = new Size(62, 48);
             lblHora.TabIndex = 0;
@@ -193,6 +193,7 @@
             Controls.Add(panelInicio);
             Name = "Form1";
             Text = "Inicio";
+            Load += Form1_Load;
             panelInicio.ResumeLayout(false);
             panelInicio.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);

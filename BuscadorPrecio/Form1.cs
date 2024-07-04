@@ -30,8 +30,7 @@ namespace BuscadorPrecio
             string tipo = cbCables.Text;
             if (tipo == "Cable Cu. THHW-LS, 90°C, 600V, Cal.")
             {
-                Form ventanaCableTH = new Form2();
-                ventanaCableTH.Show();
+                abrirVentanaCableCu(new Form2());
 
             }
             else if (tipo == "Cable multiconductor de alambre Cu ARMORFLEX")
@@ -68,6 +67,23 @@ namespace BuscadorPrecio
             cbSoporteria.Visible = true;
             btIniciarSup.Visible = true;
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abrirVentanaCableCu (object abrirVentanaCableCuu)
+        {
+            if (this.panel1.Controls.Count > 0)
+                this.panel1.Controls.RemoveAt(0);
+            Form abrirVentanaCu = abrirVentanaCableCuu as Form2;
+            abrirVentanaCu.TopLevel = false;
+            abrirVentanaCu.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(abrirVentanaCu);
+            this.panel1.Tag = abrirVentanaCu;
+            abrirVentanaCu.Show();
         }
     }
 }
