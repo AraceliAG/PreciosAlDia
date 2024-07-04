@@ -45,11 +45,12 @@
             btBuscarPrecio.TabIndex = 13;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = true;
+            btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // cbMarca
             // 
             cbMarca.FormattingEnabled = true;
-            cbMarca.Items.AddRange(new object[] { "Todas", "CONDULAC", "INDIANA", "" });
+            cbMarca.Items.AddRange(new object[] { "Todos", "CONDULAC", "INDIANA" });
             cbMarca.Location = new Point(120, 106);
             cbMarca.Name = "cbMarca";
             cbMarca.Size = new Size(212, 33);

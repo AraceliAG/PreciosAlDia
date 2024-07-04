@@ -1,6 +1,6 @@
 ﻿namespace BuscadorPrecio
 {
-    partial class CableMulti
+    partial class cableDesn
     {
         /// <summary>
         /// Required designer variable.
@@ -28,106 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             btBuscarPrecio = new Button();
             cbMarca = new ComboBox();
-            cbCaracyteristica = new ComboBox();
+            cbColor = new ComboBox();
             cbCalibre = new ComboBox();
             lblMarca = new Label();
-            lblCaracteristica = new Label();
+            lblColor = new Label();
             lblCalibre = new Label();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 203);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(850, 225);
-            dataGridView1.TabIndex = 15;
-            // 
             // btBuscarPrecio
             // 
-            btBuscarPrecio.Location = new Point(122, 148);
+            btBuscarPrecio.Location = new Point(120, 177);
             btBuscarPrecio.Name = "btBuscarPrecio";
             btBuscarPrecio.Size = new Size(212, 34);
-            btBuscarPrecio.TabIndex = 14;
+            btBuscarPrecio.TabIndex = 13;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = true;
-            btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // cbMarca
             // 
             cbMarca.FormattingEnabled = true;
-            cbMarca.Items.AddRange(new object[] { "Todos", "VIAKON" });
-            cbMarca.Location = new Point(122, 109);
+            cbMarca.Items.AddRange(new object[] { "Todos", "Condulac", "Condumex", "Viakon" });
+            cbMarca.Location = new Point(120, 126);
             cbMarca.Name = "cbMarca";
             cbMarca.Size = new Size(212, 33);
-            cbMarca.TabIndex = 13;
+            cbMarca.TabIndex = 12;
             // 
-            // cbCaracyteristica
+            // cbColor
             // 
-            cbCaracyteristica.FormattingEnabled = true;
-            cbCaracyteristica.Items.AddRange(new object[] { "Rollo Metálico 76.2m", "Métalico" });
-            cbCaracyteristica.Location = new Point(122, 71);
-            cbCaracyteristica.Name = "cbCaracyteristica";
-            cbCaracyteristica.Size = new Size(212, 33);
-            cbCaracyteristica.TabIndex = 12;
+            cbColor.FormattingEnabled = true;
+            cbColor.Items.AddRange(new object[] { "BLANCO", "NEGRO", "ROJO", "VERDE", "AZUL" });
+            cbColor.Location = new Point(120, 82);
+            cbColor.Name = "cbColor";
+            cbColor.Size = new Size(212, 33);
+            cbColor.TabIndex = 11;
             // 
             // cbCalibre
             // 
             cbCalibre.FormattingEnabled = true;
-            cbCalibre.Items.AddRange(new object[] { "2x14 + T", "3x14 + T", "4x14 + T", "2x6 + T", "3x6 + T", "4x6+ T", "2x14 + T" });
-            cbCalibre.Location = new Point(122, 24);
+            cbCalibre.Items.AddRange(new object[] { "4", "2", "6", "8", "12", "10", "14", "1/0", "2/0", "3/0", "4/0", "" });
+            cbCalibre.Location = new Point(120, 31);
             cbCalibre.Name = "cbCalibre";
             cbCalibre.Size = new Size(212, 33);
-            cbCalibre.TabIndex = 11;
+            cbCalibre.TabIndex = 10;
             // 
             // lblMarca
             // 
             lblMarca.AutoSize = true;
-            lblMarca.Location = new Point(33, 112);
+            lblMarca.Location = new Point(25, 126);
             lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(60, 25);
-            lblMarca.TabIndex = 10;
+            lblMarca.TabIndex = 9;
             lblMarca.Text = "Marca";
             // 
-            // lblCaracteristica
+            // lblColor
             // 
-            lblCaracteristica.AutoSize = true;
-            lblCaracteristica.Location = new Point(12, 71);
-            lblCaracteristica.Name = "lblCaracteristica";
-            lblCaracteristica.Size = new Size(115, 25);
-            lblCaracteristica.TabIndex = 9;
-            lblCaracteristica.Text = "Característica";
+            lblColor.AutoSize = true;
+            lblColor.Location = new Point(30, 82);
+            lblColor.Name = "lblColor";
+            lblColor.Size = new Size(55, 25);
+            lblColor.TabIndex = 8;
+            lblColor.Text = "Color";
             // 
             // lblCalibre
             // 
             lblCalibre.AutoSize = true;
-            lblCalibre.Location = new Point(32, 20);
+            lblCalibre.Location = new Point(30, 31);
             lblCalibre.Name = "lblCalibre";
             lblCalibre.Size = new Size(66, 25);
-            lblCalibre.TabIndex = 8;
+            lblCalibre.TabIndex = 7;
             lblCalibre.Text = "Calibre";
             // 
-            // CableMulti
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(30, 250);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(772, 225);
+            dataGridView1.TabIndex = 14;
+            // 
+            // cableDesn
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(924, 450);
+            ClientSize = new Size(877, 524);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
-            Controls.Add(cbCaracyteristica);
+            Controls.Add(cbColor);
             Controls.Add(cbCalibre);
             Controls.Add(lblMarca);
-            Controls.Add(lblCaracteristica);
+            Controls.Add(lblColor);
             Controls.Add(lblCalibre);
-            Name = "CableMulti";
-            Text = "CableMulti";
+            Name = "cableDesn";
+            Text = "cableDesn";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -135,13 +134,13 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
         private Button btBuscarPrecio;
         private ComboBox cbMarca;
-        private ComboBox cbCaracyteristica;
+        private ComboBox cbColor;
         private ComboBox cbCalibre;
         private Label lblMarca;
-        private Label lblCaracteristica;
+        private Label lblColor;
         private Label lblCalibre;
+        private DataGridView dataGridView1;
     }
 }
