@@ -16,12 +16,13 @@ namespace BuscadorPrecio
             DataTable resultados = DbUtils.ExecuteQuery(query);
 
             // Aquí puedes procesar los resultados (por ejemplo, mostrar en un DataGridView)
-            dataGridView1.DataSource = resultados;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             cbCables.Visible = true;
+            btnIniciar.Visible = true;
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -49,6 +50,24 @@ namespace BuscadorPrecio
         {
             Form insercion = new Insercion();
             insercion.Show();
+        }
+
+        private void timerHyF_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToShortTimeString();
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btSoportaria_Click(object sender, EventArgs e)
+        {
+            cbSoporteria.Visible = true;
+            btIniciarSup.Visible = true;
+
         }
     }
 }
