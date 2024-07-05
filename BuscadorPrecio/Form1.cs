@@ -25,26 +25,43 @@ namespace BuscadorPrecio
             btnIniciar.Visible = true;
         }
 
+        private void AbrirVentana(Form form)
+        {
+            if (this.panel1.Controls.Count > 0)
+                this.panel1.Controls.RemoveAt(0);
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(form);
+            this.panel1.Tag = form;
+            form.Show();
+        }
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             string tipo = cbCables.Text;
-            if (tipo == "Cable Cu. THHW-LS, 90°C, 600V, Cal.")
-            {
-                abrirVentanaCableCu(new Form2());
+            Form formToOpen = null;
 
-            }
-            else if (tipo == "Cable multiconductor de alambre Cu ARMORFLEX")
+            switch (tipo)
             {
-                Form ventanaCableMulti = new CableMulti();
-                ventanaCableMulti.Show();
+                case "Cable Cu. THHW-LS, 90°C, 600V, Cal.":
+                    formToOpen = new Form2();
+                    break;
+                case "Cable multiconductor de alambre Cu ARMORFLEX":
+                    formToOpen = new CableMulti();
+                    break;
+                case "Cable de uso rudo THHW":
+                    formToOpen = new CableRudo();
+                    break;
+                case "Cable Cu. Desnudo, semiduro, Cal.":
+                    formToOpen = new cableDesn();
+                    break;
+                default:
+                    MessageBox.Show("Seleccione un tipo de cable válido.");
+                    return;
             }
-            else if (tipo == "Cable de uso rudo THHW")
-            {
-                Form ventanaRudo = new CableRudo();
-                ventanaRudo.Show();
-            }
+
+            AbrirVentana(formToOpen);
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Form insercion = new Insercion();
@@ -55,11 +72,6 @@ namespace BuscadorPrecio
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
-        }
-
-        private void lblFecha_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btSoportaria_Click(object sender, EventArgs e)
@@ -73,17 +85,14 @@ namespace BuscadorPrecio
         {
 
         }
-
-        private void abrirVentanaCableCu(object abrirVentanaCableCuu)
+        private void lblFecha_Click(object sender, EventArgs e)
         {
-            if (this.panel1.Controls.Count > 0)
-                this.panel1.Controls.RemoveAt(0);
-            Form abrirVentanaCu = abrirVentanaCableCuu as Form2;
-            abrirVentanaCu.TopLevel = false;
-            abrirVentanaCu.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(abrirVentanaCu);
-            this.panel1.Tag = abrirVentanaCu;
-            abrirVentanaCu.Show();
+
+        }
+
+        private void btIniciarSup_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
