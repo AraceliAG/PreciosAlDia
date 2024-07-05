@@ -30,12 +30,14 @@
         {
             btBuscarPrecio = new Button();
             cbMarca = new ComboBox();
-            cbColor = new ComboBox();
+            cbUnidad = new ComboBox();
             cbCalibre = new ComboBox();
             lblMarca = new Label();
             lblColor = new Label();
             lblCalibre = new Label();
             dataGridView1 = new DataGridView();
+            lblTamanio = new Label();
+            cbTamanio = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -47,29 +49,31 @@
             btBuscarPrecio.TabIndex = 13;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = true;
+            btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // cbMarca
             // 
             cbMarca.FormattingEnabled = true;
-            cbMarca.Items.AddRange(new object[] { "Todos", "Condulac", "Condumex", "Viakon" });
+            cbMarca.Items.AddRange(new object[] { "Todos", "IUSA", "kg/km" });
             cbMarca.Location = new Point(120, 126);
             cbMarca.Name = "cbMarca";
             cbMarca.Size = new Size(212, 33);
             cbMarca.TabIndex = 12;
             // 
-            // cbColor
+            // cbUnidad
             // 
-            cbColor.FormattingEnabled = true;
-            cbColor.Items.AddRange(new object[] { "BLANCO", "NEGRO", "ROJO", "VERDE", "AZUL" });
-            cbColor.Location = new Point(120, 82);
-            cbColor.Name = "cbColor";
-            cbColor.Size = new Size(212, 33);
-            cbColor.TabIndex = 11;
+            cbUnidad.FormattingEnabled = true;
+            cbUnidad.Items.AddRange(new object[] { "m", "kg" });
+            cbUnidad.Location = new Point(120, 82);
+            cbUnidad.Name = "cbUnidad";
+            cbUnidad.Size = new Size(212, 33);
+            cbUnidad.TabIndex = 11;
+            cbUnidad.SelectedIndexChanged += cbUnidad_SelectedIndexChanged;
             // 
             // cbCalibre
             // 
             cbCalibre.FormattingEnabled = true;
-            cbCalibre.Items.AddRange(new object[] { "4", "2", "6", "8", "12", "10", "14", "1/0", "2/0", "3/0", "4/0", "" });
+            cbCalibre.Items.AddRange(new object[] { "12", "10", "8", "6", "4", "2", "1/0", "1/1", "1/2" });
             cbCalibre.Location = new Point(120, 31);
             cbCalibre.Name = "cbCalibre";
             cbCalibre.Size = new Size(212, 33);
@@ -89,9 +93,9 @@
             lblColor.AutoSize = true;
             lblColor.Location = new Point(30, 82);
             lblColor.Name = "lblColor";
-            lblColor.Size = new Size(55, 25);
+            lblColor.Size = new Size(69, 25);
             lblColor.TabIndex = 8;
-            lblColor.Text = "Color";
+            lblColor.Text = "Unidad";
             // 
             // lblCalibre
             // 
@@ -112,15 +116,37 @@
             dataGridView1.Size = new Size(772, 225);
             dataGridView1.TabIndex = 14;
             // 
+            // lblTamanio
+            // 
+            lblTamanio.AutoSize = true;
+            lblTamanio.Location = new Point(338, 85);
+            lblTamanio.Name = "lblTamanio";
+            lblTamanio.Size = new Size(74, 25);
+            lblTamanio.TabIndex = 15;
+            lblTamanio.Text = "Tamaño";
+            lblTamanio.Visible = false;
+            // 
+            // cbTamanio
+            // 
+            cbTamanio.FormattingEnabled = true;
+            cbTamanio.Items.AddRange(new object[] { "29.99", "47.7", "75.87", "120.6", "191.8", "304.9", "484.9" });
+            cbTamanio.Location = new Point(418, 82);
+            cbTamanio.Name = "cbTamanio";
+            cbTamanio.Size = new Size(75, 33);
+            cbTamanio.TabIndex = 16;
+            cbTamanio.Visible = false;
+            // 
             // cableDesn
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(877, 524);
+            Controls.Add(cbTamanio);
+            Controls.Add(lblTamanio);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
-            Controls.Add(cbColor);
+            Controls.Add(cbUnidad);
             Controls.Add(cbCalibre);
             Controls.Add(lblMarca);
             Controls.Add(lblColor);
@@ -136,11 +162,13 @@
 
         private Button btBuscarPrecio;
         private ComboBox cbMarca;
-        private ComboBox cbColor;
+        private ComboBox cbUnidad;
         private ComboBox cbCalibre;
         private Label lblMarca;
         private Label lblColor;
         private Label lblCalibre;
         private DataGridView dataGridView1;
+        private Label lblTamanio;
+        private ComboBox cbTamanio;
     }
 }

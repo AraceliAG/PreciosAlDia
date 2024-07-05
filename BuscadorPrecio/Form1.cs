@@ -52,6 +52,9 @@ namespace BuscadorPrecio
                 case "Cable de uso rudo THHW":
                     formToOpen = new CableRudo();
                     break;
+                case "Cable Cu. Desnudo, semiduro, Cal.":
+                    formToOpen = new cableDesn();
+                    break;
                 default:
                     MessageBox.Show("Seleccione un tipo de cable válido.");
                     return;
@@ -71,11 +74,6 @@ namespace BuscadorPrecio
             lblFecha.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void lblFecha_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btSoportaria_Click(object sender, EventArgs e)
         {
             cbSoporteria.Visible = true;
@@ -87,7 +85,14 @@ namespace BuscadorPrecio
         {
 
         }
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
 
-       
+        }
+
+        private void btIniciarSup_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -123,6 +123,7 @@
             btIniciarSup.Text = "Iniciar";
             btIniciarSup.UseVisualStyleBackColor = false;
             btIniciarSup.Visible = false;
+            btIniciarSup.Click += btIniciarSup_Click;
             // 
             // panelInicio
             // 
