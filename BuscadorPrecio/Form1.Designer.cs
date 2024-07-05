@@ -42,6 +42,7 @@
             timerHyF = new System.Windows.Forms.Timer(components);
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel1 = new Panel();
+            flowLayoutPanel2 = new FlowLayoutPanel();
             panelInicio.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -177,10 +178,18 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(303, 113);
+            panel1.Location = new Point(305, 114);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1598, 908);
+            panel1.Size = new Size(1337, 841);
             panel1.TabIndex = 10;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.BackColor = Color.FromArgb(255, 255, 192);
+            flowLayoutPanel2.Location = new Point(1648, 114);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(238, 898);
+            flowLayoutPanel2.TabIndex = 11;
             // 
             // Form1
             // 
@@ -188,6 +197,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1898, 1024);
+            Controls.Add(flowLayoutPanel2);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panelInicio);
@@ -213,5 +223,6 @@
         private System.Windows.Forms.Timer timerHyF;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel1;
+        private FlowLayoutPanel flowLayoutPanel2;
     }
 }

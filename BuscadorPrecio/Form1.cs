@@ -53,7 +53,7 @@ namespace BuscadorPrecio
 
         private void timerHyF_Tick(object sender, EventArgs e)
         {
-            lblHora.Text = DateTime.Now.ToShortTimeString();
+            lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
         }
 
@@ -74,7 +74,7 @@ namespace BuscadorPrecio
 
         }
 
-        private void abrirVentanaCableCu (object abrirVentanaCableCuu)
+        private void abrirVentanaCableCu(object abrirVentanaCableCuu)
         {
             if (this.panel1.Controls.Count > 0)
                 this.panel1.Controls.RemoveAt(0);

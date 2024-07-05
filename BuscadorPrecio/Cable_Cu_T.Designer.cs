@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblCalibre = new Label();
             lblColor = new Label();
             lblMarca = new Label();
@@ -44,27 +45,30 @@
             // lblCalibre
             // 
             lblCalibre.AutoSize = true;
-            lblCalibre.Location = new Point(28, 97);
+            lblCalibre.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCalibre.Location = new Point(23, 94);
             lblCalibre.Name = "lblCalibre";
-            lblCalibre.Size = new Size(66, 25);
+            lblCalibre.Size = new Size(88, 32);
             lblCalibre.TabIndex = 0;
             lblCalibre.Text = "Calibre";
             // 
             // lblColor
             // 
             lblColor.AutoSize = true;
-            lblColor.Location = new Point(28, 148);
+            lblColor.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblColor.Location = new Point(23, 149);
             lblColor.Name = "lblColor";
-            lblColor.Size = new Size(55, 25);
+            lblColor.Size = new Size(71, 32);
             lblColor.TabIndex = 1;
             lblColor.Text = "Color";
             // 
             // lblMarca
             // 
             lblMarca.AutoSize = true;
+            lblMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblMarca.Location = new Point(23, 192);
             lblMarca.Name = "lblMarca";
-            lblMarca.Size = new Size(60, 25);
+            lblMarca.Size = new Size(79, 32);
             lblMarca.TabIndex = 2;
             lblMarca.Text = "Marca";
             // 
@@ -74,7 +78,7 @@
             cbCalibre.Items.AddRange(new object[] { "4", "2", "6", "8", "12", "10", "14", "1/0", "2/0", "3/0", "4/0", "" });
             cbCalibre.Location = new Point(118, 97);
             cbCalibre.Name = "cbCalibre";
-            cbCalibre.Size = new Size(212, 33);
+            cbCalibre.Size = new Size(230, 33);
             cbCalibre.TabIndex = 3;
             // 
             // cbColor
@@ -83,7 +87,7 @@
             cbColor.Items.AddRange(new object[] { "BLANCO", "NEGRO", "ROJO", "VERDE", "AZUL" });
             cbColor.Location = new Point(118, 148);
             cbColor.Name = "cbColor";
-            cbColor.Size = new Size(212, 33);
+            cbColor.Size = new Size(230, 33);
             cbColor.TabIndex = 4;
             // 
             // cbMarca
@@ -92,17 +96,22 @@
             cbMarca.Items.AddRange(new object[] { "Todos", "Condulac", "Condumex", "Viakon" });
             cbMarca.Location = new Point(118, 192);
             cbMarca.Name = "cbMarca";
-            cbMarca.Size = new Size(212, 33);
+            cbMarca.Size = new Size(230, 33);
             cbMarca.TabIndex = 5;
             // 
             // btBuscarPrecio
             // 
-            btBuscarPrecio.Location = new Point(118, 243);
+            btBuscarPrecio.BackColor = Color.Yellow;
+            btBuscarPrecio.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btBuscarPrecio.Image = (Image)resources.GetObject("btBuscarPrecio.Image");
+            btBuscarPrecio.ImageAlign = ContentAlignment.TopCenter;
+            btBuscarPrecio.Location = new Point(148, 247);
             btBuscarPrecio.Name = "btBuscarPrecio";
-            btBuscarPrecio.Size = new Size(212, 34);
+            btBuscarPrecio.Size = new Size(162, 60);
             btBuscarPrecio.TabIndex = 6;
             btBuscarPrecio.Text = "Buscar";
-            btBuscarPrecio.UseVisualStyleBackColor = true;
+            btBuscarPrecio.TextAlign = ContentAlignment.BottomCenter;
+            btBuscarPrecio.UseVisualStyleBackColor = false;
             btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // dataGridView1
@@ -110,14 +119,14 @@
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Info;
-            dataGridViewCellStyle1.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Info;
+            dataGridViewCellStyle2.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.GridColor = Color.FromArgb(255, 128, 0);
             dataGridView1.Location = new Point(28, 346);
             dataGridView1.Name = "dataGridView1";
@@ -137,6 +146,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1129, 761);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
@@ -147,7 +157,7 @@
             Controls.Add(lblColor);
             Controls.Add(lblCalibre);
             Name = "Form2";
-            Text = "Cable_Cu_T";
+            Text = "Cable Cu. THHW-LS";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
