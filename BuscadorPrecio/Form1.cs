@@ -80,6 +80,13 @@ namespace BuscadorPrecio
             btIniciarSup.Visible = true;
 
         }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Form ventanaAgregar = new Agregar();
+            AbrirVentana(ventanaAgregar);
+
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -92,7 +99,24 @@ namespace BuscadorPrecio
 
         private void btIniciarSup_Click(object sender, EventArgs e)
         {
+            string tipo = cbSoporteria.Text;
+            Form formToOpen = null;
 
+            switch (tipo)
+            {
+                case "Abrazadera unicanal":
+                    formToOpen = new Abrazadera();
+                    break;
+                default:
+                    MessageBox.Show("Vuelve a intentarlo");
+                    return;
+            }
+
+            AbrirVentana(formToOpen);
         }
+
+    
+
+      
     }
 }

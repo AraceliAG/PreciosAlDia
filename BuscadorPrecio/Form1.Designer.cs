@@ -37,12 +37,15 @@
             cbSoporteria = new ComboBox();
             btIniciarSup = new Button();
             panelInicio = new Panel();
+            btEliminar = new Button();
+            btActualizar = new Button();
+            btnAgregar = new Button();
             lblFecha = new Label();
             lblHora = new Label();
             timerHyF = new System.Windows.Forms.Timer(components);
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel1 = new Panel();
-            flowLayoutPanel2 = new FlowLayoutPanel();
+            flowLCompras = new FlowLayoutPanel();
             panelInicio.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -128,6 +131,9 @@
             // panelInicio
             // 
             panelInicio.BackColor = SystemColors.ActiveCaptionText;
+            panelInicio.Controls.Add(btEliminar);
+            panelInicio.Controls.Add(btActualizar);
+            panelInicio.Controls.Add(btnAgregar);
             panelInicio.Controls.Add(lblFecha);
             panelInicio.Controls.Add(lblHora);
             panelInicio.Location = new Point(-1, 1);
@@ -135,12 +141,46 @@
             panelInicio.Size = new Size(1902, 104);
             panelInicio.TabIndex = 8;
             // 
+            // btEliminar
+            // 
+            btEliminar.BackColor = Color.Yellow;
+            btEliminar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btEliminar.Location = new Point(1136, 11);
+            btEliminar.Name = "btEliminar";
+            btEliminar.Size = new Size(166, 83);
+            btEliminar.TabIndex = 3;
+            btEliminar.Text = "Eliminar";
+            btEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btActualizar
+            // 
+            btActualizar.BackColor = Color.Yellow;
+            btActualizar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btActualizar.Location = new Point(877, 11);
+            btActualizar.Name = "btActualizar";
+            btActualizar.Size = new Size(166, 83);
+            btActualizar.TabIndex = 4;
+            btActualizar.Text = "Actualizar";
+            btActualizar.UseVisualStyleBackColor = false;
+            // 
+            // btnAgregar
+            // 
+            btnAgregar.BackColor = Color.Yellow;
+            btnAgregar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAgregar.Location = new Point(611, 11);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(166, 83);
+            btnAgregar.TabIndex = 2;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click;
+            // 
             // lblFecha
             // 
             lblFecha.AutoSize = true;
             lblFecha.Font = new Font("Yu Gothic UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblFecha.ForeColor = SystemColors.ControlLightLight;
-            lblFecha.Location = new Point(192, 28);
+            lblFecha.Location = new Point(22, 28);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(62, 48);
             lblFecha.TabIndex = 1;
@@ -152,7 +192,7 @@
             lblHora.AutoSize = true;
             lblHora.Font = new Font("Yu Gothic UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblHora.ForeColor = SystemColors.ControlLightLight;
-            lblHora.Location = new Point(1463, 28);
+            lblHora.Location = new Point(1526, 28);
             lblHora.Name = "lblHora";
             lblHora.Size = new Size(62, 48);
             lblHora.TabIndex = 0;
@@ -184,13 +224,13 @@
             panel1.Size = new Size(1337, 841);
             panel1.TabIndex = 10;
             // 
-            // flowLayoutPanel2
+            // flowLCompras
             // 
-            flowLayoutPanel2.BackColor = Color.FromArgb(255, 255, 192);
-            flowLayoutPanel2.Location = new Point(1648, 114);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(238, 898);
-            flowLayoutPanel2.TabIndex = 11;
+            flowLCompras.BackColor = Color.Yellow;
+            flowLCompras.Location = new Point(1648, 114);
+            flowLCompras.Name = "flowLCompras";
+            flowLCompras.Size = new Size(238, 898);
+            flowLCompras.TabIndex = 11;
             // 
             // Form1
             // 
@@ -198,7 +238,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1898, 1024);
-            Controls.Add(flowLayoutPanel2);
+            Controls.Add(flowLCompras);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panelInicio);
@@ -224,6 +264,9 @@
         private System.Windows.Forms.Timer timerHyF;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel1;
-        private FlowLayoutPanel flowLayoutPanel2;
+        private FlowLayoutPanel flowLCompras;
+        private Button btEliminar;
+        private Button btnAgregar;
+        private Button btActualizar;
     }
 }
