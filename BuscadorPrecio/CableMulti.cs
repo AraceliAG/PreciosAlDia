@@ -17,6 +17,8 @@ namespace BuscadorPrecio
             InitializeComponent();
         }
 
+        
+
         private void btBuscarPrecio_Click(object sender, EventArgs e)
         {
             string color = cbCaracyteristica.Text;
