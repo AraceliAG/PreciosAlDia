@@ -26,13 +26,8 @@ namespace BuscadorPrecio
         //    cbCalibre.Text = calibre;
 
         //}
-
-        private void btBuscarPrecio_Click(object sender, EventArgs e)
+        private void BuscadorGlobal(string calibre, string medida, string marca)
         {
-            string calibre = cbCalibre.Text;
-            string medida = cbMedidaMili.Text;
-            string marca = cbMarca.Text;
-
             if (marca == "Todos")
             {
                 // Consulta SQL para obtener el precio más bajo de cada marca
@@ -121,7 +116,79 @@ namespace BuscadorPrecio
                 dataGridView1.Columns["precio_formateado"].HeaderText = "Precio";
             }
 
+
+        }
+        private void btBuscarPrecio_Click(object sender, EventArgs e)
+        {
+            string calibre = cbCalibre.Text;
+            string medida = cbMedidaMili.Text;
+            string marca = cbMarca.Text;
+
+            BuscadorGlobal(calibre, medida, marca);
+
+            
             //limpieza();
+
+        }
+        private void btnBuscarP_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void btAbrzaderdaUnical_Click(object sender, EventArgs e)
+        {
+
+            lblCalibre.Visible = true;
+            lblMarca.Visible = true;
+            lblMedida.Visible = true;
+            btBuscarPrecio.Visible = true;
+
+            cbCalibre.Visible = true;
+            cbMarca.Visible = true;
+            cbMedidaMili.Visible = true;
+
+
+
+
+        }
+
+        private void btnAbrazaderaOmega_Click(object sender, EventArgs e)
+        {
+            lblCalibreO.Visible = true;
+            lblMarcaO.Visible = true;
+            lblMedidaO.Visible = true;
+            btnBucarO.Visible = true;
+
+            cbCalibreOmega.Visible = true;
+            cbMarcaOmega.Visible = true;
+            cbMedidaOmega.Visible = true;
+
+        }
+
+
+
+        private void btnAbrazaderaPera_Click(object sender, EventArgs e)
+        {
+            lblCalibreP.Visible = true;
+            lblMarcaP.Visible = true;
+            lblMedidaP.Visible = true;
+            btnBuscarP.Visible = true;
+
+            cbCalibrePera.Visible = true;
+            cbMarcaPera.Visible = true;
+            cbMedidaPera.Visible = true;
+
+        }
+
+        private void btnBucarO_Click(object sender, EventArgs e)
+        {
+            string calibreO = cbCalibreOmega.Text;
+            string medidaO = cbMedidaOmega.Text;
+            string marcaO = cbMarcaOmega.Text;
+
+            BuscadorGlobal(calibreO, medidaO, marcaO);
 
         }
     }
