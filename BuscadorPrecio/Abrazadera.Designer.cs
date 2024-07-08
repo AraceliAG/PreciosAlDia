@@ -242,7 +242,7 @@
             // cbCalibrePera
             // 
             cbCalibrePera.FormattingEnabled = true;
-            cbCalibrePera.Items.AddRange(new object[] { "1/2\"", "3/4\"", "1\"", "1 1/4\"", "1 1/2\"", "2\"" });
+            cbCalibrePera.Items.AddRange(new object[] { "1/2\"", "1/2\"", "3/4\"", "3/4\"", "1\"", "1\"", "1 1/4\"" });
             cbCalibrePera.Location = new Point(731, 83);
             cbCalibrePera.Name = "cbCalibrePera";
             cbCalibrePera.Size = new Size(150, 33);

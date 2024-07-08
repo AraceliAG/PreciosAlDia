@@ -52,7 +52,7 @@
             // 
             // btnCables
             // 
-            btnCables.BackColor = Color.Yellow;
+            btnCables.BackColor = SystemColors.ActiveCaption;
             btnCables.BackgroundImage = (Image)resources.GetObject("btnCables.BackgroundImage");
             btnCables.BackgroundImageLayout = ImageLayout.Zoom;
             btnCables.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -78,7 +78,7 @@
             // 
             // btnIniciar
             // 
-            btnIniciar.BackColor = Color.Yellow;
+            btnIniciar.BackColor = SystemColors.ActiveCaption;
             btnIniciar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnIniciar.Location = new Point(3, 156);
             btnIniciar.Name = "btnIniciar";
@@ -91,7 +91,7 @@
             // 
             // btSoportaria
             // 
-            btSoportaria.BackColor = Color.Yellow;
+            btSoportaria.BackColor = SystemColors.ActiveCaption;
             btSoportaria.BackgroundImage = (Image)resources.GetObject("btSoportaria.BackgroundImage");
             btSoportaria.BackgroundImageLayout = ImageLayout.Center;
             btSoportaria.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -117,7 +117,7 @@
             // 
             // btIniciarSup
             // 
-            btIniciarSup.BackColor = Color.Yellow;
+            btIniciarSup.BackColor = SystemColors.ActiveCaption;
             btIniciarSup.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btIniciarSup.Location = new Point(3, 356);
             btIniciarSup.Name = "btIniciarSup";
@@ -143,7 +143,7 @@
             // 
             // btEliminar
             // 
-            btEliminar.BackColor = Color.Yellow;
+            btEliminar.BackColor = SystemColors.ActiveCaption;
             btEliminar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btEliminar.Location = new Point(1136, 11);
             btEliminar.Name = "btEliminar";
@@ -154,7 +154,7 @@
             // 
             // btActualizar
             // 
-            btActualizar.BackColor = Color.Yellow;
+            btActualizar.BackColor = SystemColors.ActiveCaption;
             btActualizar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btActualizar.Location = new Point(877, 11);
             btActualizar.Name = "btActualizar";
@@ -165,7 +165,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.BackColor = Color.Yellow;
+            btnAgregar.BackColor = SystemColors.ActiveCaption;
             btnAgregar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnAgregar.Location = new Point(611, 11);
             btnAgregar.Name = "btnAgregar";
@@ -226,7 +226,7 @@
             // 
             // flowLCompras
             // 
-            flowLCompras.BackColor = Color.Yellow;
+            flowLCompras.BackColor = SystemColors.ActiveCaption;
             flowLCompras.Location = new Point(1648, 114);
             flowLCompras.Name = "flowLCompras";
             flowLCompras.Size = new Size(238, 898);
