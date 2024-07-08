@@ -21,27 +21,27 @@ namespace BuscadorPrecio
         }
 
 
-        private void limpieza()
-        {
-            string nombre = "";
-            string calibre = "";
-            string tipo_medida = "";
-            string color = "";
-            string marca = "";
-            string servicio = "";
-            string unidad = "";
-            string precio1 = "";
-            string proveedor = "";
-            string fecha1 = "";
+        //private void limpieza()
+        //{
+        //    string nombre = "";
+        //    string calibre = "";
+        //    string tipo_medida = "";
+        //    string color = "";
+        //    string marca = "";
+        //    string servicio = "";
+        //    string unidad = "";
+        //    string precio1 = "";
+        //    string proveedor = "";
+        //    string fecha1 = "";
 
-            cbCalibre.Text = calibre;
-            cbColor.Text = color;
-            cbMarca.Text = marca;
-            txtPrecio.Text = precio1;
-            txtProveedor.Text = proveedor;
-            txtFecha.Text = fecha1;
+        //    cbCalibre.Text = calibre;
+        //    cbColor.Text = color;
+        //    cbMarca.Text = marca;
+        //    txtPrecio.Text = precio1;
+        //    txtProveedor.Text = proveedor;
+        //    txtFecha.Text = fecha1;
 
-        }
+        //}
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -78,7 +78,7 @@ namespace BuscadorPrecio
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Los datos se insertaron correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpieza();
+                    //limpieza();
                 }
                 else
                 {

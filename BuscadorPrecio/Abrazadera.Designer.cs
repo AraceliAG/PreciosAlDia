@@ -71,7 +71,7 @@
             // cbMedidaMili
             // 
             cbMedidaMili.FormattingEnabled = true;
-            cbMedidaMili.Items.AddRange(new object[] { "(16 mm)", "(21 mm)", "(27 mm)", "(35 mm)", "(41 mm)", "(53 mm)", "(63 mm)", "(78 mm)" });
+            cbMedidaMili.Items.AddRange(new object[] { "16 mm", "21 mm", "27 mm", "35 mm", "41 mm", "53 mm", "63 mm", "78 mm" });
             cbMedidaMili.Location = new Point(108, 72);
             cbMedidaMili.Name = "cbMedidaMili";
             cbMedidaMili.Size = new Size(212, 33);
