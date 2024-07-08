@@ -104,7 +104,7 @@ namespace BuscadorPrecio
 
             switch (tipo)
             {
-                case "Abrazadera unicanal":
+                case "Abrazaderas":
                     formToOpen = new Abrazadera();
                     break;
                 default:
@@ -115,8 +115,8 @@ namespace BuscadorPrecio
             AbrirVentana(formToOpen);
         }
 
-    
 
-      
+
+
     }
 }

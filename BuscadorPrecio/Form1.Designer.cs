@@ -108,7 +108,7 @@
             // 
             cbSoporteria.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbSoporteria.FormattingEnabled = true;
-            cbSoporteria.Items.AddRange(new object[] { "Abrazadera unicanal", "Unicanal galvanizado", "Tuerca p/unicanal", "Soporte para elevación de tubería en azotea.", "Soporte en muro/techo p/tubo" });
+            cbSoporteria.Items.AddRange(new object[] { "Abrazaderas", "Tuerca", "Soportes", "Unicanal galvanizado" });
             cbSoporteria.Location = new Point(3, 314);
             cbSoporteria.Name = "cbSoporteria";
             cbSoporteria.Size = new Size(297, 36);
