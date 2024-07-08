@@ -26,7 +26,7 @@ namespace BuscadorPrecio
         //    cbCalibre.Text = calibre;
 
         //}
-        private void BuscadorGlobal(string calibre, string medida, string marca)
+        private void BuscadorGlobal(string calibre, string medida, string marca, string nombre)
         {
             if (marca == "Todos")
             {
@@ -39,11 +39,13 @@ namespace BuscadorPrecio
                 FROM abrazaderas
                   WHERE tipo_medida = '{medida}'
                   AND calibre = '{calibre}'
+                  AND nombre like  '{nombre}%'
                 GROUP BY proveedor
             ) sub ON STR_TO_DATE(c.fecha, '%d/%m/%Y') = sub.max_fecha
                 WHERE c.proveedor = sub.proveedor
               AND c.tipo_medida = '{medida}'
               AND c.calibre = '{calibre}'
+                AND nombre like '{nombre}%'
             ORDER BY c.proveedor, c.precio ASC";
 
                 // Ejecutar la consulta utilizando DbUtils
@@ -77,12 +79,14 @@ namespace BuscadorPrecio
         WHERE c.marca = '{marca}'
           AND c.tipo_medida = '{medida}'
           AND c.calibre = '{calibre}'
+            AND nombre like '{nombre}%'
           AND STR_TO_DATE(c.fecha, '%d/%m/%Y') = (
             SELECT MAX(STR_TO_DATE(c2.fecha, '%d/%m/%Y'))
             FROM abrazaderas c2
             WHERE c2.marca = '{marca}'
               AND c2.tipo_medida = '{medida}'
               AND c2.calibre = '{calibre}'
+               AND nombre like '{nombre}%'
           )
         ORDER BY c.precio ASC
         LIMIT 1";
@@ -123,19 +127,15 @@ namespace BuscadorPrecio
             string calibre = cbCalibre.Text;
             string medida = cbMedidaMili.Text;
             string marca = cbMarca.Text;
+            string nombre = "Abrazadera unicanal";
 
-            BuscadorGlobal(calibre, medida, marca);
+            BuscadorGlobal(calibre, medida, marca, nombre);
 
-            
+
             //limpieza();
 
         }
-        private void btnBuscarP_Click(object sender, EventArgs e)
-        {
 
-
-
-        }
 
         private void btAbrzaderdaUnical_Click(object sender, EventArgs e)
         {
@@ -187,8 +187,22 @@ namespace BuscadorPrecio
             string calibreO = cbCalibreOmega.Text;
             string medidaO = cbMedidaOmega.Text;
             string marcaO = cbMarcaOmega.Text;
+            string nombreO = "Abrazadera Omega";
 
-            BuscadorGlobal(calibreO, medidaO, marcaO);
+            BuscadorGlobal(calibreO, medidaO, marcaO, nombreO);
+
+        }
+        private void btnBuscarP_Click(object sender, EventArgs e)
+        {
+
+            string calibreP = cbCalibrePera.Text;
+            string medidaP = cbMedidaPera.Text;
+            string marcaP = cbMarcaPera.Text;
+            string nombreP = "Abrazadera tipo";
+
+
+            BuscadorGlobal(calibreP, medidaP, marcaP, nombreP);
+
 
         }
     }
