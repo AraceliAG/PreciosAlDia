@@ -10,38 +10,46 @@ using System.Windows.Forms;
 
 namespace BuscadorPrecio
 {
-    public partial class CableMulti : Form
+    public partial class Abrazadera : Form
     {
-        public CableMulti()
+        public Abrazadera()
         {
             InitializeComponent();
         }
+        //private void limpieza()
+        //{
+        //    string calibre = "";
+        //    string medida = "";
+        //    string marca = "";
+        //    cbMarca.Text = marca;
+        //    cbMedidaMili.Text = medida;
+        //    cbCalibre.Text = calibre;
 
-
+        //}
 
         private void btBuscarPrecio_Click(object sender, EventArgs e)
         {
-            string color = cbCaracyteristica.Text;
-            string marca = cbMarca.Text;
             string calibre = cbCalibre.Text;
+            string medida = cbMedidaMili.Text;
+            string marca = cbMarca.Text;
 
             if (marca == "Todos")
             {
                 // Consulta SQL para obtener el precio más bajo de cada marca
                 string query = $@"
-                SELECT c.proveedor, c.marca, c.precio, c.fecha
-                FROM cables c
-                WHERE calibre = '{calibre}'
-                  AND color = '{color}'
-                  AND STR_TO_DATE (c.fecha, '%d/%m/%Y') = (
-                SELECT MAX(STR_TO_DATE(c2.fecha, '%d/%m/%Y'))
-                FROM cables c2
-                WHERE c2.proveedor = c.proveedor
-                  AND c2.nombre = c.nombre
-                  AND c2.calibre = c.calibre
-                  AND c2.color = c.color
-              )
-            ORDER BY c.proveedor, c.nombre, c.calibre, c.color, c.marca";
+                SELECT c.proveedor, c.marca, c.precio, STR_TO_DATE(c.fecha, '%d/%m/%Y') AS fecha_formateada
+                FROM abrazaderas c
+                JOIN (
+                SELECT proveedor, MAX(STR_TO_DATE(fecha, '%d/%m/%Y')) AS max_fecha
+                FROM abrazaderas
+                  WHERE tipo_medida = '{medida}'
+                  AND calibre = '{calibre}'
+                GROUP BY proveedor
+            ) sub ON STR_TO_DATE(c.fecha, '%d/%m/%Y') = sub.max_fecha
+                WHERE c.proveedor = sub.proveedor
+              AND c.tipo_medida = '{medida}'
+              AND c.calibre = '{calibre}'
+            ORDER BY c.proveedor, c.precio ASC";
 
                 // Ejecutar la consulta utilizando DbUtils
                 DataTable resultados = DbUtils.ExecuteQuery(query);
@@ -69,21 +77,19 @@ namespace BuscadorPrecio
             {
                 // Construir la consulta SQL dinámica
                 string query = $@"
-        SELECT c.proveedor, c.precio, c.fecha
-        FROM cables c
-        WHERE marca = '{marca}'
-          AND calibre = '{calibre}'
-          AND color = '{color}'
-           AND c.fecha = (
-            SELECT MAX(c2.fecha)
-            FROM cables c2
-            WHERE c2.proveedor = c.proveedor
-              AND c2.nombre = c.nombre
-              AND c2.calibre = c.calibre
-              AND c2.color = c.color
-              AND c2.marca = c.marca
+        SELECT c.proveedor, c.marca, c.precio, STR_TO_DATE(c.fecha, '%d/%m/%Y') AS fecha_formateada
+        FROM abrazaderas c
+        WHERE c.marca = '{marca}'
+          AND c.tipo_medida = '{medida}'
+          AND c.calibre = '{calibre}'
+          AND STR_TO_DATE(c.fecha, '%d/%m/%Y') = (
+            SELECT MAX(STR_TO_DATE(c2.fecha, '%d/%m/%Y'))
+            FROM abrazaderas c2
+            WHERE c2.marca = '{marca}'
+              AND c2.tipo_medida = '{medida}'
+              AND c2.calibre = '{calibre}'
           )
-        ORDER BY MAX(c.fecha) asc
+        ORDER BY c.precio ASC
         LIMIT 1";
 
                 // Ejecutar la consulta utilizando DbUtils
@@ -115,37 +121,8 @@ namespace BuscadorPrecio
                 dataGridView1.Columns["precio_formateado"].HeaderText = "Precio";
             }
 
+            //limpieza();
 
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void cbMarca_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void cbCaracyteristica_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void cbCalibre_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void lblMarca_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblCaracteristica_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblCalibre_Click(object sender, EventArgs e)
-        {
         }
     }
 }

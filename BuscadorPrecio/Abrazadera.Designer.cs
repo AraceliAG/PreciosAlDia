@@ -1,6 +1,6 @@
 ﻿namespace BuscadorPrecio
 {
-    partial class CableMulti
+    partial class Abrazadera
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             dataGridView1 = new DataGridView();
             btBuscarPrecio = new Button();
             cbMarca = new ComboBox();
-            cbCaracyteristica = new ComboBox();
+            cbMedidaMili = new ComboBox();
             cbCalibre = new ComboBox();
             lblMarca = new Label();
             lblCaracteristica = new Label();
@@ -42,20 +42,19 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 203);
+            dataGridView1.Location = new Point(19, 204);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
             dataGridView1.Size = new Size(850, 225);
-            dataGridView1.TabIndex = 15;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.TabIndex = 23;
             // 
             // btBuscarPrecio
             // 
-            btBuscarPrecio.Location = new Point(122, 148);
+            btBuscarPrecio.Location = new Point(108, 149);
             btBuscarPrecio.Name = "btBuscarPrecio";
             btBuscarPrecio.Size = new Size(212, 34);
-            btBuscarPrecio.TabIndex = 14;
+            btBuscarPrecio.TabIndex = 22;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = true;
             btBuscarPrecio.Click += btBuscarPrecio_Click;
@@ -63,78 +62,72 @@
             // cbMarca
             // 
             cbMarca.FormattingEnabled = true;
-            cbMarca.Items.AddRange(new object[] { "Todos", "VIAKON" });
-            cbMarca.Location = new Point(122, 109);
+            cbMarca.Items.AddRange(new object[] { "Todos", "ANCLO" });
+            cbMarca.Location = new Point(108, 110);
             cbMarca.Name = "cbMarca";
             cbMarca.Size = new Size(212, 33);
-            cbMarca.TabIndex = 13;
-            cbMarca.SelectedIndexChanged += cbMarca_SelectedIndexChanged;
+            cbMarca.TabIndex = 21;
             // 
-            // cbCaracyteristica
+            // cbMedidaMili
             // 
-            cbCaracyteristica.FormattingEnabled = true;
-            cbCaracyteristica.Items.AddRange(new object[] { "Rollo Metálico 76.2m", "Métalico" });
-            cbCaracyteristica.Location = new Point(122, 71);
-            cbCaracyteristica.Name = "cbCaracyteristica";
-            cbCaracyteristica.Size = new Size(212, 33);
-            cbCaracyteristica.TabIndex = 12;
-            cbCaracyteristica.SelectedIndexChanged += cbCaracyteristica_SelectedIndexChanged;
+            cbMedidaMili.FormattingEnabled = true;
+            cbMedidaMili.Items.AddRange(new object[] { "16 mm", "21 mm", "27 mm", "35 mm", "41 mm", "53 mm", "63 mm", "78 mm" });
+            cbMedidaMili.Location = new Point(108, 72);
+            cbMedidaMili.Name = "cbMedidaMili";
+            cbMedidaMili.Size = new Size(212, 33);
+            cbMedidaMili.TabIndex = 20;
             // 
             // cbCalibre
             // 
             cbCalibre.FormattingEnabled = true;
-            cbCalibre.Items.AddRange(new object[] { "2x14 + T", "3x14 + T", "4x14 + T", "2x6 + T", "3x6 + T", "4x6+ T", "2x14 + T" });
-            cbCalibre.Location = new Point(122, 24);
+            cbCalibre.Items.AddRange(new object[] { "1/2\"", "3/4\"", "1\"", "1 1/4\"", "1 1/2\"", "2\"", "2 1/2\"", "3\"" });
+            cbCalibre.Location = new Point(108, 25);
             cbCalibre.Name = "cbCalibre";
             cbCalibre.Size = new Size(212, 33);
-            cbCalibre.TabIndex = 11;
-            cbCalibre.SelectedIndexChanged += cbCalibre_SelectedIndexChanged;
+            cbCalibre.TabIndex = 19;
             // 
             // lblMarca
             // 
             lblMarca.AutoSize = true;
-            lblMarca.Location = new Point(33, 112);
+            lblMarca.Location = new Point(19, 113);
             lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(60, 25);
-            lblMarca.TabIndex = 10;
+            lblMarca.TabIndex = 18;
             lblMarca.Text = "Marca";
-            lblMarca.Click += lblMarca_Click;
             // 
             // lblCaracteristica
             // 
             lblCaracteristica.AutoSize = true;
-            lblCaracteristica.Location = new Point(12, 71);
+            lblCaracteristica.Location = new Point(12, 72);
             lblCaracteristica.Name = "lblCaracteristica";
-            lblCaracteristica.Size = new Size(115, 25);
-            lblCaracteristica.TabIndex = 9;
-            lblCaracteristica.Text = "Característica";
-            lblCaracteristica.Click += lblCaracteristica_Click;
+            lblCaracteristica.Size = new Size(72, 25);
+            lblCaracteristica.TabIndex = 17;
+            lblCaracteristica.Text = "Medida";
             // 
             // lblCalibre
             // 
             lblCalibre.AutoSize = true;
-            lblCalibre.Location = new Point(32, 20);
+            lblCalibre.Location = new Point(18, 21);
             lblCalibre.Name = "lblCalibre";
             lblCalibre.Size = new Size(66, 25);
-            lblCalibre.TabIndex = 8;
+            lblCalibre.TabIndex = 16;
             lblCalibre.Text = "Calibre";
-            lblCalibre.Click += lblCalibre_Click;
             // 
-            // CableMulti
+            // Abrazadera
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(924, 450);
+            ClientSize = new Size(1147, 450);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
-            Controls.Add(cbCaracyteristica);
+            Controls.Add(cbMedidaMili);
             Controls.Add(cbCalibre);
             Controls.Add(lblMarca);
             Controls.Add(lblCaracteristica);
             Controls.Add(lblCalibre);
-            Name = "CableMulti";
-            Text = "CableMulti";
+            Name = "Abrazadera";
+            Text = "Abrazadera";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -145,7 +138,7 @@
         private DataGridView dataGridView1;
         private Button btBuscarPrecio;
         private ComboBox cbMarca;
-        private ComboBox cbCaracyteristica;
+        private ComboBox cbMedidaMili;
         private ComboBox cbCalibre;
         private Label lblMarca;
         private Label lblCaracteristica;
