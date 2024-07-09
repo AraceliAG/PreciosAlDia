@@ -36,6 +36,13 @@
             lblMarca = new Label();
             lblCaracteristica = new Label();
             lblCalibre = new Label();
+            lblPrecio = new Label();
+            lblProveedor = new Label();
+            lblFecha = new Label();
+            cbProveedorGlobal = new ComboBox();
+            dtpFechaGlobal = new DateTimePicker();
+            txtPrecioGlobal = new TextBox();
+            bynAgregarGlobal = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -120,11 +127,85 @@
             lblCalibre.Text = "Calibre";
             lblCalibre.Click += lblCalibre_Click;
             // 
+            // lblPrecio
+            // 
+            lblPrecio.AutoSize = true;
+            lblPrecio.Location = new Point(374, 26);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(60, 25);
+            lblPrecio.TabIndex = 16;
+            lblPrecio.Text = "Precio";
+            lblPrecio.Visible = false;
+            // 
+            // lblProveedor
+            // 
+            lblProveedor.AutoSize = true;
+            lblProveedor.Location = new Point(374, 71);
+            lblProveedor.Name = "lblProveedor";
+            lblProveedor.Size = new Size(94, 25);
+            lblProveedor.TabIndex = 17;
+            lblProveedor.Text = "Proveedor";
+            lblProveedor.Visible = false;
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(374, 117);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(57, 25);
+            lblFecha.TabIndex = 18;
+            lblFecha.Text = "Fecha";
+            lblFecha.Visible = false;
+            // 
+            // cbProveedorGlobal
+            // 
+            cbProveedorGlobal.FormattingEnabled = true;
+            cbProveedorGlobal.Location = new Point(491, 71);
+            cbProveedorGlobal.Name = "cbProveedorGlobal";
+            cbProveedorGlobal.Size = new Size(182, 33);
+            cbProveedorGlobal.TabIndex = 20;
+            cbProveedorGlobal.Visible = false;
+            // 
+            // dtpFechaGlobal
+            // 
+            dtpFechaGlobal.Format = DateTimePickerFormat.Short;
+            dtpFechaGlobal.Location = new Point(491, 112);
+            dtpFechaGlobal.Name = "dtpFechaGlobal";
+            dtpFechaGlobal.Size = new Size(180, 31);
+            dtpFechaGlobal.TabIndex = 21;
+            dtpFechaGlobal.Visible = false;
+            dtpFechaGlobal.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
+            // txtPrecioGlobal
+            // 
+            txtPrecioGlobal.Location = new Point(491, 26);
+            txtPrecioGlobal.Name = "txtPrecioGlobal";
+            txtPrecioGlobal.Size = new Size(182, 31);
+            txtPrecioGlobal.TabIndex = 22;
+            txtPrecioGlobal.Visible = false;
+            // 
+            // bynAgregarGlobal
+            // 
+            bynAgregarGlobal.Location = new Point(386, 149);
+            bynAgregarGlobal.Name = "bynAgregarGlobal";
+            bynAgregarGlobal.Size = new Size(314, 33);
+            bynAgregarGlobal.TabIndex = 23;
+            bynAgregarGlobal.Text = "Agregar";
+            bynAgregarGlobal.UseVisualStyleBackColor = true;
+            bynAgregarGlobal.Visible = false;
+            // 
             // CableMulti
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(924, 450);
+            Controls.Add(bynAgregarGlobal);
+            Controls.Add(txtPrecioGlobal);
+            Controls.Add(dtpFechaGlobal);
+            Controls.Add(cbProveedorGlobal);
+            Controls.Add(lblFecha);
+            Controls.Add(lblProveedor);
+            Controls.Add(lblPrecio);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
@@ -150,5 +231,12 @@
         private Label lblMarca;
         private Label lblCaracteristica;
         private Label lblCalibre;
+        private Label lblPrecio;
+        private Label lblProveedor;
+        private Label lblFecha;
+        private ComboBox cbProveedorGlobal;
+        private DateTimePicker dtpFechaGlobal;
+        private TextBox txtPrecioGlobal;
+        private Button bynAgregarGlobal;
     }
 }

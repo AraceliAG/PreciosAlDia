@@ -80,10 +80,63 @@ namespace BuscadorPrecio
             btIniciarSup.Visible = true;
 
         }
+
+        private void ChangeButtonColors(Control parent, Color color)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is Button)
+                {
+                    control.BackColor = color;
+                }
+                else if (control.Controls.Count > 0)
+                {
+                    ChangeButtonColors(control, color);
+                }
+            }
+        }
+
+        private void visibilidadBotones(string name, bool boleano)
+        {
+            // Iterar sobre los controles dentro del formulario para encontrar el botón
+            foreach (Control control in this.Controls)
+            {
+                // Verificar si el control es un panel
+                if (control is Panel)
+                {
+                    // Iterar sobre los controles dentro del panel
+                    foreach (Control innerControl in control.Controls)
+                    {
+                        // Verificar si el control dentro del panel es un botón y tiene el nombre correcto
+                        if (innerControl is Button && innerControl.Name == name)
+                        {
+                            // Hacer invisible el botón encontrado
+                            innerControl.Visible = boleano;
+                            // Salir del bucle ya que hemos encontrado y procesado el botón
+                            break;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        
+
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Form ventanaAgregar = new Agregar();
-            AbrirVentana(ventanaAgregar);
+            //Form ventanaAgregar = new Agregar();
+            //AbrirVentana(ventanaAgregar);
+            btnSalir.Visible = true;
+            // Cambia el color de fondo de todos los botones a rojo
+            ChangeButtonColors(this, Color.Gold);
+            flowLCompras.BackColor = Color.Gold;
+            visibilidadBotones("btnEliminar", false);
+            visibilidadBotones("btnActualizar", false);
+
+
+
 
 
         }
@@ -118,8 +171,14 @@ namespace BuscadorPrecio
             AbrirVentana(formToOpen);
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            ChangeButtonColors(this, Color.FromArgb(153, 180, 209));
+            flowLCompras.BackColor = Color.FromArgb(153, 180, 209);
+            btnSalir.Visible = false;
+            visibilidadBotones("btnEliminar", true);
+            visibilidadBotones("btnActualizar", true);
 
-
-
+        }
     }
 }

@@ -35,19 +35,19 @@
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(33, 40);
+            lblNombre.Location = new Point(14, 49);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(78, 25);
+            lblNombre.Size = new Size(127, 25);
             lblNombre.TabIndex = 0;
-            lblNombre.Text = "Nombre";
+            lblNombre.Text = "Departamento";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "hola", "holaaa", "holaaaaaa", "juaaaaaaaaaaan", "jaime", "julian", "zapato", "zapata", "yegua", "yoyo", "yummi" });
-            comboBox1.Location = new Point(132, 44);
+            comboBox1.Location = new Point(147, 49);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
+            comboBox1.Size = new Size(211, 33);
             comboBox1.TabIndex = 1;
             // 
             // Agregar

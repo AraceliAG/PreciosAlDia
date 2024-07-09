@@ -37,8 +37,9 @@
             cbSoporteria = new ComboBox();
             btIniciarSup = new Button();
             panelInicio = new Panel();
-            btEliminar = new Button();
-            btActualizar = new Button();
+            btnSalir = new Button();
+            btnEliminar = new Button();
+            btnActualizar = new Button();
             btnAgregar = new Button();
             lblFecha = new Label();
             lblHora = new Label();
@@ -131,8 +132,9 @@
             // panelInicio
             // 
             panelInicio.BackColor = SystemColors.ActiveCaptionText;
-            panelInicio.Controls.Add(btEliminar);
-            panelInicio.Controls.Add(btActualizar);
+            panelInicio.Controls.Add(btnSalir);
+            panelInicio.Controls.Add(btnEliminar);
+            panelInicio.Controls.Add(btnActualizar);
             panelInicio.Controls.Add(btnAgregar);
             panelInicio.Controls.Add(lblFecha);
             panelInicio.Controls.Add(lblHora);
@@ -141,33 +143,46 @@
             panelInicio.Size = new Size(1902, 104);
             panelInicio.TabIndex = 8;
             // 
-            // btEliminar
+            // btnSalir
             // 
-            btEliminar.BackColor = SystemColors.ActiveCaption;
-            btEliminar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btEliminar.Location = new Point(1136, 11);
-            btEliminar.Name = "btEliminar";
-            btEliminar.Size = new Size(166, 83);
-            btEliminar.TabIndex = 3;
-            btEliminar.Text = "Eliminar";
-            btEliminar.UseVisualStyleBackColor = false;
+            btnSalir.BackColor = SystemColors.ActiveCaption;
+            btnSalir.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSalir.Location = new Point(1332, 11);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(166, 83);
+            btnSalir.TabIndex = 5;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Visible = false;
+            btnSalir.Click += btnSalir_Click;
             // 
-            // btActualizar
+            // btnEliminar
             // 
-            btActualizar.BackColor = SystemColors.ActiveCaption;
-            btActualizar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btActualizar.Location = new Point(877, 11);
-            btActualizar.Name = "btActualizar";
-            btActualizar.Size = new Size(166, 83);
-            btActualizar.TabIndex = 4;
-            btActualizar.Text = "Actualizar";
-            btActualizar.UseVisualStyleBackColor = false;
+            btnEliminar.BackColor = SystemColors.ActiveCaption;
+            btnEliminar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEliminar.Location = new Point(1073, 11);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(166, 83);
+            btnEliminar.TabIndex = 3;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizar
+            // 
+            btnActualizar.BackColor = SystemColors.ActiveCaption;
+            btnActualizar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnActualizar.Location = new Point(812, 11);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(166, 83);
+            btnActualizar.TabIndex = 4;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = false;
             // 
             // btnAgregar
             // 
             btnAgregar.BackColor = SystemColors.ActiveCaption;
             btnAgregar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAgregar.Location = new Point(611, 11);
+            btnAgregar.Location = new Point(546, 11);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(166, 83);
             btnAgregar.TabIndex = 2;
@@ -265,8 +280,9 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel1;
         private FlowLayoutPanel flowLCompras;
-        private Button btEliminar;
+        private Button btnEliminar;
         private Button btnAgregar;
-        private Button btActualizar;
+        private Button btnActualizar;
+        private Button btnSalir;
     }
 }
