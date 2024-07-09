@@ -107,6 +107,9 @@ namespace BuscadorPrecio
                 case "Abrazaderas":
                     formToOpen = new Abrazadera();
                     break;
+                case "Tuercas":
+                    formToOpen = new Tuercas();
+                    break;
                 default:
                     MessageBox.Show("Vuelve a intentarlo");
                     return;
