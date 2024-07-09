@@ -43,11 +43,14 @@
             dtpFechaGlobal = new DateTimePicker();
             txtPrecioGlobal = new TextBox();
             bynAgregarGlobal = new Button();
+            btnFinalizar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(33, 203);
             dataGridView1.Name = "dataGridView1";
@@ -186,19 +189,31 @@
             // 
             // bynAgregarGlobal
             // 
-            bynAgregarGlobal.Location = new Point(386, 149);
+            bynAgregarGlobal.Location = new Point(763, 26);
             bynAgregarGlobal.Name = "bynAgregarGlobal";
-            bynAgregarGlobal.Size = new Size(314, 33);
+            bynAgregarGlobal.Size = new Size(140, 61);
             bynAgregarGlobal.TabIndex = 23;
-            bynAgregarGlobal.Text = "Agregar";
+            bynAgregarGlobal.Text = "Agregar último precio";
             bynAgregarGlobal.UseVisualStyleBackColor = true;
-            bynAgregarGlobal.Visible = false;
+            bynAgregarGlobal.Click += bynAgregarGlobal_Click;
+            // 
+            // btnFinalizar
+            // 
+            btnFinalizar.Location = new Point(374, 149);
+            btnFinalizar.Name = "btnFinalizar";
+            btnFinalizar.Size = new Size(299, 33);
+            btnFinalizar.TabIndex = 24;
+            btnFinalizar.Text = "Finalizar";
+            btnFinalizar.UseVisualStyleBackColor = true;
+            btnFinalizar.Visible = false;
+            btnFinalizar.Click += btnFinalizar_Click;
             // 
             // CableMulti
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(924, 450);
+            Controls.Add(btnFinalizar);
             Controls.Add(bynAgregarGlobal);
             Controls.Add(txtPrecioGlobal);
             Controls.Add(dtpFechaGlobal);
@@ -238,5 +253,6 @@
         private DateTimePicker dtpFechaGlobal;
         private TextBox txtPrecioGlobal;
         private Button bynAgregarGlobal;
+        private Button btnFinalizar;
     }
 }
