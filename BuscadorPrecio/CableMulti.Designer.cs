@@ -191,9 +191,9 @@
             // 
             bynAgregarGlobal.Location = new Point(763, 26);
             bynAgregarGlobal.Name = "bynAgregarGlobal";
-            bynAgregarGlobal.Size = new Size(140, 33);
+            bynAgregarGlobal.Size = new Size(140, 61);
             bynAgregarGlobal.TabIndex = 23;
-            bynAgregarGlobal.Text = "Agregar";
+            bynAgregarGlobal.Text = "Agregar último precio";
             bynAgregarGlobal.UseVisualStyleBackColor = true;
             bynAgregarGlobal.Click += bynAgregarGlobal_Click;
             // 

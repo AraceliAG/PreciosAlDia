@@ -34,6 +34,14 @@
             lblMarca = new Label();
             lblCalibre = new Label();
             dataGridView1 = new DataGridView();
+            btnFinalizar = new Button();
+            bynAgregarGlobal = new Button();
+            txtPrecioGlobal = new TextBox();
+            dtpFechaGlobal = new DateTimePicker();
+            cbProveedorGlobal = new ComboBox();
+            lblFecha = new Label();
+            lblProveedor = new Label();
+            lblPrecio = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -93,11 +101,96 @@
             dataGridView1.Size = new Size(703, 225);
             dataGridView1.TabIndex = 14;
             // 
+            // btnFinalizar
+            // 
+            btnFinalizar.Location = new Point(366, 164);
+            btnFinalizar.Name = "btnFinalizar";
+            btnFinalizar.Size = new Size(299, 33);
+            btnFinalizar.TabIndex = 32;
+            btnFinalizar.Text = "Finalizar";
+            btnFinalizar.UseVisualStyleBackColor = true;
+            btnFinalizar.Visible = false;
+            btnFinalizar.Click += btnFinalizar_Click;
+            // 
+            // bynAgregarGlobal
+            // 
+            bynAgregarGlobal.Location = new Point(755, 41);
+            bynAgregarGlobal.Name = "bynAgregarGlobal";
+            bynAgregarGlobal.Size = new Size(145, 70);
+            bynAgregarGlobal.TabIndex = 31;
+            bynAgregarGlobal.Text = "Agregar último precio";
+            bynAgregarGlobal.UseVisualStyleBackColor = true;
+            bynAgregarGlobal.Click += bynAgregarGlobal_Click;
+            // 
+            // txtPrecioGlobal
+            // 
+            txtPrecioGlobal.Location = new Point(483, 41);
+            txtPrecioGlobal.Name = "txtPrecioGlobal";
+            txtPrecioGlobal.Size = new Size(182, 31);
+            txtPrecioGlobal.TabIndex = 30;
+            txtPrecioGlobal.Visible = false;
+            // 
+            // dtpFechaGlobal
+            // 
+            dtpFechaGlobal.Format = DateTimePickerFormat.Short;
+            dtpFechaGlobal.Location = new Point(483, 127);
+            dtpFechaGlobal.Name = "dtpFechaGlobal";
+            dtpFechaGlobal.Size = new Size(180, 31);
+            dtpFechaGlobal.TabIndex = 29;
+            dtpFechaGlobal.Visible = false;
+            // 
+            // cbProveedorGlobal
+            // 
+            cbProveedorGlobal.FormattingEnabled = true;
+            cbProveedorGlobal.Location = new Point(483, 86);
+            cbProveedorGlobal.Name = "cbProveedorGlobal";
+            cbProveedorGlobal.Size = new Size(182, 33);
+            cbProveedorGlobal.TabIndex = 28;
+            cbProveedorGlobal.Visible = false;
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(366, 132);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(57, 25);
+            lblFecha.TabIndex = 27;
+            lblFecha.Text = "Fecha";
+            lblFecha.Visible = false;
+            // 
+            // lblProveedor
+            // 
+            lblProveedor.AutoSize = true;
+            lblProveedor.Location = new Point(366, 86);
+            lblProveedor.Name = "lblProveedor";
+            lblProveedor.Size = new Size(94, 25);
+            lblProveedor.TabIndex = 26;
+            lblProveedor.Text = "Proveedor";
+            lblProveedor.Visible = false;
+            // 
+            // lblPrecio
+            // 
+            lblPrecio.AutoSize = true;
+            lblPrecio.Location = new Point(366, 41);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(60, 25);
+            lblPrecio.TabIndex = 25;
+            lblPrecio.Text = "Precio";
+            lblPrecio.Visible = false;
+            // 
             // CableRudo
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 509);
+            ClientSize = new Size(1050, 509);
+            Controls.Add(btnFinalizar);
+            Controls.Add(bynAgregarGlobal);
+            Controls.Add(txtPrecioGlobal);
+            Controls.Add(dtpFechaGlobal);
+            Controls.Add(cbProveedorGlobal);
+            Controls.Add(lblFecha);
+            Controls.Add(lblProveedor);
+            Controls.Add(lblPrecio);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
@@ -119,5 +212,13 @@
         private Label lblMarca;
         private Label lblCalibre;
         private DataGridView dataGridView1;
+        private Button btnFinalizar;
+        private Button bynAgregarGlobal;
+        private TextBox txtPrecioGlobal;
+        private DateTimePicker dtpFechaGlobal;
+        private ComboBox cbProveedorGlobal;
+        private Label lblFecha;
+        private Label lblProveedor;
+        private Label lblPrecio;
     }
 }

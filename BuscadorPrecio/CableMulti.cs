@@ -162,7 +162,7 @@ namespace BuscadorPrecio
             dtpFechaGlobal.Visible = false;
             btnFinalizar.Visible = false;
             lblPrecio.Visible = false;
-            btBuscarPrecio.Visible = true; 
+            btBuscarPrecio.Visible = true;
             bynAgregarGlobal.Visible = true;
 
         }
@@ -173,7 +173,7 @@ namespace BuscadorPrecio
             cbMarca.Text = " ";
             cbCaracyteristica.Text = "";
             cbCalibre.Text = "";
-            
+
 
         }
 
