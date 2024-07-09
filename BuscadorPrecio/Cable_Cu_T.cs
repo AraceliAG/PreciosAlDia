@@ -118,7 +118,54 @@ namespace BuscadorPrecio
 
         }
 
+        private void btnAgregarGlobal_Click(object sender, EventArgs e)
+        {
+            lblMarca.Visible = true;
+            lblFecha.Visible = true;
+            lblProveedor.Visible = true;
+            cbProveedorGlobal.Visible = true;
+            txtPrecioGlobal.Visible = true;
+            dtpFechaGlobal.Visible = true;
+            btnFinalizar.Visible = true;
+            lblPrecio.Visible = true;
+            btBuscarPrecio.Visible = false;
+            dataGridView1.DataSource = null;
+            cbMarca.Text = " ";
+            cbColor.Text = "";
+            cbCalibre.Text = "";
+            btnAgregarGlobal.Visible = false;
+        }
 
 
+        private void desaparecer()
+        {
+
+            lblFecha.Visible = false;
+            lblProveedor.Visible = false;
+            cbProveedorGlobal.Visible = false;
+            txtPrecioGlobal.Visible = false;
+            dtpFechaGlobal.Visible = false;
+            btnFinalizar.Visible = false;
+            lblPrecio.Visible = false;
+            btBuscarPrecio.Visible = true;
+            btnAgregarGlobal.Visible = true;
+
+        }
+        private void limpiar()
+        {
+            cbProveedorGlobal.Text = ""; ;
+            txtPrecioGlobal.Text = "";
+            cbMarca.Text = " ";
+            cbColor.Text = "";
+            cbCalibre.Text = "";
+
+
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            desaparecer();
+            limpiar();
+        }
     }
 }

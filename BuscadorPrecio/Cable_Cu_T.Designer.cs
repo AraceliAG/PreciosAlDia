@@ -38,6 +38,14 @@
             btBuscarPrecio = new Button();
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             dataGridView1 = new DataGridView();
+            btnFinalizar = new Button();
+            btnAgregarGlobal = new Button();
+            txtPrecioGlobal = new TextBox();
+            dtpFechaGlobal = new DateTimePicker();
+            cbProveedorGlobal = new ComboBox();
+            lblFecha = new Label();
+            lblProveedor = new Label();
+            lblPrecio = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -130,12 +138,97 @@
             dataGridView1.Size = new Size(828, 279);
             dataGridView1.TabIndex = 7;
             // 
+            // btnFinalizar
+            // 
+            btnFinalizar.Location = new Point(448, 217);
+            btnFinalizar.Name = "btnFinalizar";
+            btnFinalizar.Size = new Size(299, 33);
+            btnFinalizar.TabIndex = 32;
+            btnFinalizar.Text = "Finalizar";
+            btnFinalizar.UseVisualStyleBackColor = true;
+            btnFinalizar.Visible = false;
+            btnFinalizar.Click += btnFinalizar_Click;
+            // 
+            // btnAgregarGlobal
+            // 
+            btnAgregarGlobal.Location = new Point(837, 94);
+            btnAgregarGlobal.Name = "btnAgregarGlobal";
+            btnAgregarGlobal.Size = new Size(140, 33);
+            btnAgregarGlobal.TabIndex = 31;
+            btnAgregarGlobal.Text = "Agregar";
+            btnAgregarGlobal.UseVisualStyleBackColor = true;
+            btnAgregarGlobal.Click += btnAgregarGlobal_Click;
+            // 
+            // txtPrecioGlobal
+            // 
+            txtPrecioGlobal.Location = new Point(565, 94);
+            txtPrecioGlobal.Name = "txtPrecioGlobal";
+            txtPrecioGlobal.Size = new Size(182, 31);
+            txtPrecioGlobal.TabIndex = 30;
+            txtPrecioGlobal.Visible = false;
+            // 
+            // dtpFechaGlobal
+            // 
+            dtpFechaGlobal.Format = DateTimePickerFormat.Short;
+            dtpFechaGlobal.Location = new Point(565, 180);
+            dtpFechaGlobal.Name = "dtpFechaGlobal";
+            dtpFechaGlobal.Size = new Size(180, 31);
+            dtpFechaGlobal.TabIndex = 29;
+            dtpFechaGlobal.Visible = false;
+            // 
+            // cbProveedorGlobal
+            // 
+            cbProveedorGlobal.FormattingEnabled = true;
+            cbProveedorGlobal.Location = new Point(565, 139);
+            cbProveedorGlobal.Name = "cbProveedorGlobal";
+            cbProveedorGlobal.Size = new Size(182, 33);
+            cbProveedorGlobal.TabIndex = 28;
+            cbProveedorGlobal.Visible = false;
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(448, 185);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(57, 25);
+            lblFecha.TabIndex = 27;
+            lblFecha.Text = "Fecha";
+            lblFecha.Visible = false;
+            // 
+            // lblProveedor
+            // 
+            lblProveedor.AutoSize = true;
+            lblProveedor.Location = new Point(448, 139);
+            lblProveedor.Name = "lblProveedor";
+            lblProveedor.Size = new Size(94, 25);
+            lblProveedor.TabIndex = 26;
+            lblProveedor.Text = "Proveedor";
+            lblProveedor.Visible = false;
+            // 
+            // lblPrecio
+            // 
+            lblPrecio.AutoSize = true;
+            lblPrecio.Location = new Point(448, 94);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(60, 25);
+            lblPrecio.TabIndex = 25;
+            lblPrecio.Text = "Precio";
+            lblPrecio.Visible = false;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1129, 761);
+            Controls.Add(btnFinalizar);
+            Controls.Add(btnAgregarGlobal);
+            Controls.Add(txtPrecioGlobal);
+            Controls.Add(dtpFechaGlobal);
+            Controls.Add(cbProveedorGlobal);
+            Controls.Add(lblFecha);
+            Controls.Add(lblProveedor);
+            Controls.Add(lblPrecio);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
@@ -162,5 +255,13 @@
         private Button btBuscarPrecio;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private DataGridView dataGridView1;
+        private Button btnFinalizar;
+        private Button btnAgregarGlobal;
+        private TextBox txtPrecioGlobal;
+        private DateTimePicker dtpFechaGlobal;
+        private ComboBox cbProveedorGlobal;
+        private Label lblFecha;
+        private Label lblProveedor;
+        private Label lblPrecio;
     }
 }
