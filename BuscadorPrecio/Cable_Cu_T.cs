@@ -168,5 +168,30 @@ namespace BuscadorPrecio
             desaparecer();
             limpiar();
         }
+
+        private void txtPrecioGlobal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblProveedor_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void cbProveedorGlobal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void dtpFechaGlobal_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void lblPrecio_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
