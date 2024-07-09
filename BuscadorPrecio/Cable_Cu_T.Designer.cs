@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblCalibre = new Label();
             lblColor = new Label();
             lblMarca = new Label();
@@ -37,8 +36,8 @@
             cbColor = new ComboBox();
             cbMarca = new ComboBox();
             btBuscarPrecio = new Button();
-            dataGridView1 = new DataGridView();
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -101,7 +100,7 @@
             // 
             // btBuscarPrecio
             // 
-            btBuscarPrecio.BackColor = Color.Yellow;
+            btBuscarPrecio.BackColor = SystemColors.ActiveCaption;
             btBuscarPrecio.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btBuscarPrecio.Image = (Image)resources.GetObject("btBuscarPrecio.Image");
             btBuscarPrecio.ImageAlign = ContentAlignment.TopCenter;
@@ -114,33 +113,22 @@
             btBuscarPrecio.UseVisualStyleBackColor = false;
             btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = SystemColors.Control;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Info;
-            dataGridViewCellStyle2.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.GridColor = Color.FromArgb(255, 128, 0);
-            dataGridView1.Location = new Point(28, 346);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(952, 261);
-            dataGridView1.TabIndex = 7;
-            // 
             // mySqlCommand1
             // 
             mySqlCommand1.CacheAge = 0;
             mySqlCommand1.Connection = null;
             mySqlCommand1.EnableCaching = false;
             mySqlCommand1.Transaction = null;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(33, 379);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(828, 279);
+            dataGridView1.TabIndex = 7;
             // 
             // Form2
             // 
@@ -172,7 +160,7 @@
         private ComboBox cbColor;
         private ComboBox cbMarca;
         private Button btBuscarPrecio;
-        private DataGridView dataGridView1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private DataGridView dataGridView1;
     }
 }

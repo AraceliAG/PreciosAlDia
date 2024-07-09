@@ -120,19 +120,19 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btBuscarPrecio.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKSSURBVFhH7ZZNa1NBFIaTm6RJbpIS8iHirxAXIuJCihQR
-        EQkugoiIuBARERcuigguxF/iypULcS0iXRQpIqULcSEiXbgUKaWU+rxn5kpom9w7SRMFfeFwvubMnHNm
-        7szN/UcIqtXqfKFQOB1FUU+EfKZSqbS8ezqI43iOxW7l8/l3qDvQ7h7awbfCmDskE6MfHqjwHJN/RkwW
-        20J/D730tIJtM/GjfyXmEvLkoKKHMKuYidfQr7MFdXMOgA7F+PqMWUW1RNCfmnNc+MWtvciPa7Va0Rwj
-        0Gw2GRo9QNyGlMQzc4SCFi7AVLkWv2bGAPgtsCSQL5sxK3TgaOUnRFXwxFnDQex9mLbuW7lc3rdtQ0Hg
-        DZgC17O0fRharVbEHDqgKkTJZANBb2AKuuks44M5ejAV88FZUkD71Srt3Tbf87wZJ0C9Xp+D/YB22Yaj
-        ZhwFDsxJ2IEZ4zvh/YY0PUHSUXyLzjICDLoIUwKvncWhWCweh9lXwZhTaTr8N5jrOUxbmv41EazPRwm8
-        chaHWSbwZ7dgyofwmBnTQMZvYWqZ7oOJwBy6BdXRj86SAQTp+1fQGhWMfRF1u11dRMuIKkbvQzbw2ukq
-        tueXwEfOGg5i78JUyEbQVSz4A2Onmon6ZgwA8RdgW5CKuGLGUBC4BEue46VGo5G6He12m6HRPURbnOq/
-        l0qlbIfvIDCZtkCdsE8T/ap+Psw5AB6tCr4eY+zxEan1nq9PlATtPM8kXxBtYmgTfRl64Un/iT8TP/oG
-        MT0W7SDrPkmSSH8LhoGDqQpvM5EqtI7sJXyrav/ggTvUJBJwQXWo8CyL9UXICyx6xLv3YSpJhOJvTaLj
-        PDPEYBJsnZ7+2YMkmiy+qH9Gb/rnkcv9AiasrmA40G5uAAAAAElFTkSuQmCC
+        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
 </value>
   </data>
   <metadata name="mySqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
