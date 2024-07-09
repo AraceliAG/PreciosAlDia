@@ -121,7 +121,7 @@ namespace BuscadorPrecio
 
         }
 
-        
+
 
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -134,9 +134,6 @@ namespace BuscadorPrecio
             flowLCompras.BackColor = Color.Gold;
             visibilidadBotones("btnEliminar", false);
             visibilidadBotones("btnActualizar", false);
-
-
-
 
 
         }
@@ -178,6 +175,12 @@ namespace BuscadorPrecio
             btnSalir.Visible = false;
             visibilidadBotones("btnEliminar", true);
             visibilidadBotones("btnActualizar", true);
+            // Supongamos que tienes una referencia a la ventana externa llamada externalForm
+            // Accediendo al formulario externo desde otro formulario
+
+
+
+
 
         }
     }
