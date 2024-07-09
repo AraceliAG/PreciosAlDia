@@ -158,6 +158,7 @@ namespace BuscadorPrecio
             cbMarca.Text = " ";
             cbColor.Text = "";
             cbCalibre.Text = "";
+            //test
 
 
         }
