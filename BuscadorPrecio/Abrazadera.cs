@@ -219,7 +219,7 @@ namespace BuscadorPrecio
 
             //OCULTAR CARACTERISTICAS
 
-            //test
+            
             //BUSCAR PRECIOS
             btBuscarPrecio.Visible = false;
             btnBucarO.Visible = false;
