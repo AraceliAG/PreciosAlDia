@@ -205,5 +205,42 @@ namespace BuscadorPrecio
 
 
         }
+
+        private void btnAgregarGlobal_Click(object sender, EventArgs e)
+        {
+            lblMarca.Visible = false;
+            lblFecha.Visible = true;
+            lblProveedor.Visible = true;
+            cbProveedorGlobal.Visible = true;
+            txtPrecioGlobal.Visible = true;
+            dtpFechaGlobal.Visible = true;
+            btnFinalizar.Visible = true;
+            lblPrecio.Visible = true;
+
+            //OCULTAR CARACTERISTICAS
+
+            
+            //BUSCAR PRECIOS
+            btBuscarPrecio.Visible = false;
+            btnBucarO.Visible = false;
+            btnBuscarP.Visible = false;
+
+            //MEDIDAS
+            cbMedidaMili.Text = "";
+            cbMedidaOmega.Text = " ";
+            cbMedidaPera.Text = " ";
+            
+            //MARCAS
+            cbMarcaOmega.Text = " ";
+            cbMarcaPera.Text = " ";
+            cbMarca.Text = " ";
+            //CALIBRES
+            cbCalibreOmega.Text = "";
+            cbCalibre.Text = "";
+            cbCalibrePera.Text = "";
+
+            dataGridView1.DataSource = null;
+            btnAgregarGlobal.Visible = false;
+        }
     }
 }

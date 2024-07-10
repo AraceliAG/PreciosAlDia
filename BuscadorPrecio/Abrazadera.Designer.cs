@@ -53,6 +53,14 @@
             lblMedidaP = new Label();
             cbMedidaPera = new ComboBox();
             lblMedidaO = new Label();
+            btnFinalizar = new Button();
+            btnAgregarGlobal = new Button();
+            txtPrecioGlobal = new TextBox();
+            dtpFechaGlobal = new DateTimePicker();
+            cbProveedorGlobal = new ComboBox();
+            lblFecha = new Label();
+            lblProveedor = new Label();
+            lblPrecio = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -309,11 +317,95 @@
             lblMedidaO.Text = "Medida";
             lblMedidaO.Visible = false;
             // 
+            // btnFinalizar
+            // 
+            btnFinalizar.Location = new Point(958, 209);
+            btnFinalizar.Name = "btnFinalizar";
+            btnFinalizar.Size = new Size(299, 33);
+            btnFinalizar.TabIndex = 48;
+            btnFinalizar.Text = "Finalizar";
+            btnFinalizar.UseVisualStyleBackColor = true;
+            btnFinalizar.Visible = false;
+            // 
+            // btnAgregarGlobal
+            // 
+            btnAgregarGlobal.Location = new Point(1075, 33);
+            btnAgregarGlobal.Name = "btnAgregarGlobal";
+            btnAgregarGlobal.Size = new Size(140, 33);
+            btnAgregarGlobal.TabIndex = 47;
+            btnAgregarGlobal.Text = "Agregar";
+            btnAgregarGlobal.UseVisualStyleBackColor = true;
+            btnAgregarGlobal.Click += btnAgregarGlobal_Click;
+            // 
+            // txtPrecioGlobal
+            // 
+            txtPrecioGlobal.Location = new Point(1075, 86);
+            txtPrecioGlobal.Name = "txtPrecioGlobal";
+            txtPrecioGlobal.Size = new Size(182, 31);
+            txtPrecioGlobal.TabIndex = 46;
+            txtPrecioGlobal.Visible = false;
+            // 
+            // dtpFechaGlobal
+            // 
+            dtpFechaGlobal.Format = DateTimePickerFormat.Short;
+            dtpFechaGlobal.Location = new Point(1075, 172);
+            dtpFechaGlobal.Name = "dtpFechaGlobal";
+            dtpFechaGlobal.Size = new Size(180, 31);
+            dtpFechaGlobal.TabIndex = 45;
+            dtpFechaGlobal.Visible = false;
+            // 
+            // cbProveedorGlobal
+            // 
+            cbProveedorGlobal.FormattingEnabled = true;
+            cbProveedorGlobal.Location = new Point(1075, 131);
+            cbProveedorGlobal.Name = "cbProveedorGlobal";
+            cbProveedorGlobal.Size = new Size(182, 33);
+            cbProveedorGlobal.TabIndex = 44;
+            cbProveedorGlobal.Visible = false;
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(958, 177);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(57, 25);
+            lblFecha.TabIndex = 43;
+            lblFecha.Text = "Fecha";
+            lblFecha.Visible = false;
+            // 
+            // lblProveedor
+            // 
+            lblProveedor.AutoSize = true;
+            lblProveedor.Location = new Point(958, 131);
+            lblProveedor.Name = "lblProveedor";
+            lblProveedor.Size = new Size(94, 25);
+            lblProveedor.TabIndex = 42;
+            lblProveedor.Text = "Proveedor";
+            lblProveedor.Visible = false;
+            // 
+            // lblPrecio
+            // 
+            lblPrecio.AutoSize = true;
+            lblPrecio.Location = new Point(958, 86);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(60, 25);
+            lblPrecio.TabIndex = 41;
+            lblPrecio.Text = "Precio";
+            lblPrecio.Visible = false;
+            // 
             // Abrazadera
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1243, 583);
+            ClientSize = new Size(1282, 583);
+            Controls.Add(btnFinalizar);
+            Controls.Add(btnAgregarGlobal);
+            Controls.Add(txtPrecioGlobal);
+            Controls.Add(dtpFechaGlobal);
+            Controls.Add(cbProveedorGlobal);
+            Controls.Add(lblFecha);
+            Controls.Add(lblProveedor);
+            Controls.Add(lblPrecio);
             Controls.Add(btnAbrazaderaPera);
             Controls.Add(btnBuscarP);
             Controls.Add(cbMarcaPera);
@@ -373,5 +465,13 @@
         private Label lblMedidaP;
         private ComboBox cbMedidaPera;
         private Label lblMedidaO;
+        private Button btnFinalizar;
+        private Button btnAgregarGlobal;
+        private TextBox txtPrecioGlobal;
+        private DateTimePicker dtpFechaGlobal;
+        private ComboBox cbProveedorGlobal;
+        private Label lblFecha;
+        private Label lblProveedor;
+        private Label lblPrecio;
     }
 }

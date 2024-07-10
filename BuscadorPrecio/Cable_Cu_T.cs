@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySqlConnector;
 
 
 
@@ -134,6 +135,10 @@ namespace BuscadorPrecio
             cbColor.Text = "";
             cbCalibre.Text = "";
             btnAgregarGlobal.Visible = false;
+
+
+
+
         }
 
 
@@ -165,8 +170,43 @@ namespace BuscadorPrecio
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+
+            string query = $@"INSERT INTO cables  
+                     VALUES (idcables,'Cable Cu. THHW-LS, 90øC, 600V, Cal.', 
+                    '{cbCalibre.Text}', 'AWG', '{cbColor.Text}', '{cbMarca.Text}', 'Suministro y colocación.',
+                    'm', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
+                    '{dtpFechaGlobal.Value.ToString("dd/MM/yyyy")}')";
+
+
+            DataTable resultados = DbUtils.ExecuteQuery(query);
+
             desaparecer();
             limpiar();
+        }
+
+        private void txtPrecioGlobal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblProveedor_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void cbProveedorGlobal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void dtpFechaGlobal_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void lblPrecio_Click(object sender, EventArgs e)
+        {
         }
     }
 }

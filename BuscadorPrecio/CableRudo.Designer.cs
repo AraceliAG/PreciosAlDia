@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CableRudo));
             btBuscarPrecio = new Button();
             cbMarca = new ComboBox();
             cbCalibre = new ComboBox();
@@ -47,12 +48,16 @@
             // 
             // btBuscarPrecio
             // 
-            btBuscarPrecio.Location = new Point(120, 159);
+            btBuscarPrecio.BackColor = SystemColors.ActiveCaption;
+            btBuscarPrecio.BackgroundImage = (Image)resources.GetObject("btBuscarPrecio.BackgroundImage");
+            btBuscarPrecio.BackgroundImageLayout = ImageLayout.Center;
+            btBuscarPrecio.Location = new Point(145, 164);
             btBuscarPrecio.Name = "btBuscarPrecio";
-            btBuscarPrecio.Size = new Size(212, 34);
+            btBuscarPrecio.Size = new Size(156, 67);
             btBuscarPrecio.TabIndex = 13;
             btBuscarPrecio.Text = "Buscar";
-            btBuscarPrecio.UseVisualStyleBackColor = true;
+            btBuscarPrecio.TextAlign = ContentAlignment.BottomCenter;
+            btBuscarPrecio.UseVisualStyleBackColor = false;
             btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // cbMarca

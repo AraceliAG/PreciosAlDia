@@ -166,6 +166,7 @@
             txtPrecioGlobal.Size = new Size(182, 31);
             txtPrecioGlobal.TabIndex = 30;
             txtPrecioGlobal.Visible = false;
+            txtPrecioGlobal.TextChanged += txtPrecioGlobal_TextChanged;
             // 
             // dtpFechaGlobal
             // 
@@ -175,15 +176,18 @@
             dtpFechaGlobal.Size = new Size(180, 31);
             dtpFechaGlobal.TabIndex = 29;
             dtpFechaGlobal.Visible = false;
+            dtpFechaGlobal.ValueChanged += dtpFechaGlobal_ValueChanged;
             // 
             // cbProveedorGlobal
             // 
             cbProveedorGlobal.FormattingEnabled = true;
+            cbProveedorGlobal.Items.AddRange(new object[] { "ECOZA", "DIMEGSA", "ASENCIO" });
             cbProveedorGlobal.Location = new Point(565, 139);
             cbProveedorGlobal.Name = "cbProveedorGlobal";
             cbProveedorGlobal.Size = new Size(182, 33);
             cbProveedorGlobal.TabIndex = 28;
             cbProveedorGlobal.Visible = false;
+            cbProveedorGlobal.SelectedIndexChanged += cbProveedorGlobal_SelectedIndexChanged;
             // 
             // lblFecha
             // 
@@ -194,6 +198,7 @@
             lblFecha.TabIndex = 27;
             lblFecha.Text = "Fecha";
             lblFecha.Visible = false;
+            lblFecha.Click += lblFecha_Click;
             // 
             // lblProveedor
             // 
@@ -204,6 +209,7 @@
             lblProveedor.TabIndex = 26;
             lblProveedor.Text = "Proveedor";
             lblProveedor.Visible = false;
+            lblProveedor.Click += lblProveedor_Click;
             // 
             // lblPrecio
             // 
@@ -214,6 +220,7 @@
             lblPrecio.TabIndex = 25;
             lblPrecio.Text = "Precio";
             lblPrecio.Visible = false;
+            lblPrecio.Click += lblPrecio_Click;
             // 
             // Form2
             // 
