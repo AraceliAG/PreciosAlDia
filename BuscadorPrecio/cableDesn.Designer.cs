@@ -186,6 +186,7 @@
             // cbProveedorGlobal
             // 
             cbProveedorGlobal.FormattingEnabled = true;
+            cbProveedorGlobal.Items.AddRange(new object[] { "ASENCIO", "ELEKTRON", "DIMEGSA", "ECOZA" });
             cbProveedorGlobal.Location = new Point(629, 78);
             cbProveedorGlobal.Name = "cbProveedorGlobal";
             cbProveedorGlobal.Size = new Size(182, 33);

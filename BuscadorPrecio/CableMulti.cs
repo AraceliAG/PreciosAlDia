@@ -117,41 +117,6 @@ namespace BuscadorPrecio
 
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void cbMarca_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void cbCaracyteristica_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void cbCalibre_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void lblMarca_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblCaracteristica_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblCalibre_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void desaparecer()
         {
 
@@ -236,5 +201,41 @@ namespace BuscadorPrecio
             limpiar();
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cbCaracyteristica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cbCalibre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void lblMarca_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lblCaracteristica_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lblCalibre_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
