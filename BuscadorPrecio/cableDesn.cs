@@ -89,22 +89,23 @@ namespace BuscadorPrecio
             {
                 // Construir la consulta SQL dinámica
                 string query = $@"
-        SELECT c.proveedor, c.precio, c.fecha
+        SELECT c.proveedor, c.precio, STR_TO_DATE(c.fecha, '%d/%m/%Y') AS fecha_formateada
         FROM cables c
         WHERE marca = '{marca}'
           AND calibre = '{calibre}'
           AND unidad = '{unidad}'
           AND color = '{tamanio}'
-           AND c.fecha = (
-            SELECT MAX(c2.fecha)
+           AND STR_TO_DATE(c.fecha, '%d/%m/%Y') = (
+            SELECT MAX(STR_TO_DATE(c2.fecha, '%d/%m/%Y'))
             FROM cables c2
-            WHERE c2.proveedor = c.proveedor
-              AND c2.nombre = c.nombre
-              AND c2.calibre = c.calibre
-              AND c2.color = c.color
-              AND c2.marca = c.marca
+            WHERE c2.marca = c.marca
+            AND c2.tipo_medida = c2.tipo_medida
+            AND c2.calibre = c.calibre
+            AND c2.unidad = c.unidad
+              
+              
           )
-        ORDER BY MAX(c.fecha) asc
+        ORDER BY  c.precio ASC 
         LIMIT 1";
 
                 // Ejecutar la consulta utilizando DbUtils
@@ -167,7 +168,7 @@ namespace BuscadorPrecio
         {
 
 
-            if (cbUnidad.Text =="m")
+            if (cbUnidad.Text == "m")
             {
                 // Verificar si algún campo está vacío
                 if (string.IsNullOrWhiteSpace(cbCalibre.Text) ||
@@ -184,7 +185,7 @@ namespace BuscadorPrecio
                     string query = $@"INSERT INTO cables  
                      VALUES (idcables,'Cable Cu. Desnudo, semiduro, Cal.', 
                     '{cbCalibre.Text}', 'AWG', '{cbTamanio.Text}', '{cbMarca.Text}', 'Suministro y colocación.',
-                    '{cbUnidad.Text}', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
+                    'm', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
                     '{dtpFechaGlobal.Value.ToString("dd/MM/yyyy")}')";
 
 
@@ -214,9 +215,9 @@ namespace BuscadorPrecio
                 else
                 {
                     string query = $@"INSERT INTO cables  
-                     VALUES (idcables,'Cable multiconductor de alambre Cu ARMORFLEX', 
+                     VALUES (idcables,'Cable Cu. Desnudo, semiduro, Cal.', 
                     '{cbCalibre.Text}', 'AWG', 'n/a', '{cbMarca.Text}', 'Suministro y colocación.',
-                    'm', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
+                    'kg', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
                     '{dtpFechaGlobal.Value.ToString("dd/MM/yyyy")}')";
 
 
