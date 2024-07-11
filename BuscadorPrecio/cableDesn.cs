@@ -149,6 +149,7 @@ namespace BuscadorPrecio
             lblPrecio.Visible = false;
             btBuscarPrecio.Visible = true;
             bynAgregarGlobal.Visible = true;
+            btnCancelar.Visible = false;
 
         }
         private void limpiar()
@@ -164,8 +165,70 @@ namespace BuscadorPrecio
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            desaparecer();
-            limpiar();
+
+
+            if (cbUnidad.Text =="m")
+            {
+                // Verificar si algún campo está vacío
+                if (string.IsNullOrWhiteSpace(cbCalibre.Text) ||
+                    string.IsNullOrWhiteSpace(cbUnidad.Text) ||
+                    string.IsNullOrWhiteSpace(cbMarca.Text) ||
+                    string.IsNullOrWhiteSpace(cbTamanio.Text) ||
+                    string.IsNullOrWhiteSpace(txtPrecioGlobal.Text) ||
+                    string.IsNullOrWhiteSpace(cbProveedorGlobal.Text))
+                {
+                    MessageBox.Show("Todos los campos deben estar llenos para realizar el registro.");
+                }
+                else
+                {
+                    string query = $@"INSERT INTO cables  
+                     VALUES (idcables,'Cable Cu. Desnudo, semiduro, Cal.', 
+                    '{cbCalibre.Text}', 'AWG', '{cbTamanio.Text}', '{cbMarca.Text}', 'Suministro y colocación.',
+                    '{cbUnidad.Text}', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
+                    '{dtpFechaGlobal.Value.ToString("dd/MM/yyyy")}')";
+
+
+                    DataTable resultados = DbUtils.ExecuteQuery(query);
+
+                    MessageBox.Show("SE HA AGREGADO CORRECTAMENTE");
+                    desaparecer();
+                    limpiar();
+
+                }
+
+
+            }
+            else
+            {
+
+
+                // Verificar si algún campo está vacío
+                if (string.IsNullOrWhiteSpace(cbCalibre.Text) ||
+                    string.IsNullOrWhiteSpace(cbUnidad.Text) ||
+                    string.IsNullOrWhiteSpace(cbMarca.Text) ||
+                    string.IsNullOrWhiteSpace(txtPrecioGlobal.Text) ||
+                    string.IsNullOrWhiteSpace(cbProveedorGlobal.Text))
+                {
+                    MessageBox.Show("Todos los campos deben estar llenos para realizar el registro.");
+                }
+                else
+                {
+                    string query = $@"INSERT INTO cables  
+                     VALUES (idcables,'Cable multiconductor de alambre Cu ARMORFLEX', 
+                    '{cbCalibre.Text}', 'AWG', 'n/a', '{cbMarca.Text}', 'Suministro y colocación.',
+                    'm', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
+                    '{dtpFechaGlobal.Value.ToString("dd/MM/yyyy")}')";
+
+
+                    DataTable resultados = DbUtils.ExecuteQuery(query);
+
+                    MessageBox.Show("SE HA AGREGADO CORRECTAMENTE");
+                    desaparecer();
+                    limpiar();
+
+                }
+
+            }
         }
 
         private void bynAgregarGlobal_Click_1(object sender, EventArgs e)
@@ -184,6 +247,14 @@ namespace BuscadorPrecio
             cbUnidad.Text = " ";
             cbCalibre.Text = "";
             bynAgregarGlobal.Visible = false;
+            btnCancelar.Visible = true;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            desaparecer();
+            limpiar();
+
         }
     }
 }
