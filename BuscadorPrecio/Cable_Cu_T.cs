@@ -135,6 +135,7 @@ namespace BuscadorPrecio
             cbColor.Text = "";
             cbCalibre.Text = "";
             btnAgregarGlobal.Visible = false;
+            btnCancelar.Visible = true;
 
 
 
@@ -154,6 +155,7 @@ namespace BuscadorPrecio
             lblPrecio.Visible = false;
             btBuscarPrecio.Visible = true;
             btnAgregarGlobal.Visible = true;
+            btnCancelar.Visible = false;
 
         }
         private void limpiar()
@@ -170,18 +172,41 @@ namespace BuscadorPrecio
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-
-            string query = $@"INSERT INTO cables  
+            // Verificar si algún campo está vacío
+            if (string.IsNullOrWhiteSpace(cbCalibre.Text) ||
+                string.IsNullOrWhiteSpace(cbColor.Text) ||
+                string.IsNullOrWhiteSpace(cbMarca.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecioGlobal.Text) ||
+                string.IsNullOrWhiteSpace(cbProveedorGlobal.Text))
+            {
+                MessageBox.Show("Todos los campos deben estar llenos para realizar el registro.");
+            }
+            else
+            {
+                string query = $@"INSERT INTO cables  
                      VALUES (idcables,'Cable Cu. THHW-LS, 90øC, 600V, Cal.', 
                     '{cbCalibre.Text}', 'AWG', '{cbColor.Text}', '{cbMarca.Text}', 'Suministro y colocación.',
                     'm', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
                     '{dtpFechaGlobal.Value.ToString("dd/MM/yyyy")}')";
 
 
-            DataTable resultados = DbUtils.ExecuteQuery(query);
+                DataTable resultados = DbUtils.ExecuteQuery(query);
 
+                MessageBox.Show("SE HA AGREGADO CORRECTAMENTE");
+                desaparecer();
+                limpiar();
+
+            }
+
+
+
+
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
             desaparecer();
             limpiar();
+
         }
 
         private void txtPrecioGlobal_TextChanged(object sender, EventArgs e)
@@ -208,5 +233,7 @@ namespace BuscadorPrecio
         private void lblPrecio_Click(object sender, EventArgs e)
         {
         }
+
+        
     }
 }
