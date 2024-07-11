@@ -183,5 +183,11 @@ namespace BuscadorPrecio
 
 
         }
+
+        private void btnCana_Click(object sender, EventArgs e)
+        {
+            btnIniciarCana.Visible = true;
+            cbCana.Visible = true;
+        }
     }
 }

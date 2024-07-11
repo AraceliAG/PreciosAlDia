@@ -44,6 +44,7 @@
             txtPrecioGlobal = new TextBox();
             bynAgregarGlobal = new Button();
             btnFinalizar = new Button();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 203);
+            dataGridView1.Location = new Point(33, 227);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
@@ -163,6 +164,7 @@
             // cbProveedorGlobal
             // 
             cbProveedorGlobal.FormattingEnabled = true;
+            cbProveedorGlobal.Items.AddRange(new object[] { "DIMEGSA", "ELEKTRON" });
             cbProveedorGlobal.Location = new Point(491, 71);
             cbProveedorGlobal.Name = "cbProveedorGlobal";
             cbProveedorGlobal.Size = new Size(182, 33);
@@ -208,11 +210,23 @@
             btnFinalizar.Visible = false;
             btnFinalizar.Click += btnFinalizar_Click;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(700, 148);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(212, 34);
+            btnCancelar.TabIndex = 25;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Visible = false;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // CableMulti
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(924, 450);
+            Controls.Add(btnCancelar);
             Controls.Add(btnFinalizar);
             Controls.Add(bynAgregarGlobal);
             Controls.Add(txtPrecioGlobal);
@@ -254,5 +268,6 @@
         private TextBox txtPrecioGlobal;
         private Button bynAgregarGlobal;
         private Button btnFinalizar;
+        private Button btnCancelar;
     }
 }

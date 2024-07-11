@@ -42,6 +42,9 @@
             lblHora = new Label();
             timerHyF = new System.Windows.Forms.Timer(components);
             flowLayoutPanel1 = new FlowLayoutPanel();
+            btnCana = new Button();
+            cbCana = new ComboBox();
+            btnIniciarCana = new Button();
             panel1 = new Panel();
             flowLCompras = new FlowLayoutPanel();
             panelInicio.SuspendLayout();
@@ -187,10 +190,51 @@
             flowLayoutPanel1.Controls.Add(btSoportaria);
             flowLayoutPanel1.Controls.Add(cbSoporteria);
             flowLayoutPanel1.Controls.Add(btIniciarSup);
+            flowLayoutPanel1.Controls.Add(btnCana);
+            flowLayoutPanel1.Controls.Add(cbCana);
+            flowLayoutPanel1.Controls.Add(btnIniciarCana);
             flowLayoutPanel1.Location = new Point(-1, 111);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(300, 910);
             flowLayoutPanel1.TabIndex = 9;
+            // 
+            // btnCana
+            // 
+            btnCana.BackColor = SystemColors.ActiveCaption;
+            btnCana.BackgroundImage = (Image)resources.GetObject("btnCana.BackgroundImage");
+            btnCana.BackgroundImageLayout = ImageLayout.Center;
+            btnCana.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCana.Location = new Point(3, 403);
+            btnCana.Name = "btnCana";
+            btnCana.Size = new Size(297, 105);
+            btnCana.TabIndex = 8;
+            btnCana.Text = "Canalización";
+            btnCana.TextAlign = ContentAlignment.BottomCenter;
+            btnCana.UseVisualStyleBackColor = false;
+            btnCana.Click += btnCana_Click;
+            // 
+            // cbCana
+            // 
+            cbCana.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cbCana.FormattingEnabled = true;
+            cbCana.Items.AddRange(new object[] { "Condulet oval" });
+            cbCana.Location = new Point(3, 514);
+            cbCana.Name = "cbCana";
+            cbCana.Size = new Size(297, 36);
+            cbCana.TabIndex = 9;
+            cbCana.Visible = false;
+            // 
+            // btnIniciarCana
+            // 
+            btnIniciarCana.BackColor = SystemColors.ActiveCaption;
+            btnIniciarCana.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnIniciarCana.Location = new Point(3, 556);
+            btnIniciarCana.Name = "btnIniciarCana";
+            btnIniciarCana.Size = new Size(297, 41);
+            btnIniciarCana.TabIndex = 10;
+            btnIniciarCana.Text = "Iniciar";
+            btnIniciarCana.UseVisualStyleBackColor = false;
+            btnIniciarCana.Visible = false;
             // 
             // panel1
             // 
@@ -241,5 +285,8 @@
         private Panel panel1;
         private FlowLayoutPanel flowLCompras;
         private Button btnSalir;
+        private Button btnCana;
+        private ComboBox cbCana;
+        private Button btnIniciarCana;
     }
 }

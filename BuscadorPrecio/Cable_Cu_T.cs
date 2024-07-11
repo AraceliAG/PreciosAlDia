@@ -137,9 +137,6 @@ namespace BuscadorPrecio
             btnAgregarGlobal.Visible = false;
             btnCancelar.Visible = true;
 
-
-
-
         }
 
 
@@ -184,7 +181,7 @@ namespace BuscadorPrecio
             else
             {
                 string query = $@"INSERT INTO cables  
-                     VALUES (idcables,'Cable Cu. THHW-LS, 90øC, 600V, Cal.', 
+                     VALUES (idcables,'Cable Cu. THHW-LS, 90°C, 600V, Cal.', 
                     '{cbCalibre.Text}', 'AWG', '{cbColor.Text}', '{cbMarca.Text}', 'Suministro y colocación.',
                     'm', '{txtPrecioGlobal.Text}', '{cbProveedorGlobal.Text}', 
                     '{dtpFechaGlobal.Value.ToString("dd/MM/yyyy")}')";
