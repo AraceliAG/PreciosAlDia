@@ -151,6 +151,11 @@ namespace BuscadorPrecio
             btBuscarPrecio.Visible = true;
             bynAgregarGlobal.Visible = true;
             btnCancelar.Visible = false;
+            if (cbTamanio.Visible == true && lblTamanio.Visible == true)
+            {
+                cbTamanio.Visible = false;
+                lblTamanio.Visible = false;
+            }
 
         }
         private void limpiar()
@@ -249,6 +254,11 @@ namespace BuscadorPrecio
             cbCalibre.Text = "";
             bynAgregarGlobal.Visible = false;
             btnCancelar.Visible = true;
+            if (cbTamanio.Visible == true && lblTamanio.Visible == true)
+            {
+                cbTamanio.Visible = false;
+                lblTamanio.Visible = false;
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -175,8 +175,7 @@ namespace BuscadorPrecio
             btnSalir.Visible = false;
             visibilidadBotones("btnEliminar", true);
             visibilidadBotones("btnActualizar", true);
-            // Supongamos que tienes una referencia a la ventana externa llamada externalForm
-            // Accediendo al formulario externo desde otro formulario
+           
 
 
 
