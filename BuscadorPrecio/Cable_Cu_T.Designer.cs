@@ -46,6 +46,7 @@
             lblFecha = new Label();
             lblProveedor = new Label();
             lblPrecio = new Label();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -151,7 +152,7 @@
             // 
             // btnAgregarGlobal
             // 
-            btnAgregarGlobal.Location = new Point(837, 94);
+            btnAgregarGlobal.Location = new Point(841, 97);
             btnAgregarGlobal.Name = "btnAgregarGlobal";
             btnAgregarGlobal.Size = new Size(140, 33);
             btnAgregarGlobal.TabIndex = 31;
@@ -222,12 +223,24 @@
             lblPrecio.Visible = false;
             lblPrecio.Click += lblPrecio_Click;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(841, 217);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(140, 33);
+            btnCancelar.TabIndex = 33;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Visible = false;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1129, 761);
+            Controls.Add(btnCancelar);
             Controls.Add(btnFinalizar);
             Controls.Add(btnAgregarGlobal);
             Controls.Add(txtPrecioGlobal);
@@ -270,5 +283,6 @@
         private Label lblFecha;
         private Label lblProveedor;
         private Label lblPrecio;
+        private Button btnCancelar;
     }
 }
