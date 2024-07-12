@@ -29,110 +29,26 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            btnCables = new Button();
-            cbCables = new ComboBox();
-            btnIniciar = new Button();
-            btSoportaria = new Button();
-            cbSoporteria = new ComboBox();
-            btIniciarSup = new Button();
             panelInicio = new Panel();
-            btnSalir = new Button();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            btnElectrico = new Button();
+            btnFoto = new Button();
+            btnConstruccion = new Button();
+            btnTornilleria = new Button();
+            tnFerreteria = new Button();
             lblFecha = new Label();
             lblHora = new Label();
             timerHyF = new System.Windows.Forms.Timer(components);
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            btnCana = new Button();
-            cbCana = new ComboBox();
-            btnIniciarCana = new Button();
             panel1 = new Panel();
             flowLCompras = new FlowLayoutPanel();
             panelInicio.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
+            flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // btnCables
-            // 
-            btnCables.BackColor = SystemColors.ActiveCaption;
-            btnCables.BackgroundImage = (Image)resources.GetObject("btnCables.BackgroundImage");
-            btnCables.BackgroundImageLayout = ImageLayout.Zoom;
-            btnCables.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCables.Location = new Point(3, 3);
-            btnCables.Name = "btnCables";
-            btnCables.Size = new Size(297, 105);
-            btnCables.TabIndex = 2;
-            btnCables.Text = "Cables";
-            btnCables.TextAlign = ContentAlignment.BottomCenter;
-            btnCables.UseVisualStyleBackColor = false;
-            btnCables.Click += button2_Click;
-            // 
-            // cbCables
-            // 
-            cbCables.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            cbCables.FormattingEnabled = true;
-            cbCables.Items.AddRange(new object[] { "Cable Cu. THHW-LS, 90°C, 600V, Cal.", "Cable multiconductor de alambre Cu ARMORFLEX", "Cable de uso rudo THHW", "Cable Cu. Desnudo, semiduro, Cal." });
-            cbCables.Location = new Point(3, 114);
-            cbCables.Name = "cbCables";
-            cbCables.Size = new Size(297, 36);
-            cbCables.TabIndex = 3;
-            cbCables.Visible = false;
-            // 
-            // btnIniciar
-            // 
-            btnIniciar.BackColor = SystemColors.ActiveCaption;
-            btnIniciar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnIniciar.Location = new Point(3, 156);
-            btnIniciar.Name = "btnIniciar";
-            btnIniciar.Size = new Size(297, 41);
-            btnIniciar.TabIndex = 4;
-            btnIniciar.Text = "Iniciar";
-            btnIniciar.UseVisualStyleBackColor = false;
-            btnIniciar.Visible = false;
-            btnIniciar.Click += btnIniciar_Click;
-            // 
-            // btSoportaria
-            // 
-            btSoportaria.BackColor = SystemColors.ActiveCaption;
-            btSoportaria.BackgroundImage = (Image)resources.GetObject("btSoportaria.BackgroundImage");
-            btSoportaria.BackgroundImageLayout = ImageLayout.Center;
-            btSoportaria.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btSoportaria.Location = new Point(3, 203);
-            btSoportaria.Name = "btSoportaria";
-            btSoportaria.Size = new Size(297, 105);
-            btSoportaria.TabIndex = 5;
-            btSoportaria.Text = "Soportería";
-            btSoportaria.TextAlign = ContentAlignment.BottomCenter;
-            btSoportaria.UseVisualStyleBackColor = false;
-            btSoportaria.Click += btSoportaria_Click;
-            // 
-            // cbSoporteria
-            // 
-            cbSoporteria.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            cbSoporteria.FormattingEnabled = true;
-            cbSoporteria.Items.AddRange(new object[] { "Abrazaderas", "Tuercas", "Soportes", "Unicanal galvanizado" });
-            cbSoporteria.Location = new Point(3, 314);
-            cbSoporteria.Name = "cbSoporteria";
-            cbSoporteria.Size = new Size(297, 36);
-            cbSoporteria.TabIndex = 6;
-            cbSoporteria.Visible = false;
-            // 
-            // btIniciarSup
-            // 
-            btIniciarSup.BackColor = SystemColors.ActiveCaption;
-            btIniciarSup.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btIniciarSup.Location = new Point(3, 356);
-            btIniciarSup.Name = "btIniciarSup";
-            btIniciarSup.Size = new Size(297, 41);
-            btIniciarSup.TabIndex = 7;
-            btIniciarSup.Text = "Iniciar";
-            btIniciarSup.UseVisualStyleBackColor = false;
-            btIniciarSup.Visible = false;
-            btIniciarSup.Click += btIniciarSup_Click;
             // 
             // panelInicio
             // 
             panelInicio.BackColor = SystemColors.ActiveCaptionText;
-            panelInicio.Controls.Add(btnSalir);
+            panelInicio.Controls.Add(flowLayoutPanel2);
             panelInicio.Controls.Add(lblFecha);
             panelInicio.Controls.Add(lblHora);
             panelInicio.Location = new Point(-1, 1);
@@ -140,18 +56,74 @@
             panelInicio.Size = new Size(1902, 104);
             panelInicio.TabIndex = 8;
             // 
-            // btnSalir
+            // flowLayoutPanel2
             // 
-            btnSalir.BackColor = SystemColors.ActiveCaption;
-            btnSalir.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSalir.Location = new Point(1332, 11);
-            btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(166, 83);
-            btnSalir.TabIndex = 5;
-            btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = false;
-            btnSalir.Visible = false;
-            btnSalir.Click += btnSalir_Click;
+            flowLayoutPanel2.BackColor = SystemColors.ActiveCaptionText;
+            flowLayoutPanel2.Controls.Add(btnElectrico);
+            flowLayoutPanel2.Controls.Add(btnFoto);
+            flowLayoutPanel2.Controls.Add(btnConstruccion);
+            flowLayoutPanel2.Controls.Add(btnTornilleria);
+            flowLayoutPanel2.Controls.Add(tnFerreteria);
+            flowLayoutPanel2.Location = new Point(513, 3);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(977, 101);
+            flowLayoutPanel2.TabIndex = 2;
+            // 
+            // btnElectrico
+            // 
+            btnElectrico.BackColor = SystemColors.ActiveCaption;
+            btnElectrico.Font = new Font("Yu Gothic UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnElectrico.Location = new Point(3, 3);
+            btnElectrico.Name = "btnElectrico";
+            btnElectrico.Size = new Size(189, 95);
+            btnElectrico.TabIndex = 0;
+            btnElectrico.Text = "Material Electrico";
+            btnElectrico.UseVisualStyleBackColor = false;
+            btnElectrico.Click += btnElectrico_Click;
+            // 
+            // btnFoto
+            // 
+            btnFoto.BackColor = SystemColors.ActiveCaption;
+            btnFoto.Font = new Font("Yu Gothic UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFoto.Location = new Point(198, 3);
+            btnFoto.Name = "btnFoto";
+            btnFoto.Size = new Size(189, 95);
+            btnFoto.TabIndex = 1;
+            btnFoto.Text = "Material Fotovoltaico";
+            btnFoto.UseVisualStyleBackColor = false;
+            // 
+            // btnConstruccion
+            // 
+            btnConstruccion.BackColor = SystemColors.ActiveCaption;
+            btnConstruccion.Font = new Font("Yu Gothic UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnConstruccion.Location = new Point(393, 3);
+            btnConstruccion.Name = "btnConstruccion";
+            btnConstruccion.Size = new Size(189, 95);
+            btnConstruccion.TabIndex = 2;
+            btnConstruccion.Text = "Material de Construcción";
+            btnConstruccion.UseVisualStyleBackColor = false;
+            // 
+            // btnTornilleria
+            // 
+            btnTornilleria.BackColor = SystemColors.ActiveCaption;
+            btnTornilleria.Font = new Font("Yu Gothic UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTornilleria.Location = new Point(588, 3);
+            btnTornilleria.Name = "btnTornilleria";
+            btnTornilleria.Size = new Size(189, 95);
+            btnTornilleria.TabIndex = 3;
+            btnTornilleria.Text = "Tornillería";
+            btnTornilleria.UseVisualStyleBackColor = false;
+            // 
+            // tnFerreteria
+            // 
+            tnFerreteria.BackColor = SystemColors.ActiveCaption;
+            tnFerreteria.Font = new Font("Yu Gothic UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            tnFerreteria.Location = new Point(783, 3);
+            tnFerreteria.Name = "tnFerreteria";
+            tnFerreteria.Size = new Size(189, 95);
+            tnFerreteria.TabIndex = 4;
+            tnFerreteria.Text = "Ferretería";
+            tnFerreteria.UseVisualStyleBackColor = false;
             // 
             // lblFecha
             // 
@@ -181,74 +153,19 @@
             timerHyF.Enabled = true;
             timerHyF.Tick += timerHyF_Tick;
             // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.BackColor = SystemColors.ActiveCaptionText;
-            flowLayoutPanel1.Controls.Add(btnCables);
-            flowLayoutPanel1.Controls.Add(cbCables);
-            flowLayoutPanel1.Controls.Add(btnIniciar);
-            flowLayoutPanel1.Controls.Add(btSoportaria);
-            flowLayoutPanel1.Controls.Add(cbSoporteria);
-            flowLayoutPanel1.Controls.Add(btIniciarSup);
-            flowLayoutPanel1.Controls.Add(btnCana);
-            flowLayoutPanel1.Controls.Add(cbCana);
-            flowLayoutPanel1.Controls.Add(btnIniciarCana);
-            flowLayoutPanel1.Location = new Point(-1, 111);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(300, 910);
-            flowLayoutPanel1.TabIndex = 9;
-            // 
-            // btnCana
-            // 
-            btnCana.BackColor = SystemColors.ActiveCaption;
-            btnCana.BackgroundImage = (Image)resources.GetObject("btnCana.BackgroundImage");
-            btnCana.BackgroundImageLayout = ImageLayout.Center;
-            btnCana.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCana.Location = new Point(3, 403);
-            btnCana.Name = "btnCana";
-            btnCana.Size = new Size(297, 105);
-            btnCana.TabIndex = 8;
-            btnCana.Text = "Canalización";
-            btnCana.TextAlign = ContentAlignment.BottomCenter;
-            btnCana.UseVisualStyleBackColor = false;
-            btnCana.Click += btnCana_Click;
-            // 
-            // cbCana
-            // 
-            cbCana.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            cbCana.FormattingEnabled = true;
-            cbCana.Items.AddRange(new object[] { "Condulet oval" });
-            cbCana.Location = new Point(3, 514);
-            cbCana.Name = "cbCana";
-            cbCana.Size = new Size(297, 36);
-            cbCana.TabIndex = 9;
-            cbCana.Visible = false;
-            // 
-            // btnIniciarCana
-            // 
-            btnIniciarCana.BackColor = SystemColors.ActiveCaption;
-            btnIniciarCana.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnIniciarCana.Location = new Point(3, 556);
-            btnIniciarCana.Name = "btnIniciarCana";
-            btnIniciarCana.Size = new Size(297, 41);
-            btnIniciarCana.TabIndex = 10;
-            btnIniciarCana.Text = "Iniciar";
-            btnIniciarCana.UseVisualStyleBackColor = false;
-            btnIniciarCana.Visible = false;
-            // 
             // panel1
             // 
-            panel1.Location = new Point(305, 114);
+            panel1.Location = new Point(12, 114);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1337, 841);
+            panel1.Size = new Size(1630, 898);
             panel1.TabIndex = 10;
             // 
             // flowLCompras
             // 
             flowLCompras.BackColor = SystemColors.ActiveCaption;
-            flowLCompras.Location = new Point(1648, 114);
+            flowLCompras.Location = new Point(1648, 104);
             flowLCompras.Name = "flowLCompras";
-            flowLCompras.Size = new Size(238, 898);
+            flowLCompras.Size = new Size(238, 908);
             flowLCompras.TabIndex = 11;
             // 
             // Form1
@@ -259,34 +176,28 @@
             ClientSize = new Size(1898, 1024);
             Controls.Add(flowLCompras);
             Controls.Add(panel1);
-            Controls.Add(flowLayoutPanel1);
             Controls.Add(panelInicio);
             Name = "Form1";
             Text = "Inicio";
             Load += Form1_Load;
             panelInicio.ResumeLayout(false);
             panelInicio.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-        private Button btnCables;
-        private ComboBox cbCables;
-        private Button btnIniciar;
-        private Button btSoportaria;
-        private ComboBox cbSoporteria;
-        private Button btIniciarSup;
         private Panel panelInicio;
         private Label lblHora;
         private Label lblFecha;
         private System.Windows.Forms.Timer timerHyF;
-        private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel1;
         private FlowLayoutPanel flowLCompras;
-        private Button btnSalir;
-        private Button btnCana;
-        private ComboBox cbCana;
-        private Button btnIniciarCana;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private Button btnElectrico;
+        private Button btnFoto;
+        private Button btnConstruccion;
+        private Button btnTornilleria;
+        private Button tnFerreteria;
     }
 }

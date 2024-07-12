@@ -68,13 +68,13 @@ namespace BuscadorPrecio
             {
                 // Construir la consulta SQL dinámica
                 string query = $@"
-        SELECT c.proveedor, c.precio, c.fecha
+        SELECT c.proveedor, c.precio, STR_TO_DATE(c.fecha, '%d/%m/%Y') AS fecha_formateada
         FROM cables c
         WHERE marca = '{marca}'
           AND calibre = '{calibre}'
           AND color = '{color}'
-           AND c.fecha = (
-            SELECT MAX(c2.fecha)
+           AND STR_TO_DATE(c.fecha, '%d/%m/%Y') = (
+            SELECT MAX(STR_TO_DATE(c2.fecha, '%d/%m/%Y'))
             FROM cables c2
             WHERE c2.proveedor = c.proveedor
               AND c2.nombre = c.nombre
@@ -82,7 +82,7 @@ namespace BuscadorPrecio
               AND c2.color = c.color
               AND c2.marca = c.marca
           )
-        ORDER BY MAX(c.fecha) asc
+        ORDER BY  c.precio ASC 
         LIMIT 1";
 
                 // Ejecutar la consulta utilizando DbUtils
