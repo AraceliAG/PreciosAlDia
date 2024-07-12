@@ -72,7 +72,7 @@ namespace BuscadorPrecio
                 case "Abrazaderas":
                     formToOpen = new Abrazadera();
                     break;
-                
+
 
             }
 
