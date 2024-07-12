@@ -136,6 +136,109 @@ namespace BuscadorPrecio
 
         }
 
+        private void Ocultar1()
+        {
+            lblCalibre.Visible = false;
+            lblMarca.Visible = false;
+            lblMedida.Visible = false;
+            btBuscarPrecio.Visible = false;
+
+            cbCalibre.Visible = false;
+            cbMarca.Visible = false;
+            cbMedidaMili.Visible = false;
+
+            lblCalibreP.Visible = false;
+            lblMarcaP.Visible = false;
+            lblMedidaP.Visible = false;
+            btnBuscarP.Visible = false;
+
+            cbCalibrePera.Visible = false;
+            cbMarcaPera.Visible = false;
+            cbMedidaPera.Visible = false;
+
+
+           
+            /*LIMPIAR CAMPOS*/
+            cbCalibre.Text = "";
+            cbMarca.Text = "";
+            cbMedidaMili.Text = "";
+
+
+            cbCalibrePera.Text = "";
+            cbMarcaPera.Text = "";
+            cbMedidaPera.Text = "";
+
+        }
+
+        private void Ocultar2()
+        {
+            lblCalibreP.Visible = false;
+            lblMarcaP.Visible = false;
+            lblMedidaP.Visible = false;
+            btnBuscarP.Visible = false;
+
+            cbCalibrePera.Visible = false;
+            cbMarcaPera.Visible = false;
+            cbMedidaPera.Visible = false;
+
+
+            lblCalibreO.Visible = false;
+            lblMarcaO.Visible = false;
+            lblMedidaO.Visible = false;
+            btnBucarO.Visible = false;
+
+            cbCalibreOmega.Visible = false;
+            cbMarcaOmega.Visible = false;
+            cbMedidaOmega.Visible = false;
+
+
+
+            /*LIMPIAR CAMPOS*/
+            cbCalibrePera.Text = "";
+            cbMarcaPera.Text = "";
+            cbMedidaPera.Text = "";
+
+            cbCalibreOmega.Text = "";
+            cbMarcaOmega.Text = "";
+            cbMedidaOmega.Text = "";
+
+
+
+        }
+
+        private void Ocultar3()
+        {
+            lblCalibreO.Visible = false;
+            lblMarcaO.Visible = false;
+            lblMedidaO.Visible = false;
+            btnBucarO.Visible = false;
+
+            cbCalibreOmega.Visible = false;
+            cbMarcaOmega.Visible = false;
+            cbMedidaOmega.Visible = false;
+
+            lblCalibre.Visible = false;
+            lblMarca.Visible = false;
+            lblMedida.Visible = false;
+            btBuscarPrecio.Visible = false;
+
+            cbCalibre.Visible = false;
+            cbMarca.Visible = false;
+            cbMedidaMili.Visible = false;
+
+            /*LIMPIAR CAMPOS*/
+
+            cbCalibreOmega.Text = "";
+            cbMarcaOmega.Text = "";
+            cbMedidaOmega.Text = "";
+
+            cbCalibre.Text = "";
+            cbMarca.Text = "";
+            cbMedidaMili.Text = "";
+
+
+        }
+
 
         private void btAbrzaderdaUnical_Click(object sender, EventArgs e)
         {
@@ -150,7 +253,8 @@ namespace BuscadorPrecio
             cbMedidaMili.Visible = true;
 
 
-
+            /*AQUI*/
+            Ocultar2();
 
         }
 
@@ -164,6 +268,9 @@ namespace BuscadorPrecio
             cbCalibreOmega.Visible = true;
             cbMarcaOmega.Visible = true;
             cbMedidaOmega.Visible = true;
+
+            //OCULTAR COMPONENTES DE LOS OTROS TIPOS DE ABRAZADERAS
+            Ocultar1();
 
         }
 
@@ -179,6 +286,7 @@ namespace BuscadorPrecio
             cbCalibrePera.Visible = true;
             cbMarcaPera.Visible = true;
             cbMedidaPera.Visible = true;
+            Ocultar3();
 
         }
 

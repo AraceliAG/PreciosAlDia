@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             lblCalibre = new Label();
             lblColor = new Label();
             lblMarca = new Label();
@@ -54,7 +57,7 @@
             // 
             lblCalibre.AutoSize = true;
             lblCalibre.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCalibre.Location = new Point(23, 94);
+            lblCalibre.Location = new Point(12, 40);
             lblCalibre.Name = "lblCalibre";
             lblCalibre.Size = new Size(88, 32);
             lblCalibre.TabIndex = 0;
@@ -64,7 +67,7 @@
             // 
             lblColor.AutoSize = true;
             lblColor.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblColor.Location = new Point(23, 149);
+            lblColor.Location = new Point(12, 90);
             lblColor.Name = "lblColor";
             lblColor.Size = new Size(71, 32);
             lblColor.TabIndex = 1;
@@ -74,7 +77,7 @@
             // 
             lblMarca.AutoSize = true;
             lblMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMarca.Location = new Point(23, 192);
+            lblMarca.Location = new Point(12, 144);
             lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(79, 32);
             lblMarca.TabIndex = 2;
@@ -82,40 +85,43 @@
             // 
             // cbCalibre
             // 
+            cbCalibre.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbCalibre.FormattingEnabled = true;
             cbCalibre.Items.AddRange(new object[] { "4", "2", "6", "8", "12", "10", "14", "1/0", "2/0", "3/0", "4/0", "" });
-            cbCalibre.Location = new Point(118, 97);
+            cbCalibre.Location = new Point(118, 37);
             cbCalibre.Name = "cbCalibre";
-            cbCalibre.Size = new Size(230, 33);
+            cbCalibre.Size = new Size(230, 40);
             cbCalibre.TabIndex = 3;
             // 
             // cbColor
             // 
+            cbColor.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbColor.FormattingEnabled = true;
             cbColor.Items.AddRange(new object[] { "BLANCO", "NEGRO", "ROJO", "VERDE", "AZUL" });
-            cbColor.Location = new Point(118, 148);
+            cbColor.Location = new Point(118, 89);
             cbColor.Name = "cbColor";
-            cbColor.Size = new Size(230, 33);
+            cbColor.Size = new Size(230, 40);
             cbColor.TabIndex = 4;
             // 
             // cbMarca
             // 
+            cbMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMarca.FormattingEnabled = true;
             cbMarca.Items.AddRange(new object[] { "Todos", "Condulac", "Condumex", "Viakon" });
-            cbMarca.Location = new Point(118, 192);
+            cbMarca.Location = new Point(118, 144);
             cbMarca.Name = "cbMarca";
-            cbMarca.Size = new Size(230, 33);
+            cbMarca.Size = new Size(230, 40);
             cbMarca.TabIndex = 5;
             // 
             // btBuscarPrecio
             // 
             btBuscarPrecio.BackColor = SystemColors.ActiveCaption;
-            btBuscarPrecio.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btBuscarPrecio.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btBuscarPrecio.Image = (Image)resources.GetObject("btBuscarPrecio.Image");
             btBuscarPrecio.ImageAlign = ContentAlignment.TopCenter;
-            btBuscarPrecio.Location = new Point(148, 247);
+            btBuscarPrecio.Location = new Point(118, 206);
             btBuscarPrecio.Name = "btBuscarPrecio";
-            btBuscarPrecio.Size = new Size(162, 60);
+            btBuscarPrecio.Size = new Size(230, 63);
             btBuscarPrecio.TabIndex = 6;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.TextAlign = ContentAlignment.BottomCenter;
@@ -131,9 +137,35 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 379);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.Location = new Point(32, 295);
             dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
             dataGridView1.Size = new Size(828, 279);
@@ -141,7 +173,7 @@
             // 
             // btnFinalizar
             // 
-            btnFinalizar.Location = new Point(448, 217);
+            btnFinalizar.Location = new Point(577, 190);
             btnFinalizar.Name = "btnFinalizar";
             btnFinalizar.Size = new Size(299, 33);
             btnFinalizar.TabIndex = 32;
@@ -152,7 +184,7 @@
             // 
             // btnAgregarGlobal
             // 
-            btnAgregarGlobal.Location = new Point(841, 97);
+            btnAgregarGlobal.Location = new Point(907, 37);
             btnAgregarGlobal.Name = "btnAgregarGlobal";
             btnAgregarGlobal.Size = new Size(140, 33);
             btnAgregarGlobal.TabIndex = 31;
@@ -162,7 +194,7 @@
             // 
             // txtPrecioGlobal
             // 
-            txtPrecioGlobal.Location = new Point(565, 94);
+            txtPrecioGlobal.Location = new Point(694, 34);
             txtPrecioGlobal.Name = "txtPrecioGlobal";
             txtPrecioGlobal.Size = new Size(182, 31);
             txtPrecioGlobal.TabIndex = 30;
@@ -172,7 +204,7 @@
             // dtpFechaGlobal
             // 
             dtpFechaGlobal.Format = DateTimePickerFormat.Short;
-            dtpFechaGlobal.Location = new Point(565, 180);
+            dtpFechaGlobal.Location = new Point(694, 120);
             dtpFechaGlobal.Name = "dtpFechaGlobal";
             dtpFechaGlobal.Size = new Size(180, 31);
             dtpFechaGlobal.TabIndex = 29;
@@ -183,7 +215,7 @@
             // 
             cbProveedorGlobal.FormattingEnabled = true;
             cbProveedorGlobal.Items.AddRange(new object[] { "ECOZA", "DIMEGSA", "ASENCIO" });
-            cbProveedorGlobal.Location = new Point(565, 139);
+            cbProveedorGlobal.Location = new Point(694, 79);
             cbProveedorGlobal.Name = "cbProveedorGlobal";
             cbProveedorGlobal.Size = new Size(182, 33);
             cbProveedorGlobal.TabIndex = 28;
@@ -193,7 +225,7 @@
             // lblFecha
             // 
             lblFecha.AutoSize = true;
-            lblFecha.Location = new Point(448, 185);
+            lblFecha.Location = new Point(577, 125);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(57, 25);
             lblFecha.TabIndex = 27;
@@ -204,7 +236,7 @@
             // lblProveedor
             // 
             lblProveedor.AutoSize = true;
-            lblProveedor.Location = new Point(448, 139);
+            lblProveedor.Location = new Point(577, 79);
             lblProveedor.Name = "lblProveedor";
             lblProveedor.Size = new Size(94, 25);
             lblProveedor.TabIndex = 26;
@@ -215,7 +247,7 @@
             // lblPrecio
             // 
             lblPrecio.AutoSize = true;
-            lblPrecio.Location = new Point(448, 94);
+            lblPrecio.Location = new Point(577, 34);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(60, 25);
             lblPrecio.TabIndex = 25;
@@ -225,7 +257,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(841, 217);
+            btnCancelar.Location = new Point(907, 89);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(140, 33);
             btnCancelar.TabIndex = 33;
