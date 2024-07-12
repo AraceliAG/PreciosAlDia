@@ -9,8 +9,6 @@ namespace BuscadorPrecio
         {
             InitializeComponent();
         }
-
-
         private void AbrirVentana(Form form)
         {
             if (this.panel1.Controls.Count > 0)
@@ -27,12 +25,6 @@ namespace BuscadorPrecio
             lblFecha.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void btnCana_Click(object sender, EventArgs e)
-        {
-            //btnIniciarCana.Visible = true;
-            //cbCana.Visible = true;
-        }
-
         private void btnElectrico_Click(object sender, EventArgs e)
         {
             Form formToOpen = null;
@@ -45,6 +37,14 @@ namespace BuscadorPrecio
         }
         private void lblFecha_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+            Form ventanaFoto = null;
+            ventanaFoto = new MaterialFotovoltaico();
+            AbrirVentana(ventanaFoto);
 
         }
     }

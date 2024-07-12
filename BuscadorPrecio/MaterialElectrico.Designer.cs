@@ -146,7 +146,7 @@
             Controls.Add(panelVista);
             Controls.Add(panelMenu);
             Name = "MaterialElectrico";
-            Text = "MaterialElectrico";
+            Text = "Material Electrico";
             panelMenu.ResumeLayout(false);
             ResumeLayout(false);
         }

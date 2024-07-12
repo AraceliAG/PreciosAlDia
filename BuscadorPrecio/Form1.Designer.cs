@@ -91,6 +91,7 @@
             btnFoto.TabIndex = 1;
             btnFoto.Text = "Material Fotovoltaico";
             btnFoto.UseVisualStyleBackColor = false;
+            btnFoto.Click += btnFoto_Click;
             // 
             // btnConstruccion
             // 
