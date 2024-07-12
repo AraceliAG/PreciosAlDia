@@ -64,7 +64,7 @@
             btSoportaria.Name = "btSoportaria";
             btSoportaria.Size = new Size(297, 83);
             btSoportaria.TabIndex = 11;
-            btSoportaria.Text = "Soportería";
+            btSoportaria.Text = "Soporte";
             btSoportaria.TextAlign = ContentAlignment.BottomCenter;
             btSoportaria.UseVisualStyleBackColor = false;
             btSoportaria.Click += btSoportaria_Click;
