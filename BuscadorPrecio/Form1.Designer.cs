@@ -103,6 +103,7 @@
             btnConstruccion.TabIndex = 2;
             btnConstruccion.Text = "Material de Construcción";
             btnConstruccion.UseVisualStyleBackColor = false;
+            btnConstruccion.Click += btnConstruccion_Click;
             // 
             // btnTornilleria
             // 
@@ -114,6 +115,7 @@
             btnTornilleria.TabIndex = 3;
             btnTornilleria.Text = "Tornillería";
             btnTornilleria.UseVisualStyleBackColor = false;
+            btnTornilleria.Click += btnTornilleria_Click;
             // 
             // tnFerreteria
             // 
@@ -125,6 +127,7 @@
             tnFerreteria.TabIndex = 4;
             tnFerreteria.Text = "Ferretería";
             tnFerreteria.UseVisualStyleBackColor = false;
+            tnFerreteria.Click += tnFerreteria_Click;
             // 
             // lblFecha
             // 

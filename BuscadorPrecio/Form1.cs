@@ -27,7 +27,7 @@ namespace BuscadorPrecio
 
         private void btnElectrico_Click(object sender, EventArgs e)
         {
-            Form formToOpen = null;
+            Form formToOpen;
             formToOpen = new MaterialElectrico();
             AbrirVentana(formToOpen);
         }
@@ -42,10 +42,31 @@ namespace BuscadorPrecio
 
         private void btnFoto_Click(object sender, EventArgs e)
         {
-            Form ventanaFoto = null;
+            Form ventanaFoto ;
             ventanaFoto = new MaterialFotovoltaico();
             AbrirVentana(ventanaFoto);
 
+        }
+
+        private void btnConstruccion_Click(object sender, EventArgs e)
+        {
+            Form ventanaCons ;
+            ventanaCons = new MaterialConstruccion();
+            AbrirVentana(ventanaCons);
+        }
+
+        private void btnTornilleria_Click(object sender, EventArgs e)
+        {
+            Form ventanaTornilleria;
+            ventanaTornilleria = new Tornilleria();
+            AbrirVentana(ventanaTornilleria);
+        }
+
+        private void tnFerreteria_Click(object sender, EventArgs e)
+        {
+            Form ventanaFerreteria ;
+            ventanaFerreteria = new Ferreteria();
+            AbrirVentana(ventanaFerreteria);
         }
     }
 }
