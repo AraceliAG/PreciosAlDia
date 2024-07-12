@@ -236,6 +236,6 @@ namespace BuscadorPrecio
 
         }
 
-       
+
     }
 }

@@ -173,51 +173,58 @@
             // 
             // btnFinalizar
             // 
+            btnFinalizar.BackColor = SystemColors.ActiveCaption;
+            btnFinalizar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnFinalizar.Location = new Point(577, 190);
             btnFinalizar.Name = "btnFinalizar";
-            btnFinalizar.Size = new Size(299, 33);
+            btnFinalizar.Size = new Size(299, 58);
             btnFinalizar.TabIndex = 32;
             btnFinalizar.Text = "Finalizar";
-            btnFinalizar.UseVisualStyleBackColor = true;
+            btnFinalizar.UseVisualStyleBackColor = false;
             btnFinalizar.Visible = false;
             btnFinalizar.Click += btnFinalizar_Click;
             // 
             // btnAgregarGlobal
             // 
-            btnAgregarGlobal.Location = new Point(907, 37);
+            btnAgregarGlobal.BackColor = SystemColors.ActiveCaption;
+            btnAgregarGlobal.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAgregarGlobal.Location = new Point(907, 34);
             btnAgregarGlobal.Name = "btnAgregarGlobal";
-            btnAgregarGlobal.Size = new Size(140, 33);
+            btnAgregarGlobal.Size = new Size(169, 49);
             btnAgregarGlobal.TabIndex = 31;
             btnAgregarGlobal.Text = "Agregar";
-            btnAgregarGlobal.UseVisualStyleBackColor = true;
+            btnAgregarGlobal.UseVisualStyleBackColor = false;
             btnAgregarGlobal.Click += btnAgregarGlobal_Click;
             // 
             // txtPrecioGlobal
             // 
-            txtPrecioGlobal.Location = new Point(694, 34);
+            txtPrecioGlobal.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPrecioGlobal.Location = new Point(653, 34);
             txtPrecioGlobal.Name = "txtPrecioGlobal";
-            txtPrecioGlobal.Size = new Size(182, 31);
+            txtPrecioGlobal.Size = new Size(223, 39);
             txtPrecioGlobal.TabIndex = 30;
             txtPrecioGlobal.Visible = false;
             txtPrecioGlobal.TextChanged += txtPrecioGlobal_TextChanged;
             // 
             // dtpFechaGlobal
             // 
+            dtpFechaGlobal.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtpFechaGlobal.Format = DateTimePickerFormat.Short;
-            dtpFechaGlobal.Location = new Point(694, 120);
+            dtpFechaGlobal.Location = new Point(653, 125);
             dtpFechaGlobal.Name = "dtpFechaGlobal";
-            dtpFechaGlobal.Size = new Size(180, 31);
+            dtpFechaGlobal.Size = new Size(221, 39);
             dtpFechaGlobal.TabIndex = 29;
             dtpFechaGlobal.Visible = false;
             dtpFechaGlobal.ValueChanged += dtpFechaGlobal_ValueChanged;
             // 
             // cbProveedorGlobal
             // 
+            cbProveedorGlobal.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbProveedorGlobal.FormattingEnabled = true;
             cbProveedorGlobal.Items.AddRange(new object[] { "ECOZA", "DIMEGSA", "ASENCIO" });
-            cbProveedorGlobal.Location = new Point(694, 79);
+            cbProveedorGlobal.Location = new Point(653, 79);
             cbProveedorGlobal.Name = "cbProveedorGlobal";
-            cbProveedorGlobal.Size = new Size(182, 33);
+            cbProveedorGlobal.Size = new Size(223, 40);
             cbProveedorGlobal.TabIndex = 28;
             cbProveedorGlobal.Visible = false;
             cbProveedorGlobal.SelectedIndexChanged += cbProveedorGlobal_SelectedIndexChanged;
@@ -225,9 +232,10 @@
             // lblFecha
             // 
             lblFecha.AutoSize = true;
-            lblFecha.Location = new Point(577, 125);
+            lblFecha.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFecha.Location = new Point(530, 125);
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(57, 25);
+            lblFecha.Size = new Size(75, 32);
             lblFecha.TabIndex = 27;
             lblFecha.Text = "Fecha";
             lblFecha.Visible = false;
@@ -236,9 +244,10 @@
             // lblProveedor
             // 
             lblProveedor.AutoSize = true;
-            lblProveedor.Location = new Point(577, 79);
+            lblProveedor.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblProveedor.Location = new Point(529, 79);
             lblProveedor.Name = "lblProveedor";
-            lblProveedor.Size = new Size(94, 25);
+            lblProveedor.Size = new Size(123, 32);
             lblProveedor.TabIndex = 26;
             lblProveedor.Text = "Proveedor";
             lblProveedor.Visible = false;
@@ -247,9 +256,10 @@
             // lblPrecio
             // 
             lblPrecio.AutoSize = true;
-            lblPrecio.Location = new Point(577, 34);
+            lblPrecio.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPrecio.Location = new Point(526, 34);
             lblPrecio.Name = "lblPrecio";
-            lblPrecio.Size = new Size(60, 25);
+            lblPrecio.Size = new Size(79, 32);
             lblPrecio.TabIndex = 25;
             lblPrecio.Text = "Precio";
             lblPrecio.Visible = false;
@@ -257,12 +267,14 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.BackColor = SystemColors.ActiveCaption;
+            btnCancelar.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCancelar.Location = new Point(907, 89);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(140, 33);
+            btnCancelar.Size = new Size(169, 53);
             btnCancelar.TabIndex = 33;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Visible = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
@@ -271,7 +283,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1129, 761);
+            ClientSize = new Size(1365, 652);
             Controls.Add(btnCancelar);
             Controls.Add(btnFinalizar);
             Controls.Add(btnAgregarGlobal);
