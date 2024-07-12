@@ -164,7 +164,7 @@ namespace BuscadorPrecio
                 desaparecer();
                 limpiar();
             }
-            
+
         }
 
         private void bynAgregarGlobal_Click(object sender, EventArgs e)

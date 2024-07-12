@@ -157,7 +157,7 @@ namespace BuscadorPrecio
             cbMedidaPera.Visible = false;
 
 
-           
+
             /*LIMPIAR CAMPOS*/
             cbCalibre.Text = "";
             cbMarca.Text = "";
@@ -327,7 +327,7 @@ namespace BuscadorPrecio
 
             //OCULTAR CARACTERISTICAS
 
-            
+
             //BUSCAR PRECIOS
             btBuscarPrecio.Visible = false;
             btnBucarO.Visible = false;
@@ -337,7 +337,7 @@ namespace BuscadorPrecio
             cbMedidaMili.Text = "";
             cbMedidaOmega.Text = " ";
             cbMedidaPera.Text = " ";
-            
+
             //MARCAS
             cbMarcaOmega.Text = " ";
             cbMarcaPera.Text = " ";
