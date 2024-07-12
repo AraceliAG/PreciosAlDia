@@ -60,24 +60,26 @@
             btSoportaria.BackgroundImage = (Image)resources.GetObject("btSoportaria.BackgroundImage");
             btSoportaria.BackgroundImageLayout = ImageLayout.Center;
             btSoportaria.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btSoportaria.Location = new Point(16, 163);
+            btSoportaria.Location = new Point(16, 141);
             btSoportaria.Name = "btSoportaria";
-            btSoportaria.Size = new Size(297, 105);
+            btSoportaria.Size = new Size(297, 83);
             btSoportaria.TabIndex = 11;
             btSoportaria.Text = "Soportería";
             btSoportaria.TextAlign = ContentAlignment.BottomCenter;
             btSoportaria.UseVisualStyleBackColor = false;
+            btSoportaria.Click += btSoportaria_Click;
             // 
             // cbSoporteria
             // 
             cbSoporteria.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbSoporteria.FormattingEnabled = true;
             cbSoporteria.Items.AddRange(new object[] { "Abrazaderas", "Tuercas", "Soportes", "Unicanal galvanizado" });
-            cbSoporteria.Location = new Point(16, 274);
+            cbSoporteria.Location = new Point(16, 230);
             cbSoporteria.Name = "cbSoporteria";
             cbSoporteria.Size = new Size(297, 36);
             cbSoporteria.TabIndex = 12;
             cbSoporteria.Visible = false;
+            cbSoporteria.SelectedIndexChanged += cbSoporteria_SelectedIndexChanged;
             // 
             // btnCana
             // 
@@ -85,9 +87,9 @@
             btnCana.BackgroundImage = (Image)resources.GetObject("btnCana.BackgroundImage");
             btnCana.BackgroundImageLayout = ImageLayout.Center;
             btnCana.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCana.Location = new Point(16, 316);
+            btnCana.Location = new Point(16, 272);
             btnCana.Name = "btnCana";
-            btnCana.Size = new Size(297, 105);
+            btnCana.Size = new Size(297, 83);
             btnCana.TabIndex = 14;
             btnCana.Text = "Canalización";
             btnCana.TextAlign = ContentAlignment.BottomCenter;
@@ -98,7 +100,7 @@
             cbCana.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbCana.FormattingEnabled = true;
             cbCana.Items.AddRange(new object[] { "Condulet oval" });
-            cbCana.Location = new Point(16, 427);
+            cbCana.Location = new Point(16, 361);
             cbCana.Name = "cbCana";
             cbCana.Size = new Size(297, 36);
             cbCana.TabIndex = 15;
@@ -112,7 +114,7 @@
             btnCables.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCables.Location = new Point(16, 10);
             btnCables.Name = "btnCables";
-            btnCables.Size = new Size(297, 105);
+            btnCables.Size = new Size(297, 83);
             btnCables.TabIndex = 5;
             btnCables.Text = "Cables";
             btnCables.TextAlign = ContentAlignment.BottomCenter;
@@ -124,7 +126,7 @@
             cbCables.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbCables.FormattingEnabled = true;
             cbCables.Items.AddRange(new object[] { "Cable Cu. THHW-LS, 90°C, 600V, Cal.", "Cable multiconductor de alambre Cu ARMORFLEX", "Cable de uso rudo THHW", "Cable Cu. Desnudo, semiduro, Cal." });
-            cbCables.Location = new Point(16, 121);
+            cbCables.Location = new Point(16, 99);
             cbCables.Name = "cbCables";
             cbCables.Size = new Size(297, 36);
             cbCables.TabIndex = 6;

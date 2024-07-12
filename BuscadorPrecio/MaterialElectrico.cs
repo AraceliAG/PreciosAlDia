@@ -56,5 +56,28 @@ namespace BuscadorPrecio
 
             AbrirVentana(formToOpen);
         }
+
+        private void btSoportaria_Click(object sender, EventArgs e)
+        {
+            cbSoporteria.Visible = true;
+        }
+
+        private void cbSoporteria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tipo = cbSoporteria.Text;
+            Form formToOpen = null;
+
+            switch (tipo)
+            {
+                case "Abrazaderas":
+                    formToOpen = new Abrazadera();
+                    break;
+                
+
+            }
+
+            AbrirVentana(formToOpen);
+
+        }
     }
 }
