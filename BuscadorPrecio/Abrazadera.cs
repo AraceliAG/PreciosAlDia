@@ -32,7 +32,7 @@ namespace BuscadorPrecio
             {
                 // Consulta SQL para obtener el precio más bajo de cada marca
                 string query = $@"
-                SELECT c.proveedor, c.marca, c.precio, STR_TO_DATE(c.fecha, '%d/%m/%Y') AS fecha_formateada
+                SELECT c.proveedor, c.marca, c.precio, STR_TO_DATE(c.fecha, '%d/%m/%Y') AS fecha_
                 FROM abrazaderas c
                 JOIN (
                 SELECT proveedor, MAX(STR_TO_DATE(fecha, '%d/%m/%Y')) AS max_fecha
@@ -46,7 +46,7 @@ namespace BuscadorPrecio
               AND c.tipo_medida = '{medida}'
               AND c.calibre = '{calibre}'
                 AND nombre like '{nombre}%'
-            ORDER BY c.proveedor, c.precio ASC";
+            ORDER BY fecha_ DESC, c.precio ASC";
 
                 // Ejecutar la consulta utilizando DbUtils
                 DataTable resultados = DbUtils.ExecuteQuery(query);
@@ -74,7 +74,7 @@ namespace BuscadorPrecio
             {
                 // Construir la consulta SQL dinámica
                 string query = $@"
-        SELECT c.proveedor, c.marca, c.precio, STR_TO_DATE(c.fecha, '%d/%m/%Y') AS fecha_formateada
+        SELECT c.proveedor, c.marca, c.precio, STR_TO_DATE(c.fecha, '%d/%m/%Y') AS fecha_
         FROM abrazaderas c
         WHERE c.marca = '{marca}'
           AND c.tipo_medida = '{medida}'
@@ -88,7 +88,7 @@ namespace BuscadorPrecio
               AND c2.calibre = '{calibre}'
                AND nombre like '{nombre}%'
           )
-        ORDER BY c.precio ASC
+        ORDER BY fecha_ DESC, c.precio ASC
         LIMIT 1";
 
                 // Ejecutar la consulta utilizando DbUtils
