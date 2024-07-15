@@ -82,5 +82,28 @@ namespace BuscadorPrecio
             AbrirVentana(formToOpen);
 
         }
+
+        private void cbCana_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tipo = cbCana.Text;
+            Form formToOpen = null;
+
+            switch (tipo)
+            {
+                case "Condulet oval":
+                    formToOpen = new Form2();
+                    break;
+
+
+            }
+
+            AbrirVentana(formToOpen);
+
+        }
+
+        private void btnCana_Click(object sender, EventArgs e)
+        {
+            cbCana.Visible = true;
+        }
     }
 }

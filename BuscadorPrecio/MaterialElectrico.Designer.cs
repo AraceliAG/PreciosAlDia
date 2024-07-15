@@ -94,6 +94,7 @@
             btnCana.Text = "Canalización";
             btnCana.TextAlign = ContentAlignment.BottomCenter;
             btnCana.UseVisualStyleBackColor = false;
+            btnCana.Click += btnCana_Click;
             // 
             // cbCana
             // 
@@ -105,6 +106,7 @@
             cbCana.Size = new Size(297, 36);
             cbCana.TabIndex = 15;
             cbCana.Visible = false;
+            cbCana.SelectedIndexChanged += cbCana_SelectedIndexChanged;
             // 
             // btnCables
             // 
