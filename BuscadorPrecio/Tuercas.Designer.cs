@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             btBuscarPrecio = new Button();
             cbMarca = new ComboBox();
             cbMedida = new ComboBox();
@@ -35,6 +38,8 @@
             lblMarca = new Label();
             lblCaracteristica = new Label();
             lblTipo = new Label();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btBuscarPrecio
@@ -63,7 +68,7 @@
             // 
             cbMedida.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMedida.FormattingEnabled = true;
-            cbMedida.Items.AddRange(new object[] { "1/4\"", "3/8\"" });
+            cbMedida.Items.AddRange(new object[] { " 1/4", " 3/8" });
             cbMedida.Location = new Point(194, 85);
             cbMedida.Name = "cbMedida";
             cbMedida.Size = new Size(212, 40);
@@ -73,7 +78,7 @@
             // 
             cbTipo.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbTipo.FormattingEnabled = true;
-            cbTipo.Items.AddRange(new object[] { "Tuerca p/unicanal", "Tuerca COPLE", "Tuerca hexagonal, galvanizada", "Tuerca hexagonal, inoxidable", "Tuerca inserto de nylon, inoxidable" });
+            cbTipo.Items.AddRange(new object[] { "Tuerca p/unicanal con resorte", "Tuerca COPLE hexagonal galvanizada", "Tuerca hexagonal, galvanizada", "Tuerca hexagonal, inoxidable", "Tuerca inserto de nylon, inoxidable" });
             cbTipo.Location = new Point(194, 42);
             cbTipo.Name = "cbTipo";
             cbTipo.Size = new Size(335, 40);
@@ -110,11 +115,48 @@
             lblTipo.TabIndex = 15;
             lblTipo.Text = "Tipo";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.Location = new Point(45, 273);
+            dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(991, 355);
+            dataGridView1.TabIndex = 27;
+            // 
             // Tuercas
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1268, 595);
+            ClientSize = new Size(1268, 759);
+            Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
             Controls.Add(cbMedida);
@@ -124,6 +166,7 @@
             Controls.Add(lblTipo);
             Name = "Tuercas";
             Text = "Tuercas";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,5 +180,6 @@
         private Label lblMarca;
         private Label lblCaracteristica;
         private Label lblTipo;
+        private DataGridView dataGridView1;
     }
 }
