@@ -35,10 +35,12 @@
             btBuscarPrecio = new Button();
             cbMarca = new ComboBox();
             cbMedida = new ComboBox();
-            cbTipo = new ComboBox();
+            cbTipoTapa = new ComboBox();
             lblMarca = new Label();
             lblCaracteristica = new Label();
             lblTipo = new Label();
+            cbSerie = new ComboBox();
+            lblSerie = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(31, 258);
+            dataGridView1.Location = new Point(20, 291);
             dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.HotTrack;
@@ -82,19 +84,20 @@
             // 
             btBuscarPrecio.BackColor = SystemColors.ActiveCaption;
             btBuscarPrecio.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btBuscarPrecio.Location = new Point(180, 159);
+            btBuscarPrecio.Location = new Point(180, 210);
             btBuscarPrecio.Name = "btBuscarPrecio";
             btBuscarPrecio.Size = new Size(212, 56);
             btBuscarPrecio.TabIndex = 34;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = false;
+            btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // cbMarca
             // 
             cbMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMarca.FormattingEnabled = true;
-            cbMarca.Items.AddRange(new object[] { "Todos", "N/A", "ANCLO" });
-            cbMarca.Location = new Point(180, 111);
+            cbMarca.Items.AddRange(new object[] { "Todos", "Crouse Hinds" });
+            cbMarca.Location = new Point(180, 164);
             cbMarca.Name = "cbMarca";
             cbMarca.Size = new Size(212, 40);
             cbMarca.TabIndex = 33;
@@ -103,27 +106,27 @@
             // 
             cbMedida.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMedida.FormattingEnabled = true;
-            cbMedida.Items.AddRange(new object[] { " 1/4", " 3/8" });
+            cbMedida.Items.AddRange(new object[] { " 1/2", " 3/4", "1    ", "1 1/4", "1 1/2", "1, 1/4", "1, 1/2", "2    " });
             cbMedida.Location = new Point(180, 70);
             cbMedida.Name = "cbMedida";
             cbMedida.Size = new Size(212, 40);
             cbMedida.TabIndex = 32;
             // 
-            // cbTipo
+            // cbTipoTapa
             // 
-            cbTipo.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbTipo.FormattingEnabled = true;
-            cbTipo.Items.AddRange(new object[] { "Tuerca p/unicanal con resorte", "Tuerca COPLE hexagonal galvanizada", "Tuerca hexagonal, galvanizada", "Tuerca hexagonal, inoxidable", "Tuerca inserto de nylon, inoxidable" });
-            cbTipo.Location = new Point(180, 27);
-            cbTipo.Name = "cbTipo";
-            cbTipo.Size = new Size(335, 40);
-            cbTipo.TabIndex = 31;
+            cbTipoTapa.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbTipoTapa.FormattingEnabled = true;
+            cbTipoTapa.Items.AddRange(new object[] { "LB", "LL", "LR", "T", "C" });
+            cbTipoTapa.Location = new Point(180, 27);
+            cbTipoTapa.Name = "cbTipoTapa";
+            cbTipoTapa.Size = new Size(212, 40);
+            cbTipoTapa.TabIndex = 31;
             // 
             // lblMarca
             // 
             lblMarca.AutoSize = true;
             lblMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMarca.Location = new Point(20, 114);
+            lblMarca.Location = new Point(20, 155);
             lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(79, 32);
             lblMarca.TabIndex = 30;
@@ -145,20 +148,42 @@
             lblTipo.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTipo.Location = new Point(20, 30);
             lblTipo.Name = "lblTipo";
-            lblTipo.Size = new Size(61, 32);
+            lblTipo.Size = new Size(150, 32);
             lblTipo.TabIndex = 28;
-            lblTipo.Text = "Tipo";
+            lblTipo.Text = "Tipo de Tapa";
+            // 
+            // cbSerie
+            // 
+            cbSerie.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbSerie.FormattingEnabled = true;
+            cbSerie.Items.AddRange(new object[] { "3" });
+            cbSerie.Location = new Point(180, 118);
+            cbSerie.Name = "cbSerie";
+            cbSerie.Size = new Size(212, 40);
+            cbSerie.TabIndex = 37;
+            // 
+            // lblSerie
+            // 
+            lblSerie.AutoSize = true;
+            lblSerie.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSerie.Location = new Point(20, 118);
+            lblSerie.Name = "lblSerie";
+            lblSerie.Size = new Size(67, 32);
+            lblSerie.TabIndex = 36;
+            lblSerie.Text = "Serie";
             // 
             // Condulet
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1199, 658);
+            Controls.Add(cbSerie);
+            Controls.Add(lblSerie);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
             Controls.Add(cbMedida);
-            Controls.Add(cbTipo);
+            Controls.Add(cbTipoTapa);
             Controls.Add(lblMarca);
             Controls.Add(lblCaracteristica);
             Controls.Add(lblTipo);
@@ -175,9 +200,11 @@
         private Button btBuscarPrecio;
         private ComboBox cbMarca;
         private ComboBox cbMedida;
-        private ComboBox cbTipo;
+        private ComboBox cbTipoTapa;
         private Label lblMarca;
         private Label lblCaracteristica;
         private Label lblTipo;
+        private ComboBox cbSerie;
+        private Label lblSerie;
     }
 }
