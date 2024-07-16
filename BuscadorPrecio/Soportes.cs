@@ -16,5 +16,15 @@ namespace BuscadorPrecio
         {
             InitializeComponent();
         }
+
+        private void btnSE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTipo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

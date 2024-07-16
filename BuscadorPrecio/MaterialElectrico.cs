@@ -91,7 +91,7 @@ namespace BuscadorPrecio
             switch (tipo)
             {
                 case "Condulet oval":
-                    formToOpen = new Form2();
+                    formToOpen = new Condulet();
                     break;
 
 
