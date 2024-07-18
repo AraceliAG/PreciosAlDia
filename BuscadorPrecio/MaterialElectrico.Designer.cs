@@ -100,7 +100,7 @@
             // 
             cbCana.Font = new Font("Yu Gothic UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbCana.FormattingEnabled = true;
-            cbCana.Items.AddRange(new object[] { "Condulet oval" });
+            cbCana.Items.AddRange(new object[] { "Condulet oval", "Conector" });
             cbCana.Location = new Point(16, 361);
             cbCana.Name = "cbCana";
             cbCana.Size = new Size(297, 36);
