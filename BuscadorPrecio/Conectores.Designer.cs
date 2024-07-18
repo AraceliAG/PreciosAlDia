@@ -117,6 +117,7 @@
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = false;
             btBuscarPrecio.Visible = false;
+            btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // cbMarca
             // 
