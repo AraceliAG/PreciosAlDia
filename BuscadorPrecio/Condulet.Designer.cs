@@ -121,6 +121,7 @@
             cbTipoTapa.Name = "cbTipoTapa";
             cbTipoTapa.Size = new Size(212, 40);
             cbTipoTapa.TabIndex = 31;
+            cbTipoTapa.SelectedIndexChanged += cbTipoTapa_SelectedIndexChanged;
             // 
             // lblMarca
             // 

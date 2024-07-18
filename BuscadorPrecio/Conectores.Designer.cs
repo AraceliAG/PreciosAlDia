@@ -31,38 +31,42 @@
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            cbSerie = new ComboBox();
-            lblSerie = new Label();
+            cbModelo = new ComboBox();
+            lblModelo = new Label();
             dataGridView1 = new DataGridView();
             btBuscarPrecio = new Button();
             cbMarca = new ComboBox();
             cbMedida = new ComboBox();
-            cbTipoTapa = new ComboBox();
+            cbTipoConector = new ComboBox();
             lblMarca = new Label();
-            lblCaracteristica = new Label();
+            lblMedida = new Label();
             lblTipoConec = new Label();
+            lblCarac = new Label();
+            cbCarac = new ComboBox();
+            lblmm = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // cbSerie
+            // cbModelo
             // 
-            cbSerie.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbSerie.FormattingEnabled = true;
-            cbSerie.Items.AddRange(new object[] { "3" });
-            cbSerie.Location = new Point(242, 113);
-            cbSerie.Name = "cbSerie";
-            cbSerie.Size = new Size(212, 40);
-            cbSerie.TabIndex = 47;
+            cbModelo.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbModelo.FormattingEnabled = true;
+            cbModelo.Location = new Point(710, 122);
+            cbModelo.Name = "cbModelo";
+            cbModelo.Size = new Size(212, 40);
+            cbModelo.TabIndex = 47;
+            cbModelo.Visible = false;
             // 
-            // lblSerie
+            // lblModelo
             // 
-            lblSerie.AutoSize = true;
-            lblSerie.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSerie.Location = new Point(23, 116);
-            lblSerie.Name = "lblSerie";
-            lblSerie.Size = new Size(67, 32);
-            lblSerie.TabIndex = 46;
-            lblSerie.Text = "Serie";
+            lblModelo.AutoSize = true;
+            lblModelo.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblModelo.Location = new Point(537, 122);
+            lblModelo.Name = "lblModelo";
+            lblModelo.Size = new Size(97, 32);
+            lblModelo.TabIndex = 46;
+            lblModelo.Text = "Modelo";
+            lblModelo.Visible = false;
             // 
             // dataGridView1
             // 
@@ -85,7 +89,7 @@
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
-            dataGridView1.Location = new Point(23, 289);
+            dataGridView1.Location = new Point(23, 277);
             dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = SystemColors.HotTrack;
@@ -110,56 +114,62 @@
             btBuscarPrecio.TabIndex = 44;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = false;
+            btBuscarPrecio.Visible = false;
             // 
             // cbMarca
             // 
             cbMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMarca.FormattingEnabled = true;
-            cbMarca.Items.AddRange(new object[] { "Todos", "Crouse Hinds" });
-            cbMarca.Location = new Point(242, 162);
+            cbMarca.Items.AddRange(new object[] { "Todos", "ANCLO", "ARGOS", "BURNDY", "DROF", "Crouse Hinds" });
+            cbMarca.Location = new Point(242, 114);
             cbMarca.Name = "cbMarca";
             cbMarca.Size = new Size(212, 40);
             cbMarca.TabIndex = 43;
+            cbMarca.Visible = false;
             // 
             // cbMedida
             // 
             cbMedida.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMedida.FormattingEnabled = true;
-            cbMedida.Items.AddRange(new object[] { " 1/2", " 3/4", "1    ", "1 1/4", "1 1/2", "1, 1/4", "1, 1/2", "2    " });
             cbMedida.Location = new Point(242, 68);
             cbMedida.Name = "cbMedida";
-            cbMedida.Size = new Size(212, 40);
+            cbMedida.Size = new Size(182, 40);
             cbMedida.TabIndex = 42;
+            cbMedida.Visible = false;
+            cbMedida.SelectedIndexChanged += cbMedida_SelectedIndexChanged;
             // 
-            // cbTipoTapa
+            // cbTipoConector
             // 
-            cbTipoTapa.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbTipoTapa.FormattingEnabled = true;
-            cbTipoTapa.Items.AddRange(new object[] { "Conector recto Zapa, p/tubo flexible", "Conector glándula con contratuerca", "Conector FoGa P/Delgada", "Conector recto p/Tubo licuatite", "Conector bipartido, de cobre", "Conector a tope. Empalme de cobre estañado, cañón largo", "Conector a tope. Empalme de cobre estañado, cañón corto" });
-            cbTipoTapa.Location = new Point(242, 25);
-            cbTipoTapa.Name = "cbTipoTapa";
-            cbTipoTapa.Size = new Size(416, 40);
-            cbTipoTapa.TabIndex = 41;
+            cbTipoConector.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbTipoConector.FormattingEnabled = true;
+            cbTipoConector.Items.AddRange(new object[] { "Conector FoGa P/Delgada", "Conector bipartido, de cobre", "Conector recto p/Tubo licuatite", "Conector recto Zapa, p/tubo flexible", "Conector glándula con contratuerca" });
+            cbTipoConector.Location = new Point(242, 25);
+            cbTipoConector.Name = "cbTipoConector";
+            cbTipoConector.Size = new Size(416, 40);
+            cbTipoConector.TabIndex = 41;
+            cbTipoConector.SelectedIndexChanged += cbTipoTapa_SelectedIndexChanged;
             // 
             // lblMarca
             // 
             lblMarca.AutoSize = true;
             lblMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMarca.Location = new Point(23, 153);
+            lblMarca.Location = new Point(23, 117);
             lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(79, 32);
             lblMarca.TabIndex = 40;
             lblMarca.Text = "Marca";
+            lblMarca.Visible = false;
             // 
-            // lblCaracteristica
+            // lblMedida
             // 
-            lblCaracteristica.AutoSize = true;
-            lblCaracteristica.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCaracteristica.Location = new Point(23, 71);
-            lblCaracteristica.Name = "lblCaracteristica";
-            lblCaracteristica.Size = new Size(95, 32);
-            lblCaracteristica.TabIndex = 39;
-            lblCaracteristica.Text = "Medida";
+            lblMedida.AutoSize = true;
+            lblMedida.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMedida.Location = new Point(23, 71);
+            lblMedida.Name = "lblMedida";
+            lblMedida.Size = new Size(95, 32);
+            lblMedida.TabIndex = 39;
+            lblMedida.Text = "Medida";
+            lblMedida.Visible = false;
             // 
             // lblTipoConec
             // 
@@ -171,20 +181,55 @@
             lblTipoConec.TabIndex = 38;
             lblTipoConec.Text = "Tipo de Conector";
             // 
+            // lblCarac
+            // 
+            lblCarac.AutoSize = true;
+            lblCarac.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCarac.Location = new Point(537, 81);
+            lblCarac.Name = "lblCarac";
+            lblCarac.Size = new Size(154, 32);
+            lblCarac.TabIndex = 48;
+            lblCarac.Text = "Característica";
+            lblCarac.Visible = false;
+            // 
+            // cbCarac
+            // 
+            cbCarac.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbCarac.FormattingEnabled = true;
+            cbCarac.Location = new Point(710, 73);
+            cbCarac.Name = "cbCarac";
+            cbCarac.Size = new Size(212, 40);
+            cbCarac.TabIndex = 49;
+            cbCarac.Visible = false;
+            // 
+            // lblmm
+            // 
+            lblmm.AutoSize = true;
+            lblmm.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblmm.Location = new Point(446, 71);
+            lblmm.Name = "lblmm";
+            lblmm.Size = new Size(24, 32);
+            lblmm.TabIndex = 50;
+            lblmm.Text = "-";
+            lblmm.Visible = false;
+            // 
             // Conectores
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1203, 587);
-            Controls.Add(cbSerie);
-            Controls.Add(lblSerie);
+            Controls.Add(lblmm);
+            Controls.Add(cbCarac);
+            Controls.Add(lblCarac);
+            Controls.Add(cbModelo);
+            Controls.Add(lblModelo);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
             Controls.Add(cbMedida);
-            Controls.Add(cbTipoTapa);
+            Controls.Add(cbTipoConector);
             Controls.Add(lblMarca);
-            Controls.Add(lblCaracteristica);
+            Controls.Add(lblMedida);
             Controls.Add(lblTipoConec);
             Name = "Conectores";
             Text = "Conectores";
@@ -195,15 +240,18 @@
 
         #endregion
 
-        private ComboBox cbSerie;
-        private Label lblSerie;
+        private ComboBox cbModelo;
+        private Label lblModelo;
         private DataGridView dataGridView1;
         private Button btBuscarPrecio;
         private ComboBox cbMarca;
         private ComboBox cbMedida;
-        private ComboBox cbTipoTapa;
+        private ComboBox cbTipoConector;
         private Label lblMarca;
-        private Label lblCaracteristica;
+        private Label lblMedida;
         private Label lblTipoConec;
+        private Label lblCarac;
+        private ComboBox cbCarac;
+        private Label lblmm;
     }
 }

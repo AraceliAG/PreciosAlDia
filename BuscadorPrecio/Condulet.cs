@@ -120,5 +120,10 @@ namespace BuscadorPrecio
                 dataGridView1.Columns["precio_formateado"].HeaderText = "Precio";
             }
         }
+
+        private void cbTipoTapa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,45 @@ namespace BuscadorPrecio
         {
             InitializeComponent();
         }
+
+        private void cbMedida_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbModelo.Items.Clear();
+            cbModelo.Text = " ";
+
+            if (cbModelo.Text == "")
+            {
+                cbMedida.Items.AddRange(new object[]
+                {
+
+
+                });
+
+            }
+        }
+
+        private void visible()
+        {
+            cbMedida.Visible = true;
+            lblMedida.Visible = true;
+
+            lblmm.Visible = true;
+
+            cbCarac.Visible = true;
+            lblCarac.Visible = true;
+
+            cbMarca.Visible = true;
+            lblMarca.Visible = true;
+
+        }
+
+        private void cbTipoTapa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTipoConector.Text == "Conector FoGa P/Delgada")
+            {
+                visible();
+
+            }
+        }
     }
 }

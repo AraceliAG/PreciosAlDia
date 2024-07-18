@@ -94,6 +94,10 @@ namespace BuscadorPrecio
                     formToOpen = new Condulet();
                     break;
 
+                case "Conector":
+                    formToOpen = new Conectores();
+                    break;
+
 
             }
 
