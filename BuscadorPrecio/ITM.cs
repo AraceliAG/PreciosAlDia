@@ -137,11 +137,31 @@ namespace BuscadorPrecio
             }
         }
 
+
+        private void capacidad_voltaje(string nombre, string serie)
+        {
+            string consulta = $@"SELECT capacidad_a,
+            voltaje from itm where nombre='{nombre}' and serie = {serie} ";
+
+            lblVoltaje.Text = consulta;
+        }
         private void cbSerie_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Dictionary<string, string> capacidades = new Dictionary <string, string>();
             //capacidades.Add("1x16A", "6kA 400V");
-            
+
+
+
+        }
+
+        private void lblVoltaje_Click(object sender, EventArgs e)
+        {
+            string nombre = cbTipoITM.Text;
+            string serie = cbSerie.Text;
+            if (serie == "5SL61167CC")
+            {
+                capacidad_voltaje(nombre, serie);
+            }
         }
     }
 }
