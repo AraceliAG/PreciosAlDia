@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -400,12 +401,19 @@ namespace BuscadorPrecio
             string carac = cbCarac.Text;
             string marca = cbMarca.Text;
 
-        //(string nombre, string modelo, string medida, string caracteristica, string marca)
+            //(string nombre, string modelo, string medida, string caracteristica, string marca)
 
+            //Conector bipartido, de cobre
+            //Conector recto p/ Tubo licuatite
+            //Conector recto Zapa, p/ tubo flexible
+            //Conector glándula con contratuerca
             if (nombre == "Conector FoGa P/Delgada")
             {
                 consultaGeneral(nombre, modelo ="", medida, carac, marca);
 
+            }else if (nombre == "Conector recto p/ Tubo licuatite")
+            {
+                consultaGeneral(nombre, modelo = "", medida, carac = " ", marca);
             }
             
 
