@@ -98,6 +98,10 @@ namespace BuscadorPrecio
                     formToOpen = new Conectores();
                     break;
 
+                case "ITM":
+                    formToOpen = new ITM();
+                    break;
+
 
             }
 
