@@ -196,7 +196,9 @@ namespace BuscadorPrecio
                     "1/2",
                     "3/8"
                 });
-
+                visible();
+                lblCarac.Visible = false;
+                cbCarac.Visible = false;
 
             }
             else if (cbTipoConector.Text == "Conector recto p/Tubo licuatite")
@@ -272,24 +274,24 @@ namespace BuscadorPrecio
         {
             if (cbModelo.Text == "KS-15")
             {
-                lblCalibre.Text = "Cal. 14 tre -8 tre, AWG";
+                lblCalibre.Text = "Cal. 14 tre -8 tre";
 
             }
             else if (cbModelo.Text == "KS-17")
             {
-                lblCalibre.Text = "Cal. 8 tre-6 sol, AWG";
+                lblCalibre.Text = "Cal. 8 tre-6 sol";
             }
             else if (cbModelo.Text == "KS-20")
             {
-                lblCalibre.Text = "Cal. 8 tre - 4 sol, AWG";
+                lblCalibre.Text = "Cal. 8 tre - 4 sol";
             }
             else if (cbModelo.Text == "KS-22")
             {
-                lblCalibre.Text = "Cal. 6-2, AWG";
+                lblCalibre.Text = "Cal. 6-2";
             }
             else if (cbModelo.Text == "KS-25")
             {
-                lblCalibre.Text = "Cal. 4-1/0, AWG";
+                lblCalibre.Text = "Cal. 4-1/0";
             }
         }
 
@@ -411,9 +413,25 @@ namespace BuscadorPrecio
             {
                 consultaGeneral(nombre, modelo ="", medida, carac, marca);
 
-            }else if (nombre == "Conector recto p/ Tubo licuatite")
+            }
+            else if (nombre == "Conector bipartido, de cobre")
             {
-                consultaGeneral(nombre, modelo = "", medida, carac = " ", marca);
+                consultaGeneral(nombre, modelo, medida2_2, carac="AWG", marca);
+
+            }
+            else if (nombre == "Conector recto p/Tubo licuatite")
+            {
+                consultaGeneral(nombre, modelo = "", medida, carac = "", marca);
+            }
+            else if (nombre == "Conector recto Zapa, p/tubo flexible")
+            {
+                consultaGeneral(nombre, modelo, medida, carac="", marca);
+
+            }
+            else if (nombre == "Conector glándula con contratuerca")
+            {
+                consultaGeneral(nombre, modelo = "", medida, carac, marca);
+
             }
             
 
