@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -141,14 +142,43 @@ namespace BuscadorPrecio
         private void capacidad_voltaje(string nombre, string serie)
         {
             string consulta = $@"SELECT capacidad_a,
-            voltaje from itm where nombre='{nombre}' and serie = {serie} ";
+            voltaje from itm where nombre='{nombre}' and serie = '{serie}'";
 
-            lblVoltaje.Text = consulta;
+            DataTable resultados = DbUtils.ExecuteQuery(consulta);
+
+
+            if (resultados.Rows.Count > 0)
+            {
+                // Extraer el primer resultado
+                lblVoltaje.Visible = true;
+                DataRow fila = resultados.Rows[0];
+
+                // Asignar los valores a los Labels
+                //lblCapacidad.Text = fila["capacidad_a"].ToString();
+                lblVoltaje.Text = "Voltaje: " +(fila["voltaje"].ToString()) + "     Capacidad: " + (fila["capacidad_a"].ToString());
+
+            }
+            else
+            {
+                // Manejar el caso cuando no se encuentran resultados
+                
+                lblVoltaje.Text = "No encontrado";
+            }
         }
+
+
+
+    
         private void cbSerie_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Dictionary<string, string> capacidades = new Dictionary <string, string>();
             //capacidades.Add("1x16A", "6kA 400V");
+
+            string nombre = cbTipoITM.Text;
+            string serie = cbSerie.Text;
+                //capacidad_voltaje(nombre, serie);
+            capacidad_voltaje(nombre, serie);
+            
 
 
 
@@ -156,12 +186,7 @@ namespace BuscadorPrecio
 
         private void lblVoltaje_Click(object sender, EventArgs e)
         {
-            string nombre = cbTipoITM.Text;
-            string serie = cbSerie.Text;
-            if (serie == "5SL61167CC")
-            {
-                capacidad_voltaje(nombre, serie);
-            }
+            
         }
     }
 }

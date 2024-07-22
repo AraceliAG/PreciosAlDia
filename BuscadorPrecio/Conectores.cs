@@ -411,12 +411,12 @@ namespace BuscadorPrecio
             //Conector glándula con contratuerca
             if (nombre == "Conector FoGa P/Delgada")
             {
-                consultaGeneral(nombre, modelo ="", medida, carac, marca);
+                consultaGeneral(nombre, modelo = "", medida, carac, marca);
 
             }
             else if (nombre == "Conector bipartido, de cobre")
             {
-                consultaGeneral(nombre, modelo, medida2_2, carac="AWG", marca);
+                consultaGeneral(nombre, modelo, medida2_2, carac = "AWG", marca);
 
             }
             else if (nombre == "Conector recto p/Tubo licuatite")
@@ -425,7 +425,7 @@ namespace BuscadorPrecio
             }
             else if (nombre == "Conector recto Zapa, p/tubo flexible")
             {
-                consultaGeneral(nombre, modelo, medida, carac="", marca);
+                consultaGeneral(nombre, modelo, medida, carac = "", marca);
 
             }
             else if (nombre == "Conector glándula con contratuerca")
@@ -433,11 +433,16 @@ namespace BuscadorPrecio
                 consultaGeneral(nombre, modelo = "", medida, carac, marca);
 
             }
-            
 
-        
 
+
+
+        }
+
+        private void lblmm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-   }
 }
 

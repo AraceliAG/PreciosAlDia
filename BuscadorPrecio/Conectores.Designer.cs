@@ -216,6 +216,7 @@
             lblmm.TabIndex = 50;
             lblmm.Text = "-";
             lblmm.Visible = false;
+            lblmm.Click += lblmm_Click;
             // 
             // lblCalibre
             // 
