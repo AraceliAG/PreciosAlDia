@@ -89,12 +89,12 @@
             btBuscarPrecio.TabIndex = 34;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = false;
+            btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // cbMarca
             // 
             cbMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMarca.FormattingEnabled = true;
-            cbMarca.Items.AddRange(new object[] { "Todos", "N/A", "ANCLO" });
             cbMarca.Location = new Point(196, 127);
             cbMarca.Name = "cbMarca";
             cbMarca.Size = new Size(212, 40);
