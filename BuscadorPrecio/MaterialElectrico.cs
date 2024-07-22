@@ -101,7 +101,9 @@ namespace BuscadorPrecio
                 case "ITM":
                     formToOpen = new ITM();
                     break;
-
+                case "Tubería":
+                    formToOpen = new Tubería();
+                    break;
 
             }
 
