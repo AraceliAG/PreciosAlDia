@@ -291,6 +291,13 @@ namespace BuscadorPrecio
                 // Mostrar la columna formateada
                 dataGridView1.Columns["precio_formateado"].HeaderText = "Precio";
             }
+            if (dataGridView1.Rows.Count > 0)
+            {
+                foreach (DataGridViewCell cell in dataGridView1.Rows[0].Cells)
+                {
+                    cell.Style.BackColor = Color.LightGreen;
+                }
+            }
         }
     }
 }
