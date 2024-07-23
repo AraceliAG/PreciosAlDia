@@ -40,7 +40,6 @@
             lblMedida = new Label();
             lblTipoTuberia = new Label();
             lblmm = new Label();
-            lblCaracterística = new Label();
             mySqlDataAdapter1 = new MySqlConnector.MySqlDataAdapter();
             mySqlDataAdapter2 = new MySqlConnector.MySqlDataAdapter();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -92,6 +91,7 @@
             btBuscarPrecio.TabIndex = 42;
             btBuscarPrecio.Text = "Buscar";
             btBuscarPrecio.UseVisualStyleBackColor = false;
+            btBuscarPrecio.Click += btBuscarPrecio_Click;
             // 
             // cbMarca
             // 
@@ -111,12 +111,13 @@
             cbMedida.Name = "cbMedida";
             cbMedida.Size = new Size(212, 40);
             cbMedida.TabIndex = 40;
+            cbMedida.SelectedIndexChanged += cbMedida_SelectedIndexChanged;
             // 
             // cbTipoTubería
             // 
             cbTipoTubería.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbTipoTubería.FormattingEnabled = true;
-            cbTipoTubería.Items.AddRange(new object[] { "Tubo FoGa, P/Delgada", "Tubo conduit PVC pesado", "Tubo FoGa, ROSCADO, con cople", "Tubo metálico flexible hermético a líquidos", "" });
+            cbTipoTubería.Items.AddRange(new object[] { "Tubo FoGa, P/Delgada", "Tubo conduit PVC pesado", "Tubo FoGa, ROSCADO, con cople", "Tubo metálico flexible hermético a líquidos" });
             cbTipoTubería.Location = new Point(250, 69);
             cbTipoTubería.Name = "cbTipoTubería";
             cbTipoTubería.Size = new Size(335, 40);
@@ -164,17 +165,6 @@
             lblmm.Text = "-";
             lblmm.Visible = false;
             // 
-            // lblCaracterística
-            // 
-            lblCaracterística.AutoSize = true;
-            lblCaracterística.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCaracterística.Location = new Point(653, 120);
-            lblCaracterística.Name = "lblCaracterística";
-            lblCaracterística.Size = new Size(24, 32);
-            lblCaracterística.TabIndex = 52;
-            lblCaracterística.Text = "-";
-            lblCaracterística.Visible = false;
-            // 
             // mySqlDataAdapter1
             // 
             mySqlDataAdapter1.DeleteCommand = null;
@@ -196,7 +186,6 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1374, 736);
-            Controls.Add(lblCaracterística);
             Controls.Add(lblmm);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
@@ -224,7 +213,6 @@
         private Label lblMedida;
         private Label lblTipoTuberia;
         private Label lblmm;
-        private Label lblCaracterística;
         private MySqlConnector.MySqlDataAdapter mySqlDataAdapter1;
         private MySqlConnector.MySqlDataAdapter mySqlDataAdapter2;
     }
