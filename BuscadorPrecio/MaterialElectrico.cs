@@ -104,6 +104,9 @@ namespace BuscadorPrecio
                 case "Tubería":
                     formToOpen = new Tubería();
                     break;
+                case "Cople":
+                    formToOpen = new Cople();
+                    break;
 
             }
 
