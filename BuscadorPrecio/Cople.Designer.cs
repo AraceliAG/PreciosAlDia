@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             btBuscarPrecio = new Button();
             cbMarca = new ComboBox();
-            cbSerie = new ComboBox();
-            cbTipoITM = new ComboBox();
+            cbMedida = new ComboBox();
+            cbTipoCople = new ComboBox();
             lblMarca = new Label();
-            lblSerie = new Label();
-            lblTipoITM = new Label();
+            lblMedida = new Label();
+            lblCople = new Label();
+            lblMm = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,33 +47,33 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.Location = new Point(27, 261);
             dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle3.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle6.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
             dataGridView1.Size = new Size(991, 355);
@@ -98,69 +99,82 @@
             cbMarca.Size = new Size(212, 40);
             cbMarca.TabIndex = 41;
             // 
-            // cbSerie
+            // cbMedida
             // 
-            cbSerie.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbSerie.FormattingEnabled = true;
-            cbSerie.Items.AddRange(new object[] { " 1/4", " 3/8" });
-            cbSerie.Location = new Point(176, 73);
-            cbSerie.Name = "cbSerie";
-            cbSerie.Size = new Size(212, 40);
-            cbSerie.TabIndex = 40;
+            cbMedida.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbMedida.FormattingEnabled = true;
+            cbMedida.Items.AddRange(new object[] { " 1/4", " 3/8" });
+            cbMedida.Location = new Point(176, 73);
+            cbMedida.Name = "cbMedida";
+            cbMedida.Size = new Size(212, 40);
+            cbMedida.TabIndex = 40;
             // 
-            // cbTipoITM
+            // cbTipoCople
             // 
-            cbTipoITM.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbTipoITM.FormattingEnabled = true;
-            cbTipoITM.Items.AddRange(new object[] { "I.T.M., Riel Din 1P", "I.T.M., Riel Din 2P", "I.T.M., Riel Din 3P", "I.T.M., QO-Enchufable", "I.T.M., QO-Atornillable", "I.T.M., JDA 3 POLOS I-LINE", "I.T.M., JDL 3 POLOS c/Zapatas", "I.T.M., HDL 3 POLOS c/Zapatas", "I.T.M., JDL 3 POLOS c/Zapatas" });
-            cbTipoITM.Location = new Point(176, 30);
-            cbTipoITM.Name = "cbTipoITM";
-            cbTipoITM.Size = new Size(335, 40);
-            cbTipoITM.TabIndex = 39;
+            cbTipoCople.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbTipoCople.FormattingEnabled = true;
+            cbTipoCople.Items.AddRange(new object[] { "Cople FoGa P/Delgada", "Cople p/Tubo conduit PVC pesado" });
+            cbTipoCople.Location = new Point(176, 30);
+            cbTipoCople.Name = "cbTipoCople";
+            cbTipoCople.Size = new Size(335, 40);
+            cbTipoCople.TabIndex = 39;
+            cbTipoCople.SelectedIndexChanged += cbTipoITM_SelectedIndexChanged;
             // 
             // lblMarca
             // 
             lblMarca.AutoSize = true;
             lblMarca.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMarca.Location = new Point(16, 117);
+            lblMarca.Location = new Point(24, 117);
             lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(79, 32);
             lblMarca.TabIndex = 38;
             lblMarca.Text = "Marca";
             // 
-            // lblSerie
+            // lblMedida
             // 
-            lblSerie.AutoSize = true;
-            lblSerie.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSerie.Location = new Point(16, 76);
-            lblSerie.Name = "lblSerie";
-            lblSerie.Size = new Size(67, 32);
-            lblSerie.TabIndex = 37;
-            lblSerie.Text = "Serie";
+            lblMedida.AutoSize = true;
+            lblMedida.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMedida.Location = new Point(27, 76);
+            lblMedida.Name = "lblMedida";
+            lblMedida.Size = new Size(95, 32);
+            lblMedida.TabIndex = 37;
+            lblMedida.Text = "Medida";
             // 
-            // lblTipoITM
+            // lblCople
             // 
-            lblTipoITM.AutoSize = true;
-            lblTipoITM.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTipoITM.Location = new Point(16, 33);
-            lblTipoITM.Name = "lblTipoITM";
-            lblTipoITM.Size = new Size(121, 32);
-            lblTipoITM.TabIndex = 36;
-            lblTipoITM.Text = "Tipo I.T.M.";
+            lblCople.AutoSize = true;
+            lblCople.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCople.Location = new Point(27, 33);
+            lblCople.Name = "lblCople";
+            lblCople.Size = new Size(76, 32);
+            lblCople.TabIndex = 36;
+            lblCople.Text = "Cople";
+            // 
+            // lblMm
+            // 
+            lblMm.AutoSize = true;
+            lblMm.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMm.Location = new Point(427, 81);
+            lblMm.Name = "lblMm";
+            lblMm.Size = new Size(24, 32);
+            lblMm.TabIndex = 52;
+            lblMm.Text = "-";
+            lblMm.Visible = false;
             // 
             // Cople
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1193, 677);
+            Controls.Add(lblMm);
             Controls.Add(dataGridView1);
             Controls.Add(btBuscarPrecio);
             Controls.Add(cbMarca);
-            Controls.Add(cbSerie);
-            Controls.Add(cbTipoITM);
+            Controls.Add(cbMedida);
+            Controls.Add(cbTipoCople);
             Controls.Add(lblMarca);
-            Controls.Add(lblSerie);
-            Controls.Add(lblTipoITM);
+            Controls.Add(lblMedida);
+            Controls.Add(lblCople);
             Name = "Cople";
             Text = "Cople";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -173,10 +187,11 @@
         private DataGridView dataGridView1;
         private Button btBuscarPrecio;
         private ComboBox cbMarca;
-        private ComboBox cbSerie;
-        private ComboBox cbTipoITM;
+        private ComboBox cbMedida;
+        private ComboBox cbTipoCople;
         private Label lblMarca;
-        private Label lblSerie;
-        private Label lblTipoITM;
+        private Label lblMedida;
+        private Label lblCople;
+        private Label lblMm;
     }
 }

@@ -16,5 +16,37 @@ namespace BuscadorPrecio
         {
             InitializeComponent();
         }
+
+        private void cbTipoITM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            cbMedida.Items.Clear();
+            if (cbTipoCople.Text == "Cople FoGa P/Delgada")
+            {
+                cbMedida.Items.AddRange(new object[]
+                {
+                    "1/2",
+                    "3/4",
+                    "1",
+                    "1 1/4",
+                    "1 1/2",
+                    "2"
+
+                });
+
+
+
+            }else if (cbTipoCople.Text == "Cople p/Tubo conduit PVC pesado")
+            {
+                cbMedida.Items.AddRange(new object[] {
+                "1/2",
+                "3/4",                 
+                "1 1/4",
+                 "2"
+
+                });
+
+            }
+        }
     }
 }
